@@ -661,10 +661,6 @@ p {
   margin-left: 0.5rem;
 }
 
-.ml-8 {
-  margin-left: 2rem;
-}
-
 .mt-12 {
   margin-top: 3rem;
 }
@@ -719,6 +715,46 @@ p {
 
 .h-full {
   height: 100%;
+}
+
+.h-\[96\] {
+  height: 96;
+}
+
+.h-\[380px\] {
+  height: 380px;
+}
+
+.h-\[3760px\] {
+  height: 3760px;
+}
+
+.h-\[370px\] {
+  height: 370px;
+}
+
+.h-\[48\] {
+  height: 48;
+}
+
+.h-\[190px\] {
+  height: 190px;
+}
+
+.h-\[185px\] {
+  height: 185px;
+}
+
+.h-\[186px\] {
+  height: 186px;
+}
+
+.h-\[187px\] {
+  height: 187px;
+}
+
+.h-\[188px\] {
+  height: 188px;
 }
 
 .w-1\/2 {
@@ -826,6 +862,10 @@ p {
   justify-content: space-between;
 }
 
+.gap-0 {
+  gap: 0px;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
@@ -840,10 +880,6 @@ p {
 
 .gap-1 {
   gap: 0.25rem;
-}
-
-.gap-0 {
-  gap: 0px;
 }
 
 .space-x-3 > :not([hidden]) ~ :not([hidden]) {
@@ -906,12 +942,6 @@ p {
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
-.space-x-12 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(3rem * var(--tw-space-x-reverse));
-  margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
 .place-self-end {
   place-self: end;
 }
@@ -930,6 +960,20 @@ p {
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-r-lg {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.rounded-l-lg {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }
 
 .border {
