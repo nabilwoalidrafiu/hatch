@@ -621,10 +621,6 @@ p {
   z-index: 10;
 }
 
-.-z-10 {
-  z-index: -10;
-}
-
 .z-30 {
   z-index: 30;
 }
@@ -637,6 +633,10 @@ p {
 .my-12 {
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+
+.-mt-8 {
+  margin-top: -2rem;
 }
 
 .mb-9 {
@@ -665,22 +665,6 @@ p {
 
 .mt-32 {
   margin-top: 8rem;
-}
-
-.mt-8 {
-  margin-top: 2rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
-.mb-12 {
-  margin-bottom: 3rem;
-}
-
-.-mt-8 {
-  margin-top: -2rem;
 }
 
 .flex {
@@ -719,24 +703,12 @@ p {
   height: 23px;
 }
 
-.h-full {
-  height: 100%;
-}
-
-.h-\[\] {
-  height: ;
-}
-
-.h-\[515px\] {
-  height: 515px;
-}
-
 .h-\[470px\] {
   height: 470px;
 }
 
-.h-\[550px\] {
-  height: 550px;
+.h-full {
+  height: 100%;
 }
 
 .w-1\/2 {
@@ -779,8 +751,16 @@ p {
   width: 400px;
 }
 
+.w-\[550px\] {
+  width: 550px;
+}
+
 .w-\[600px\] {
   width: 600px;
+}
+
+.w-\[668px\] {
+  width: 668px;
 }
 
 .w-fit {
@@ -790,54 +770,6 @@ p {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[full\] {
-  width: full;
-}
-
-.w-\[450px\] {
-  width: 450px;
-}
-
-.w-\[500px\] {
-  width: 500px;
-}
-
-.w-2\/3 {
-  width: 66.666667%;
-}
-
-.w-2\/5 {
-  width: 40%;
-}
-
-.w-1 {
-  width: 0.25rem;
-}
-
-.w-96 {
-  width: 24rem;
-}
-
-.w-\[4\] {
-  width: 4;
-}
-
-.w-\[50px\] {
-  width: 50px;
-}
-
-.w-\[550px\] {
-  width: 550px;
-}
-
-.w-\[\] {
-  width: ;
-}
-
-.w-\[668px\] {
-  width: 668px;
 }
 
 .max-w-\[1200px\] {
@@ -858,10 +790,6 @@ p {
 
 .flex-col {
   flex-direction: column;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
 }
 
 .items-start {
@@ -978,12 +906,6 @@ p {
   margin-bottom: calc(1.75rem * var(--tw-space-y-reverse));
 }
 
-.space-y-8 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-}
-
 .rounded {
   border-radius: 0.25rem;
 }
@@ -1030,6 +952,11 @@ p {
   --tw-border-opacity: 0.25;
 }
 
+.bg-\[\#FFFFFF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#ffffff\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1050,51 +977,8 @@ p {
   background-color: rgb(209 254 209 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#F4FFF4\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(244 255 244 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#FFFFF4\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 244 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#FFFFFF\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-opacity-70 {
-  --tw-bg-opacity: 0.7;
-}
-
-.bg-opacity-25 {
-  --tw-bg-opacity: 0.25;
-}
-
-.bg-opacity-30 {
-  --tw-bg-opacity: 0.3;
-}
-
-.bg-opacity-40 {
-  --tw-bg-opacity: 0.4;
-}
-
-.bg-opacity-50 {
-  --tw-bg-opacity: 0.5;
-}
-
-.bg-opacity-60 {
-  --tw-bg-opacity: 0.6;
-}
-
 .bg-opacity-75 {
   --tw-bg-opacity: 0.75;
-}
-
-.bg-opacity-80 {
-  --tw-bg-opacity: 0.8;
 }
 
 .stroke-2 {
@@ -1153,24 +1037,14 @@ p {
   padding-bottom: 1rem;
 }
 
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .pb-6 {
@@ -1253,12 +1127,6 @@ p {
 .text-button {
   --tw-text-opacity: 1;
   color: rgb(0 141 150 / var(--tw-text-opacity));
-}
-
-.shadow-sm {
-  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-md {
