@@ -12,6 +12,7 @@ module.exports = {
     colors: {
       h1Color: "#143E4A",
       h2Color: "#4C4C4C",
+      h3Color: "#273240",
       bodyText:  '#646464',
       primary :  '#D1FED1',
       button : '#008D96',

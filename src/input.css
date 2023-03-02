@@ -15,8 +15,14 @@
     h2{
         @apply text-4xl font-semibold text-h2Color
     }
+    h3{
+      @apply text-[32px] font-normal text-h3Color
+    }
     h4{
         @apply text-2xl font-semibold
+    }
+    h6{
+      @apply text-lg font-normal
     }
     p{
         @apply text-base font-normal
@@ -30,9 +36,19 @@
     .footer-body{
         @apply text-bodyText font-light text-xl
     }
-   
-}
+    .pricing_ul li:before{
+      content: '✓ ';
+      @apply text-base
+    }
+    .accordion-header {
+      @apply py-4 px-6 cursor-pointer
+    }
+    .accordion-body{
+      @apply max-h-0 overflow-hidden transition-all duration-200 ease-out
+    }
 
+    
+}
 
 
 
@@ -64,3 +80,46 @@
   
   
   .show {display: block;}
+
+
+
+
+
+/* Accordion styles */
+.accordion {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion-title {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-weight: 600;
+  text-align: left;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.accordion-title:focus {
+  outline: none;
+}
+
+.accordion-content {
+  padding: 1rem;
+  background-color: #fff;
+  display: none;
+}
+
+.accordion-item.active .accordion-title {
+  background-color: #e1e1e1;
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
+}
