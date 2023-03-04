@@ -44,15 +44,18 @@
       @apply py-4 px-6 cursor-pointer
     }
     .accordion-body{
-      @apply max-h-0 overflow-hidden transition-all duration-200 ease-out
+      @apply max-h-0 overflow-hidden transition-all duration-200 ease-out 
     }
+    
     .accordion-title{
       @apply flex justify-between items-center w-full cursor-pointer p-4 text-sm
     }
     .accordion-content{
-      @apply p-4 text-sm hidden
+      @apply px-4 text-sm hidden  -mt-4
     }
-    
+    .accordion-content p{
+      @apply text-sm
+    }
 }
 
 
@@ -125,3 +128,11 @@
 .accordion-item.active .accordion-content {
   display: block;
 }
+
+
+
+
+
+
+
+

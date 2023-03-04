@@ -1,3 +1,5 @@
+
+
 const dropdown = document.getElementById('dropdown');
 // dropdown.style.display = 'hidden';
 /* When the user clicks on the button, 
@@ -22,26 +24,6 @@ function myFunction() {
     }
   }
 
-  // accordion
-  // const accordionHeader = document.querySelectorAll('.accordion-header')
-  // accordionHeader.addEventListener('click', () => {
-  //   console.log('clicked')
-  // })
-  // accordionHeader.forEach(accordionHeader => {
-  //   accordionHeader.addEventListener('click', event =>{
-  //     console.log('acc')
-  //     accordionHeader.classList.toggle("active")
-  //     const accordionBody = accordionHeader.nextElementSibling
-  //     if(accordionHeader.classList.contains("active")){
-  //       accordionBody.style.maxHeight = accordionBody.scrollHeight + "px"
-  //     }
-  //     else{
-  //       accordionBody.style.maxHeight = 0
-  //     }
-  //   })
-  // })
-
-
   window.addEventListener('load', function() {
         const accordionItems = document.querySelectorAll('.accordion-item');
         const chevronDown = document.querySelector('.chevron-down')
@@ -55,11 +37,7 @@ function myFunction() {
           // Toggle the display of the accordion content
           const content = item.querySelector('.accordion-content');
           content.style.display = content.style.display === 'block' ? 'none' : 'block';
-          // chevronDown.style.display = chevronDown.style.display === 'block' ? 'none' : 'block';
-          // chevronUp.style.display = chevronUp.style.display === 'none' ? 'block' : 'none';
           
-      // Toggle the display of the chevrons
-      // chevronUp.style.display = 'block';
         });
       });
    })
