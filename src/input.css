@@ -46,7 +46,12 @@
     .accordion-body{
       @apply max-h-0 overflow-hidden transition-all duration-200 ease-out
     }
-
+    .accordion-title{
+      @apply flex justify-between items-center w-full cursor-pointer p-4 text-sm
+    }
+    .accordion-content{
+      @apply p-4 text-sm hidden
+    }
     
 }
 
@@ -86,38 +91,35 @@
 
 
 /* Accordion styles */
-.accordion {
+/* .accordion {
   border: 1px solid #ccc;
   border-radius: 4px;
   overflow: hidden;
-}
+} */
 
-.accordion-item {
+/* .accordion-item {
   border-bottom: 1px solid #ccc;
-}
+} */
 
-.accordion-title {
-  display: block;
+/* .accordion-title {
   width: 100%;
   padding: 1rem;
   font-weight: 600;
   text-align: left;
-  background-color: #f1f1f1;
   cursor: pointer;
-}
+} */
 
-.accordion-title:focus {
+/* .accordion-title:focus {
   outline: none;
-}
+} */
 
-.accordion-content {
+/* .accordion-content {
   padding: 1rem;
-  background-color: #fff;
   display: none;
-}
+} */
 
 .accordion-item.active .accordion-title {
-  background-color: #e1e1e1;
+  font-weight: 500;
 }
 
 .accordion-item.active .accordion-content {

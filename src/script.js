@@ -42,17 +42,25 @@ function myFunction() {
   // })
 
 
-
-  const accordionItems = document.querySelectorAll('.accordion-item');
-
-  accordionItems.forEach(item => {
-    const title = item.querySelector('.accordion-title');
-    title.addEventListener('click', () => {
-      // Toggle the active class on the accordion item
-      item.classList.toggle('active');
+  window.addEventListener('load', function() {
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        const chevronDown = document.querySelector('.chevron-down')
+        const chevronUp = document.querySelectorAll('.chevron-up')
+        accordionItems.forEach(item => {
+        const title = item.querySelector('.accordion-title');
+        title.addEventListener('click', () => {
+          // Toggle the active class on the accordion item
+          item.classList.toggle('active');
+      
+          // Toggle the display of the accordion content
+          const content = item.querySelector('.accordion-content');
+          content.style.display = content.style.display === 'block' ? 'none' : 'block';
+          // chevronDown.style.display = chevronDown.style.display === 'block' ? 'none' : 'block';
+          // chevronUp.style.display = chevronUp.style.display === 'none' ? 'block' : 'none';
+          
+      // Toggle the display of the chevrons
+      // chevronUp.style.display = 'block';
+        });
+      });
+   })
   
-      // Toggle the display of the accordion content
-      const content = item.querySelector('.accordion-content');
-      content.style.display = content.style.display === 'block' ? 'none' : 'block';
-    });
-  });
