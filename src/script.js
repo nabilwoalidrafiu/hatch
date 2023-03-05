@@ -34,6 +34,7 @@ function myFunction() {
         jQuery('.accordion-item').on('click', function(){
           if (jQuery(this).hasClass("active")) {
             jQuery(this).removeClass("active").find(".accordion-content").slideUp();
+            
           } else {
             jQuery(".accordion > .accordion-item.active > .accordion-content").slideUp();
             jQuery(".accordion > .accordion-item.active").removeClass("active");

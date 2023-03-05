@@ -56,6 +56,12 @@
     .accordion-content p{
       @apply text-sm
     }
+    .input-class{
+      @apply w-full border border-solid border-[#000000] border-opacity-20 h-10 rounded-md
+    }
+    .label-class{
+      @apply text-sm font-light text-bodyText
+    }
 }
 
 
@@ -88,38 +94,6 @@
   
   
   .show {display: block;}
-
-
-
-
-
-/* Accordion styles */
-/* .accordion {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  overflow: hidden;
-} */
-
-/* .accordion-item {
-  border-bottom: 1px solid #ccc;
-} */
-
-/* .accordion-title {
-  width: 100%;
-  padding: 1rem;
-  font-weight: 600;
-  text-align: left;
-  cursor: pointer;
-} */
-
-/* .accordion-title:focus {
-  outline: none;
-} */
-
-/* .accordion-content {
-  padding: 1rem;
-  display: none;
-} */
 
 .accordion-item.active .accordion-title {
   font-weight: 500;
