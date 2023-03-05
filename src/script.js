@@ -1,4 +1,5 @@
 
+       
 
 const dropdown = document.getElementById('dropdown');
 // dropdown.style.display = 'hidden';
@@ -24,21 +25,21 @@ function myFunction() {
     }
   }
 
-  window.addEventListener('load', function() {
-        const accordionItems = document.querySelectorAll('.accordion-item');
-        const chevronDown = document.querySelector('.chevron-down')
-        const chevronUp = document.querySelectorAll('.chevron-up')
-        accordionItems.forEach(item => {
-        const title = item.querySelector('.accordion-title');
-        title.addEventListener('click', () => {
-          // Toggle the active class on the accordion item
-          item.classList.toggle('active');
-      
-          // Toggle the display of the accordion content
-          const content = item.querySelector('.accordion-content');
-          content.style.display = content.style.display === 'block' ? 'none' : 'block';
-          
-        });
-      });
-   })
+   jQuery(document).ready(function(){
+   
   
+        jQuery('.accordion > .accordion-item > .accordion-content').hide();
+        jQuery('.chevron-up').hide();
+        jQuery('.chevron-down').show();
+        jQuery('.accordion-item').on('click', function(){
+          if (jQuery(this).hasClass("active")) {
+            jQuery(this).removeClass("active").find(".accordion-content").slideUp();
+          } else {
+            jQuery(".accordion > .accordion-item.active > .accordion-content").slideUp();
+            jQuery(".accordion > .accordion-item.active").removeClass("active");
+            jQuery(this).addClass("active").find(".accordion-content").slideDown();
+            
+          }
+          return false;
+        })
+   })
