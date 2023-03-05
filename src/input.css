@@ -36,6 +36,9 @@
     .footer-body{
         @apply text-bodyText font-light text-xl
     }
+    .footer-social-icon{
+      @apply h-5 w-5 rounded border border-solid border-bodyText stroke-2 p-0.5 font-bold text-bodyText
+    }
     .pricing_ul li:before{
       content: '✓ ';
       @apply text-base
