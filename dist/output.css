@@ -771,6 +771,10 @@ p {
   margin-top: 8rem;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -861,6 +865,18 @@ p {
 
 .h-full {
   height: 100%;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
+.h-\[\] {
+  height: ;
+}
+
+.h-\[48px\] {
+  height: 48px;
 }
 
 .w-1\/2 {
@@ -959,6 +975,34 @@ p {
 
 .w-72 {
   width: 18rem;
+}
+
+.w-5\/12 {
+  width: 41.666667%;
+}
+
+.w-7\/12 {
+  width: 58.333333%;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-\[48PX\] {
+  width: 48PX;
+}
+
+.w-\[48\] {
+  width: 48;
+}
+
+.w-\[48px\] {
+  width: 48px;
 }
 
 .max-w-\[1200px\] {
