@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Registration Information</title>
+    <!-- stylesheet -->
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;500;600;700&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body class="font-poppins">
+    <!-- herobanner -->
+    <header class="bg-primary h-[515px] relative z-10">
+        <div class="">
+          <!-- navbar -->
+         <div class=" bg-[#FFFFFF] bg-opacity-75 shadow-md  w-full relative z-30">
+          <div
+          class="container mx-auto max-w-[1200px] flex items-center justify-between space-x-8 font-roboto py-5 px-2"
+        >
+          <!-- Logo -->
+          <div class="w-fit">
+            <a href="/src/index.html" class="w-fit">
+              <img src="/src/img/logo.png" alt="logo" srcset="" class="w-20" />
+            </a>
+          </div>
+          <div class="flex w-full items-center justify-between">
+            <nav class="ml-12">
+              <ul class="flex items-center justify-start space-x-8">
+                <li>
+                  <a href="/searchjobs.html" class="font-normal">
+                    Search Jobs
+                  </a>
+                </li>
+                <li>
+                  <a href="/searchcompanies.html" class="">
+                    Search Companies
+                  </a>
+                </li>
+                <li>
+                  <a href="/resources.html" class=""> Resources </a>
+                </li>
+              </ul>
+            </nav>
+            <!-- dropdown -->
+            <nav class="space-x-4">
+              <div class="dropdown">
+                <button
+                  onclick="myFunction()"
+                  class="dropbtn flex items-center"
+                >
+                  For Employers
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="ml-2 h-5 w-5 font-bold"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#">Dashboard</a>
+                  <a href="#">My Job</a>
+                  <a href="#">My Profile</a>
+                  <a href="#">My Account</a>
+                  <a href="#">Massage</a>
+                  <a href="#">Job applicant</a>
+                  <a href="#">Talent community</a>
+                  <a href="#">Post a new job </a>
+                  <a href="#">Logout</a>
+                </div>
+              </div>
+              <div class="signup">
+                <button
+                  onclick=""
+                  class="border border-[#008D96] rounded-full py-2 px-4"
+                >
+                  Signup/ Login
+              
+                </button>
+               
+              </div>
+            </nav>
+          </div>
+        </div>
+         </div>
+  
+        
+        </div>
+      </header>
+
+    
+<!-- about us-->
+<main class="max-w-[1200px] container mx-auto ">
+  <div class="container mx-auto text-left space-y-3 p-14 w-[606px] shadow-custom -mt-48 z-30">
+      <h4 class="text-3xl">Let's create your account</h4>
+      <p class="font-roboto">Already have an account? <a href="" class="text-[#008D96] underline">Sign in</a></p>
+
+     
+      <form action="" class="space-y-3">
+        <div class="">
+          <label for="" class="font-medium" >Company Name</label>
+          <input type="email" class="input-class">
+        </div>
+        <div>
+          <label for="" class="font-medium" >Business Email</label>
+          <input type="email" class="input-class">
+        </div>
+        <div>
+          <label for="" class="font-medium" >Password</label>
+          <input type="password" class="input-class">
+        </div>
+        <div>
+          <button class="bg-button rounded-lg text-[#FFFFFF] py-2 px-4 w-40">Continue</button>
+        </div>
+    </form>
+    <div>
+      
+        <p class="font-light">By creating an account, you agree to Indeed’s <a href="https://au.jora.com/cms/terms-of-service" class="underline">Terms of Service</a>, <a href="" class="underline">Cookie Policy</a> and <a href="https://au.jora.com/cms/privacy"  class="underline">Privacy Statement</a>. You consent to receiving marketing messages from Indeed and may opt out from receiving such messages by following the unsubscribe link in our messages, or as detailed in our terms.</p>
+    </div>
+  </div>
+</main>
+
+
+
+  
+</body>
+
+    <!-- js -->
+    <script src="/src/script.js"></script>
+</html>
