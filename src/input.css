@@ -60,7 +60,7 @@
       @apply text-sm
     }
     .input-class{
-      @apply w-full border border-solid border-[#000000] border-opacity-20 h-10 rounded-md
+      @apply w-full border border-solid border-[#000000] border-opacity-20 h-10 rounded-md p-2
     }
     .label-class{
       @apply text-sm font-light text-bodyText
