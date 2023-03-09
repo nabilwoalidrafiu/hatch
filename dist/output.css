@@ -722,6 +722,10 @@ p {
   top: 0.75rem;
 }
 
+.left-2 {
+  left: 0.5rem;
+}
+
 .-z-10 {
   z-index: -10;
 }
@@ -1103,6 +1107,10 @@ p {
 
 .w-56 {
   width: 14rem;
+}
+
+.w-44 {
+  width: 11rem;
 }
 
 .max-w-\[1200px\] {
@@ -1767,6 +1775,14 @@ p {
 
 .pl-12 {
   padding-left: 3rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
+}
+
+.pl-6 {
+  padding-left: 1.5rem;
 }
 
 .text-left {
