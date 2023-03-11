@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate-Single Page</title>
+      <!-- stylesheet -->
+      <link href="/dist/output.css" rel="stylesheet" />
+      <!-- js -->
+      <script src="script.js"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;500;600;700&family=Roboto&display=swap"
+        rel="stylesheet"
+      />
+</head>
+<body class="font-poppins">
+    <header class="py-4 shadow-custom">
+        <div class="container mx-auto">
+          <!-- navbar -->
+          <div
+            class="container mx-auto  flex max-w-[1200px] items-center justify-between space-x-8 font-roboto "
+          >
+            <!-- Logo -->
+            <div class="w-fit">
+              <a href="/src/index.html" class="w-fit">
+                <img src="/src/img/logo.png" alt="logo" srcset="" class="w-20" />
+              </a>
+            </div>
+            <div class="flex w-full items-center justify-between">
+              <nav class="ml-12">
+                <ul class="flex items-center justify-start space-x-8">
+                  <li>
+                    <a href="/searchjobs.html" class="font-normal">
+                      Search Jobs
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/searchcompanies.html" class="">
+                      Search Companies
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/resources.html" class=""> Resources </a>
+                  </li>
+                </ul>
+              </nav>
+              <!-- dropdown -->
+              <nav class="space-x-4">
+                <div class="dropdown">
+                  <button
+                    onclick="myFunction()"
+                    class="dropbtn flex items-center"
+                  >
+                    For Employers
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="ml-2 h-5 w-5 font-bold"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                      />
+                    </svg>
+                  </button>
+                  <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Dashboard</a>
+                    <a href="#">My Job</a>
+                    <a href="#">My Profile</a>
+                    <a href="#">My Account</a>
+                    <a href="#">Massage</a>
+                    <a href="#">Job applicant</a>
+                    <a href="#">Talent community</a>
+                    <a href="#">Post a new job </a>
+                    <a href="#">Logout</a>
+                  </div>
+                </div>
+                <div class="signup">
+                  <button
+                    onclick=""
+                    class="border border-[#008D96] rounded-full py-2 px-4"
+                  >
+                    Signup/ Login
+                
+                  </button>
+                 
+                </div>
+              </nav>
+            </div>
+          </div>
+  
+          
+        </div>
+      </header>
+      <!-- form -->
+    <main class="max-w-[1200px] container mx-auto my-10 pb-16">
+        <div class="flex justify-center items-start gap-4">
+          <div class="">
+            <div class="flex justify-between  items-center bg-[#FAFAFA] w-[800px] h-[220px] p-12">
+              <div class="flex flex-col justify-start  mb-8">
+                <img src="/src/img/signature.png" alt="" srcset="" class="w-[67px] h-[67ppx]">
+                <h6 class="text-lg">Jubayer Islam</h6>
+              </div>
+              <div>
+              <button class="bg-button rounded-xl text-white py-3 px-4 w-40">Send Message</button>
+
+              </div>
+            </div>
+            <div class="flex justify-start items-center gap-2 my-10">
+              <button class="bg-primary rounded-lg py-2 px-4 w-28 text-sm text-black">Details</button>
+              <button class="border border-black rounded-xl py-1.5 px-4 w-28 text-sm text-black">Resume</button>
+
+            </div>
+            <div class="space-y-6">
+              <div class="rounded-md border border-">
+                <p class="text-sm font-semibold bg-primary/25 py-2 px-2 rounded-md shadow-custom">Work Experience</p>
+                <p class="text-sm font-semibold py-2 px-2 border-b">Work Title : <span class="font-normal">Graphics Designer</span></p>
+                <p class="text-sm font-semibold py-2 px-2 border-b">Company Name : <span class="font-normal">Goggle</span></p>
+                <p class="text-sm font-semibold py-2 px-2 border-b">Start Date : <span class="font-normal">2010</span></p>
+                <p class="text-sm font-semibold py-2 px-2">End Date : <span class="font-normal">2013</span></p>
+              </div>
+              <div class="rounded-md border border-">
+                <p class="text-sm font-semibold bg-primary/25 py-2 px-2 rounded-md shadow-custom">Work Experience</p>
+                <p class="text-sm font-semibold py-2 px-2 border-b">Work Title : <span class="font-normal">Graphics Designer</span></p>
+                <p class="text-sm font-semibold py-2 px-2 border-b">Company Name : <span class="font-normal">Goggle</span></p>
+                <p class="text-sm font-semibold py-2 px-2 border-b">Start Date : <span class="font-normal">2010</span></p>
+                <p class="text-sm font-semibold py-2 px-2">End Date : <span class="font-normal">2017</span></p>
+              </div>
+              <div class="rounded-md border border-">
+                <p class="text-sm font-semibold bg-primary/25 py-2 px-2 rounded-md shadow-custom">Work Experience</p>
+                <p class="text-sm font-semibold py-2 px-2 border-b">Work Title : <span class="font-normal">Graphics Designer</span></p>
+                <p class="text-sm font-semibold py-2 px-2 border-b">Company Name : <span class="font-normal">Goggle</span></p>
+                <p class="text-sm font-semibold py-2 px-2 border-b">Start Date : <span class="font-normal">2017</span></p>
+                <p class="text-sm font-semibold py-2 px-2">End Date : <span class="font-normal">I currently  work here</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="p-10 bg-[#FAFAFA] space-y-5">
+            <h5>Candidate Information</h5>
+            <div class="space-y-1">
+              <p class="text-bodyText font-xs">I am looking for</p>
+              <p class="font-medium">Web Developer</p>
+            </div>
+            <div class="space-y-1">
+              <p class="text-bodyText font-xs">Email</p>
+              <p class="font-medium">joyerjoy56@gmail.com</p>
+            </div>
+            <div class="space-y-1">
+              <p class="text-bodyText font-xs">LinkedIn URL </p>
+              <p class="font-medium">https://www.linkedin.com/in/saimul
+                -islam-67370b194/</p>
+            </div>
+            <div class="space-y-1">
+              <p class="text-bodyText font-xs">Phone number</p>
+              <p class="font-medium">01711244963</p>
+            </div>
+            <div class="space-y-1">
+              <p class="text-bodyText font-xs">Location</p>
+              <p class="font-medium">Dhaka, Bamgladesh</p>
+            </div>
+            <div class="space-y-1">
+              <p class="text-bodyText font-xs">Saas experience</p>
+              <p class="font-medium">yes</p>
+            </div>
+            <div class="space-y-1">
+              <p class="text-bodyText font-xs">Salary expectation</p>
+              <p class="font-medium">$50k-$100k</p>
+            </div>
+            <div class="space-y-1">
+              <p class="text-bodyText font-xs">Skills</p>
+              <p class="font-medium uppercase">graphic design, UI/UX Design , digital marketing, web developer</p>
+            </div>
+          </div>
+        </div>
+       
+    </main>
+
+    <!-- footer -->
+    <footer class="">
+      <div
+        class="h-[23px] border border-bodyText border-opacity-10 bg-primary"
+      ></div>
+      <div
+        class="border border-t-0 border-bodyText border-opacity-25 pt-16 pb-6"
+      >
+        <div class="container mx-auto max-w-[1200px]">
+          <div class="flex items-start justify-between">
+            <div>
+              <img src="/src/img/logo.png" alt="" class="" />
+            </div>
+            <div>
+              <h3 class="footer-heading">Professionals</h3>
+              <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
+                <li>
+                  <a class="footer-body" href="">Join the SaaS network</a>
+                </li>
+                <li>
+                  <a class="footer-body" href="/searchjobs">Search jobs</a>
+                </li>
+                <li>
+                  <a class="footer-body" href="/searchcompanies"
+                    >Search Companies</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="footer-heading">Employers</h3>
+              <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
+                <li><a class="footer-body" href="">Post a Job</a></li>
+                <li>
+                  <a class="footer-body" href="/">Search the SaaS network</a>
+                </li>
+                <li><a class="footer-body" href="/pricing">Pricing</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="footer-heading">OpentoSaaS</h3>
+              <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
+                <li><a class="footer-body" href="/src/about.html">About</a></li>
+                <li>
+                  <a class="footer-body" href="/privacy">Private Policy</a>
+                </li>
+                <li>
+                  <a class="footer-body" href="/terms&conditions"
+                    >Terms and Conditions</a
+                  >
+                </li>
+                <li><a class="footer-body" href="/blog">Blog</a></li>
+                <li><a class="footer-body" href="/conbtact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-12 flex items-center justify-between">
+            <p class="text-sm font-normal text-bodyText">@2023 Seek</p>
+            <div
+              class="flex items-center justify-center space-x-4 md:justify-end"
+            >
+              <p class="text-sm font-normal text-bodyText">Follow us:</p>
+              <a href="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  class="footer-social-icon"
+                >
+                  <path
+                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                  />
+                </svg>
+              </a>
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  class="footer-social-icon"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                  />
+                </svg>
+              </a>
+              <a href="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  class="footer-social-icon"
+                >
+                  <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+                  />
+                </svg>
+              </a>
+              <a href="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="footer-social-icon"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
