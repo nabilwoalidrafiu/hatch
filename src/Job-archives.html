@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job- Archives</title>
+    <!-- stylesheet -->
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;500;600;700&family=Roboto&display=swap" rel="stylesheet">
+     <!-- js -->
+    <script src="/src/script.js"></script>
+</head>
+<body class="font-poppins">
+    <!-- herobanner -->
+    <header class="bg-primary h-[515px] relative z-10">
+        <div class="">
+          <!-- navbar -->
+         <div class=" bg-white bg-opacity-75 shadow-md  w-full relative z-30">
+          <div
+          class="container mx-auto max-w-[1200px] flex items-center justify-between space-x-8 font-roboto py-5 px-2"
+        >
+          <!-- Logo -->
+          <div class="w-fit">
+            <a href="/src/index.html" class="w-fit">
+              <img src="/src/img/logo.png" alt="logo" srcset="" class="w-20" />
+            </a>
+          </div>
+          <div class="flex w-full items-center justify-between">
+            <nav class="ml-12">
+              <ul class="flex items-center justify-start space-x-8">
+                <li>
+                  <a href="/searchjobs.html" class="font-normal">
+                    Search Jobs
+                  </a>
+                </li>
+                <li>
+                  <a href="/searchcompanies.html" class="">
+                    Search Companies
+                  </a>
+                </li>
+                <li>
+                  <a href="/resources.html" class=""> Resources </a>
+                </li>
+              </ul>
+            </nav>
+            <!-- dropdown -->
+            <nav class="space-x-4">
+              <div class="dropdown">
+                <button
+                  onclick="myFunction()"
+                  class="dropbtn flex items-center"
+                >
+                  For Employers
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="ml-2 h-5 w-5 font-bold"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#">Dashboard</a>
+                  <a href="#">My Job</a>
+                  <a href="#">My Profile</a>
+                  <a href="#">My Account</a>
+                  <a href="#">Massage</a>
+                  <a href="#">Job applicant</a>
+                  <a href="#">Talent community</a>
+                  <a href="#">Post a new job </a>
+                  <a href="#">Logout</a>
+                </div>
+              </div>
+              <div class="signup">
+                <button
+                  onclick=""
+                  class="border border-[#008D96] rounded-full py-2 px-4"
+                >
+                  Signup/ Login
+              
+                </button>
+               
+              </div>
+            </nav>
+          </div>
+        </div>
+         </div>
+  
+         <div class="flex items-center justify-start h-[470px]">
+          <div class="flex w-[1200px] items-center justify-center">
+            <div class="space-y-5">
+              <h1>
+                Join the <br>
+                SaaS network
+              </h1>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </header>
+
+      <main class="max-w-[1200px] container mx-auto my-12">
+        <!-- <div class="flex justify-end my-12">
+          <div class="flex  justify-between items-center w-[780px]">
+            <label for="" class="text-base font-medium">Showing 1-10 of 208 result</label>
+            <div class="space-x-5">
+              <label for="" class="text-base font-medium">Sort By</label>
+              <select name="" id="" class="rounded-xl border border-button px-7 py-1">
+                <option value="">Default</option>
+              </select>
+            </div>
+           </div>
+        </div> -->
+        <div class="flex justify-between items-start">
+          <div class=" shadow-custom  h-full w-[380px] py-7">
+            <form action="" class="w-full">
+              <div class="space-y-6 px-10">
+                <div class="space-y-5">
+                    <label for="" class="font-medium" required>Search Keyword</label>
+                    <input type="text" class="input-class shadow-custom border-0" placeholder="Search By Job Title Or Job ID">
+                </div>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center">
+                    <label for="" class="font-medium" required>Location:</label>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class=" w-5 h-5 text-bodyText stroke-2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>                    
+                  </div>
+                  <div>
+                    <input type="checkbox" name="" id="work" class="">
+                    <label for="work" class="text-sm text-bodyText font-light">Remote</label>
+                  </div>
+                  <select name="" id="" class="input-class shadow-custom border-0 font-medium text-sm text-bodyText">
+                    <option value="">Country</option>
+                  </select>
+                  <select name="" id="" class="input-class shadow-custom border-0 font-medium text-sm text-bodyText">
+                    <option value="">State</option>
+                  </select>
+                  <select name="" id="" class="input-class shadow-custom border-0 font-medium text-sm text-bodyText">
+                    <option value="">City</option>
+                  </select>
+                </div>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center">
+                    <label for="" class="font-medium" required>Industry</label>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class=" w-5 h-5 text-bodyText stroke-2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </div>
+                  <select name="" id="" class="input-class shadow-custom border-0 my-4 font-medium text-sm text-bodyText">
+                    <option value="" class="font-medium text-sm text-bodyText">category</option>
+                  </select>
+                </div>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center">
+                    <label for="" class="font-medium" required>Job Category</label>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class=" w-5 h-5 text-bodyText stroke-2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </div>
+                  <input type="text" class="input-class shadow-custom border-0" placeholder="Job Category">
+                </div>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center">
+                    <label for="" class="font-medium" required>Job Type</label>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class=" w-5 h-5 text-bodyText stroke-2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </div>
+                  <div class="space-y-3">
+                    <div class="flex items-center">
+                      <input type="radio" id="baseSalary1" name="baseSalary" class="" value="1">
+                      <label for="baseSalary1" class="flex items-center label-class ml-2">
+                        Full time (29)
+                      </label>
+                    </div>
+                    <div class="flex items-center">
+                      <input type="radio" id="baseSalary2" name="baseSalary" class="" value="1">
+                      <label for="baseSalary2" class="flex items-center label-class ml-2">
+                        Part time (0)
+                      </label>
+                    </div>
+                    <div class="flex items-center">
+                      <input type="radio" id="baseSalary3" name="baseSalary" class="" value="1">
+                      <label for="baseSalary3" class="flex items-center label-class ml-2">
+                        Contract (0)
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center">
+                    <label for="" class="font-medium" required>Salary</label>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class=" w-5 h-5 text-bodyText stroke-2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </div>
+                  <div class="space-y-3">
+                    <div class="flex items-center">
+                      <input type="radio" id="baseSalary1" name="baseSalary" class="" value="1">
+                      <label for="baseSalary1" class="flex items-center label-class ml-2">
+                         $60k - $90k
+                      </label>
+                    </div>
+                    
+                    <div class="flex items-center">
+                      <input type="radio" id="baseSalary2" name="baseSalary" class="" value="1">
+                      <label for="baseSalary2" class="flex items-center label-class ml-2">
+                        $90k - $120k
+                      </label>
+                    </div>
+                    <div class="flex items-center">
+                      <input type="radio" id="baseSalary3" name="baseSalary" class="" value="1">
+                      <label for="baseSalary3" class="flex items-center label-class ml-2">
+                        $120k - $150k
+                      </label>
+                    </div>
+                    <div class="flex items-center">
+                      <input type="radio" id="baseSalary4" name="baseSalary" class="" value="1">
+                      <label for="baseSalary4" class="flex items-center label-class ml-2">
+                        $150k - $180k
+                      </label>
+                    </div>
+                    <div class="flex items-center">
+                      <input type="radio" id="baseSalary5" name="baseSalary" class="" value="1">
+                      <label for="baseSalary5" class="flex items-center label-class ml-2">
+                        $180k - $210k
+                      </label>
+                    </div>
+                    <div class="flex items-center">
+                      <input type="radio" id="baseSalary6" name="baseSalary" class="" value="1">
+                      <label for="baseSalary6" class="flex items-center label-class ml-2">
+                        $250k
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="p-8">
+                <button class="btn-button w-full">Show Jobs</button>
+              </div>
+          </form>
+          </div>
+          
+            <div class=" pl-8  flex flex-col space-y-3">
+              <div class="flex justify-end  mb-6">
+                <div class="flex  justify-between items-end w-[780px]">
+                  <div class="flex flex-col space-y-2">
+                    <label for="" class="text-base font-medium">Showing 1-10 of 208 result</label>
+                    <button class="btn-button flex justify-center items-center w-60">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 rounded mr-2 stroke-2 text-white ">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                      </svg>
+                      RECEIVE JOBS ALERTS</button>
+                  </div>
+                  <div class="space-x-5">
+                    <label for="" class="text-base font-medium">Sort By</label>
+                    <select name="" id="" class="rounded-xl border border-button px-12 py-1 w-40">
+                      <option value="">Date</option>
+                    </select>
+                  </div>
+                 </div>
+              </div>
+             <div class="space-y-8 w-[780px]">
+              <div class="flex justify-center items-center w-full h-56 rounded-xl shadow-custom px-8 py-14 gap-9">
+                <div class="flex justify-start items-start gap-2">
+                  <div class="w-[82px] h-[73px] bg-[#EBEBEB] rounded-xl">
+                  </div>
+                  <div class="w-[450px]">
+                    <div class="space-y-1 border-b border-[#A7A7A7] px-4 pb-4 mb-1">
+                      <h4 class="text-base text-bodyText">Associate Lead Product Designer</h4>
+                      <p class="text-sm font-medium text-bodyText">Current Company: Innovapptive</p>
+                      <p class="text-xs font-light text-bodyText">Current Company: Innovapptive</p>
+                    </div>
+                    <div class="flex">
+                      <div class="border-r border-[#A7A7A7] w-40 py-1 pl-8 space-y-3">
+                        <p class="text-xs text-bodyText">Total Experience</p>
+                        <p class="text-xs text-button">7</p>
+                      </div>
+                      <div class=" border-r border-[#A7A7A7] w-40 py-1 pl-8 space-y-3">
+                        <p class="text-xs text-bodyText">Sass experience </p>
+                        <p class="text-xs text-button">Yes</p>
+                      </div>
+                      <div class="w-40 py-1 pl-8">
+                        <p class="text-xs text-bodyText">Expected Annual Salary </p>
+                        <p class="text-xs text-button">$60k - $90k</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn-secondary text-xs">View Profile</button>
+              </div>
+              <div class="flex justify-center items-center w-full h-56 rounded-xl shadow-custom px-8 py-14 gap-9">
+                <div class="flex justify-start items-start gap-2">
+                  <div class="w-[82px] h-[73px] bg-[#EBEBEB] rounded-xl">
+                  </div>
+                  <div class="w-[450px]">
+                    <div class="space-y-1 border-b border-[#A7A7A7] px-4 pb-4 mb-1">
+                      <h4 class="text-base text-bodyText">Associate Lead Product Designer</h4>
+                      <p class="text-sm font-medium text-bodyText">Current Company: Innovapptive</p>
+                      <p class="text-xs font-light text-bodyText">Current Company: Innovapptive</p>
+                    </div>
+                    <div class="flex">
+                      <div class="border-r border-[#A7A7A7] w-40 py-1 pl-8 space-y-3">
+                        <p class="text-xs text-bodyText">Total Experience</p>
+                        <p class="text-xs text-button">7</p>
+                      </div>
+                      <div class=" border-r border-[#A7A7A7] w-40 py-1 pl-8 space-y-3">
+                        <p class="text-xs text-bodyText">Sass experience </p>
+                        <p class="text-xs text-button">Yes</p>
+                      </div>
+                      <div class="w-40 py-1 pl-8">
+                        <p class="text-xs text-bodyText">Expected Annual Salary </p>
+                        <p class="text-xs text-button">$60k - $90k</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn-secondary text-xs">View Profile</button>
+              </div>
+              <div class="flex justify-center items-center w-full h-56 rounded-xl shadow-custom px-8 py-14 gap-9">
+                <div class="flex justify-start items-start gap-2">
+                  <div class="w-[82px] h-[73px] bg-[#EBEBEB] rounded-xl">
+                  </div>
+                  <div class="w-[450px]">
+                    <div class="space-y-1 border-b border-[#A7A7A7] px-4 pb-4 mb-1">
+                      <h4 class="text-base text-bodyText">Associate Lead Product Designer</h4>
+                      <p class="text-sm font-medium text-bodyText">Current Company: Innovapptive</p>
+                      <p class="text-xs font-light text-bodyText">Current Company: Innovapptive</p>
+                    </div>
+                    <div class="flex">
+                      <div class="border-r border-[#A7A7A7] w-40 py-1 pl-8 space-y-3">
+                        <p class="text-xs text-bodyText">Total Experience</p>
+                        <p class="text-xs text-button">7</p>
+                      </div>
+                      <div class=" border-r border-[#A7A7A7] w-40 py-1 pl-8 space-y-3">
+                        <p class="text-xs text-bodyText">Sass experience </p>
+                        <p class="text-xs text-button">Yes</p>
+                      </div>
+                      <div class="w-40 py-1 pl-8">
+                        <p class="text-xs text-bodyText">Expected Annual Salary </p>
+                        <p class="text-xs text-button">$60k - $90k</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn-secondary text-xs">View Profile</button>
+              </div>
+              <div class="flex justify-center items-center w-full h-56 rounded-xl shadow-custom px-8 py-14 gap-9">
+                <div class="flex justify-start items-start gap-2">
+                  <div class="w-[82px] h-[73px] bg-[#EBEBEB] rounded-xl">
+                  </div>
+                  <div class="w-[450px]">
+                    <div class="space-y-1 border-b border-[#A7A7A7] px-4 pb-4 mb-1">
+                      <h4 class="text-base text-bodyText">Associate Lead Product Designer</h4>
+                      <p class="text-sm font-medium text-bodyText">Current Company: Innovapptive</p>
+                      <p class="text-xs font-light text-bodyText">Current Company: Innovapptive</p>
+                    </div>
+                    <div class="flex">
+                      <div class="border-r border-[#A7A7A7] w-40 py-1 pl-8 space-y-3">
+                        <p class="text-xs text-bodyText">Total Experience</p>
+                        <p class="text-xs text-button">7</p>
+                      </div>
+                      <div class=" border-r border-[#A7A7A7] w-40 py-1 pl-8 space-y-3">
+                        <p class="text-xs text-bodyText">Sass experience </p>
+                        <p class="text-xs text-button">Yes</p>
+                      </div>
+                      <div class="w-40 py-1 pl-8">
+                        <p class="text-xs text-bodyText">Expected Annual Salary </p>
+                        <p class="text-xs text-button">$60k - $90k</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn-secondary text-xs">View Profile</button>
+              </div>
+              <div class="flex justify-center items-center w-full h-56 rounded-xl shadow-custom px-8 py-14 gap-9">
+                <div class="flex justify-start items-start gap-2">
+                  <div class="w-[82px] h-[73px] bg-[#EBEBEB] rounded-xl">
+                  </div>
+                  <div class="w-[450px]">
+                    <div class="space-y-1 border-b border-[#A7A7A7] px-4 pb-4 mb-1">
+                      <h4 class="text-base text-bodyText">Associate Lead Product Designer</h4>
+                      <p class="text-sm font-medium text-bodyText">Current Company: Innovapptive</p>
+                      <p class="text-xs font-light text-bodyText">Current Company: Innovapptive</p>
+                    </div>
+                    <div class="flex">
+                      <div class="border-r border-[#A7A7A7] w-40 py-1 pl-8 space-y-3">
+                        <p class="text-xs text-bodyText">Total Experience</p>
+                        <p class="text-xs text-button">7</p>
+                      </div>
+                      <div class=" border-r border-[#A7A7A7] w-40 py-1 pl-8 space-y-3">
+                        <p class="text-xs text-bodyText">Sass experience </p>
+                        <p class="text-xs text-button">Yes</p>
+                      </div>
+                      <div class="w-40 py-1 pl-8">
+                        <p class="text-xs text-bodyText">Expected Annual Salary </p>
+                        <p class="text-xs text-button">$60k - $90k</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn-secondary text-xs">View Profile</button>
+              </div>
+             </div>
+            </div>
+           
+        </div>
+       
+    </main>
+    
+  <!-- footer -->
+  <footer class="">
+    <div
+      class="h-[23px] border border-bodyText border-opacity-10 bg-primary"
+    ></div>
+    <div
+      class="border border-t-0 border-bodyText border-opacity-25 pt-16 pb-6"
+    >
+      <div class="container mx-auto max-w-[1200px]">
+        <div class="flex items-start justify-between">
+          <div>
+            <img src="/src/img/logo.png" alt="" class="" />
+          </div>
+          <div>
+            <h3 class="footer-heading">Professionals</h3>
+            <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
+              <li>
+                <a class="footer-body" href="">Join the SaaS network</a>
+              </li>
+              <li>
+                <a class="footer-body" href="/searchjobs">Search jobs</a>
+              </li>
+              <li>
+                <a class="footer-body" href="/searchcompanies"
+                  >Search Companies</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-heading">Employers</h3>
+            <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
+              <li><a class="footer-body" href="">Post a Job</a></li>
+              <li>
+                <a class="footer-body" href="/">Search the SaaS network</a>
+              </li>
+              <li><a class="footer-body" href="/pricing">Pricing</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-heading">OpentoSaaS</h3>
+            <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
+              <li><a class="footer-body" href="/src/about.html">About</a></li>
+              <li>
+                <a class="footer-body" href="/privacy">Private Policy</a>
+              </li>
+              <li>
+                <a class="footer-body" href="/terms&conditions"
+                  >Terms and Conditions</a
+                >
+              </li>
+              <li><a class="footer-body" href="/blog">Blog</a></li>
+              <li><a class="footer-body" href="/conbtact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-12 flex items-center justify-between">
+          <p class="text-sm font-normal text-bodyText">@2023 Seek</p>
+          <div
+            class="flex items-center justify-center space-x-4 md:justify-end"
+          >
+            <p class="text-sm font-normal text-bodyText">Follow us:</p>
+            <a href="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                class="footer-social-icon"
+              >
+                <path
+                  d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                />
+              </svg>
+            </a>
+            <a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                class="footer-social-icon"
+              >
+                <path
+                  fill="currentColor"
+                  d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                />
+              </svg>
+            </a>
+            <a href="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                class="footer-social-icon"
+              >
+                <path
+                  d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+                />
+              </svg>
+            </a>
+            <a href="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                class="footer-social-icon"
+              >
+                <path
+                  fill="currentColor"
+                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  
+</body>
+
+</html>

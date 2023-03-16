@@ -76,6 +76,9 @@
 .btn-button{
   @apply bg-button rounded-xl text-white py-2 px-4
 }
+.btn-buttonlg{
+  @apply bg-button rounded-lg text-white py-2
+}
 .btn-buttonLight{
   @apply bg-button/30 rounded-xl 
 }
@@ -84,6 +87,9 @@
 }
 .btn-white{
   @apply rounded-xl border border-solid 
+}
+.btn-whitelg{
+  @apply rounded-lg border border-solid py-2
 }
 
    

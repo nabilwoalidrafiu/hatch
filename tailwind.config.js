@@ -17,8 +17,8 @@ module.exports = {
         button : '#008D96',
         gradient: '#CDE5E0',
         jobs: "#D8E7FF",
-        iconBg: '#D9D9D9'
-        
+        iconBg: '#D9D9D9',
+        lightText: '#777777'
       }
     },
    
