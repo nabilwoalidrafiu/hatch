@@ -874,6 +874,11 @@ p {
   margin-bottom: 2rem;
 }
 
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .-mt-4 {
   margin-top: -1rem;
 }
@@ -1885,6 +1890,11 @@ p {
   stroke-width: 2;
 }
 
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1940,6 +1950,10 @@ p {
 
 .p-8 {
   padding: 2rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .px-1 {
@@ -2243,6 +2257,10 @@ p {
   line-height: 1rem;
 }
 
+.text-\[24px\] {
+  font-size: 24px;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -2361,6 +2379,12 @@ p {
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -2678,6 +2702,18 @@ input[type=date]:focus::-webkit-datetime-edit {
     width: 100%;
   }
 
+  .md\:w-96 {
+    width: 24rem;
+  }
+
+  .md\:w-5\/12 {
+    width: 41.666667%;
+  }
+
+  .md\:w-\[606px\] {
+    width: 606px;
+  }
+
   .md\:max-w-\[767px\] {
     max-width: 767px;
   }
@@ -2756,6 +2792,10 @@ input[type=date]:focus::-webkit-datetime-edit {
     margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
   }
 
+  .md\:p-14 {
+    padding: 3.5rem;
+  }
+
   .md\:px-2 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -2788,6 +2828,11 @@ input[type=date]:focus::-webkit-datetime-edit {
     line-height: 1.5rem;
   }
 
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
   .md\:font-normal {
     font-weight: 400;
   }
@@ -2812,6 +2857,14 @@ input[type=date]:focus::-webkit-datetime-edit {
 
   .lg\:w-\[668px\] {
     width: 668px;
+  }
+
+  .lg\:w-5\/12 {
+    width: 41.666667%;
+  }
+
+  .lg\:w-7\/12 {
+    width: 58.333333%;
   }
 
   .lg\:max-w-\[1000px\] {
