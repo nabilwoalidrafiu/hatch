@@ -983,6 +983,10 @@ p {
   margin-top: 15rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -2649,6 +2653,10 @@ input[type=date]:focus::-webkit-datetime-edit {
     margin-top: 8rem;
   }
 
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+
   .md\:block {
     display: block;
   }
@@ -2817,6 +2825,10 @@ input[type=date]:focus::-webkit-datetime-edit {
 
   .md\:pr-12 {
     padding-right: 3rem;
+  }
+
+  .md\:pt-0 {
+    padding-top: 0px;
   }
 
   .md\:text-left {
