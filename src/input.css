@@ -31,7 +31,7 @@
         @apply text-[28px] md:text-3xl lg:text-4xl font-semibold text-h2Color
     }
     h3{
-      @apply text-[32px] font-normal text-h3Color
+      @apply text-[26px] md:text-[32px] font-normal text-h3Color
     }
     h4{
         @apply text-[19px] md:text-xl lg:text-2xl font-semibold
@@ -69,7 +69,7 @@
     }
     
     .accordion-title{
-      @apply flex justify-between items-center w-full cursor-pointer p-4 text-sm
+      @apply flex justify-between items-center w-full cursor-pointer p-4 text-sm text-left
     }
     .accordion-content{
       @apply px-4 text-sm  
