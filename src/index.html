@@ -7,8 +7,6 @@
     <title>Hatch</title>
     <!-- stylesheet -->
     <link href="/dist/output.css" rel="stylesheet" />
-    <!-- js -->
-    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,44 +15,44 @@
     />
   </head>
   <body class="font-poppins">
-    <!-- herobanner -->
-    <header class="relative z-0 bg-primary pt-8">
-      <div class="container mx-auto">
-        <!-- navbar -->
-        <div
-          class="container mx-auto flex max-w-[1200px] items-center justify-between space-x-8 font-roboto"
-        >
+    <!--   overflow-y-scroll no-scrollbar -->
+    <header id="header" class="bg-primary relative">
+        <!-- nav menu -->
+        <div id="nav_menu" class="nav_menu container mx-auto pt-8 w-11/12 md:max-w-[767px] lg:max-w-[1000px] xl:max-w-[1200px] flex flex-col md:flex-row items-center justify-between md:space-x-8 font-roboto z-0">
           <!-- Logo -->
-          <div class="w-fit">
+          <div class="w-full md:w-fit flex justify-between items-center">
             <a href="/src/index.html" class="w-fit">
               <img src="/src/img/logo.png" alt="logo" srcset="" class="w-20" />
             </a>
+            <button  class="toggle_btn flex md:hidden">
+              <img src="/src/img/logo.png" alt="" class="hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="menu_btn w-8 h-6 stroke-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+              </svg>
+            </button>
           </div>
-          <div class="flex w-full items-center justify-between">
-            <nav class="ml-12">
-              <ul class="flex items-center justify-start space-x-8">
+          <div id="" class=" hidden md:flex flex-col md:flex-row items-center justify-center md:justify-between h-screen md:h-auto space-y-8 md:space-y-0 w-full">
+            <nav class="lg:ml-12">
+              <ul class="flex flex-col md:flex-row items-center justify-start space-y-8 md:space-y-0 md:space-x-2 lg:space-x-8">
                 <li>
-                  <a href="/searchjobs.html" class="font-normal">
+                  <a href="/searchjobs.html" class="text-[22px] md:text-base font-medium md:font-normal">
                     Search Jobs
                   </a>
                 </li>
                 <li>
-                  <a href="/searchcompanies.html" class="">
+                  <a href="/searchcompanies.html" class="text-[22px] md:text-base font-medium md:font-normal">
                     Search Companies
                   </a>
                 </li>
                 <li>
-                  <a href="/resources.html" class=""> Resources </a>
+                  <a href="/resources.html" class="text-[22px] md:text-base font-medium md:font-normal"> Resources </a>
                 </li>
               </ul>
             </nav>
             <!-- dropdown -->
-            <nav class="space-x-4">
+            <nav class="md:space-x-2 lg:space-x-8 flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0">
               <div class="dropdown">
-                <button
-                  onclick="myFunction()"
-                  class="dropbtn flex items-center"
-                >
+                <button  class="forCandidate dropbtn flex items-center text-[22px] md:text-base font-medium md:font-normal">
                   For Candidate
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -71,22 +69,22 @@
                     />
                   </svg>
                 </button>
-                <div id="myDropdown" class="dropdown-content">
-                  <a href="#">Dashboard</a>
-                  <a href="#">My Job</a>
-                  <a href="#">My Profile</a>
-                  <a href="#">My Account</a>
-                  <a href="#">Massage</a>
+                <div  class="candidateDropdown dropdown-content">
+                  <a href="/src/candidate-myprofile.html">Dashboard</a>
+                  <a href="">My Job</a>
+                  <a href="/src/candidate-myprofile.html">My Profile</a>
+                  <a href="/src/candidate-myaccount.html">My Account</a>
+                  <a href="/src/candidate-messages.html">Massage</a>
+                  <a href="/src/candidate-myapplication.html">My application</a>
                   <a href="#">Job applicant</a>
                   <a href="#">Talent community</a>
                   <a href="#">Post a new job </a>
+                  <a href="#">Subscription</a>
                   <a href="#">Logout</a>
                 </div>
               </div>
               <div class="dropdown">
-                <button
-                  onclick="myFunction()"
-                  class="dropbtn flex items-center"
+                <button class="forEmployer dropbtn flex items-center text-[22px] md:text-base font-medium md:font-normal"
                 >
                   For Employers
                   <svg
@@ -104,26 +102,132 @@
                     />
                   </svg>
                 </button>
-                <div id="myDropdown" class="dropdown-content">
-                  <a href="#">Dashboard</a>
-                  <a href="#">My Job</a>
-                  <a href="#">My Profile</a>
-                  <a href="#">My Account</a>
-                  <a href="#">Massage</a>
-                  <a href="#">Job applicant</a>
-                  <a href="#">Talent community</a>
-                  <a href="#">Post a new job </a>
+                <div class="employerDropdown dropdown-content">
+                  <a href="/src/employer-myprofile.html">Dashboard</a>
+                  <a href="/src/employer-myjob.html">My Job</a>
+                  <a href="/src/employer-myprofile.html">My Profile</a>
+                  <a href="/src/employer-myaccount.html">My Account</a>
+                  <a href="/src/employer-messages.html">Massage</a>
+                  <a href="/src/employer-myapplication.html">My application</a>
+                  <a href="/src/employer-jobapplicants.html">Job applicant</a>
+                  <a href="/src/employer-talentcommunity.html">Talent community</a>
+                  <a href="/src/employer-jobpostform.html">Post a new job </a>
+                  <a href="/src/employer-subscription.html">Subscription</a>
                   <a href="#">Logout</a>
                 </div>
               </div>
             </nav>
           </div>
+         
         </div>
-
-        <div class="flex items-center justify-center">
-          <div class="flex w-[1200px] items-center justify-center">
-            <div class="space-y-5">
-              <h1>
+        <!-- hamburger menu -->
+        <div id="menu_bar" class="fixed top-0 left-0 bottom-0 menu_bar block md:hidden z-10 w-full bg-white float-right overflow-y-auto">
+          <div class="container mx-auto pt-8 w-11/12 md:w-fit flex justify-between items-center ">
+            <a href="/src/index.html" class="w-fit">
+              <img src="/src/img/logo.png" alt="logo" srcset="" class="w-20" />
+            </a>
+            <button  class="toggle_btn flex md:hidden">
+              <img src="/src/img/logo.png" alt="" class="hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="cross_btn w-8 h-6 stroke-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <nav>
+            <ul class="flex flex-col bg-white items-center justify-center text-center space-y-4 w-full h-screen">
+              <li>
+                <a href="/searchjobs.html" class="text-[22px] font-medium ">
+                  Search Jobs
+                </a>
+              </li>
+              <li>
+                <a href="/searchcompanies.html" class="text-[22px] font-medium ">
+                  Search Companies
+                </a>
+              </li>
+              <li>
+                <a href="/resources.html" class="text-[22px] font-medium "> Resources </a>
+              </li>
+              <li>
+                <div class="dropdown">
+                  <button  class="forCandidate dropbtn flex items-center text-[22px] md:text-base font-medium md:font-normal">
+                    For Candidate
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="ml-2 h-5 w-5 font-bold"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                      />
+                    </svg>
+                  </button>
+                  <div  class="candidateDropdown dropdown-content">
+                    <a href="/src/candidate-myprofile.html">Dashboard</a>
+                    <a href="">My Job</a>
+                    <a href="/src/candidate-myprofile.html">My Profile</a>
+                    <a href="/src/candidate-myaccount.html">My Account</a>
+                    <a href="/src/candidate-messages.html">Massage</a>
+                    <a href="/src/candidate-myapplication.html">My application</a>
+                    <a href="#">Job applicant</a>
+                    <a href="#">Talent community</a>
+                    <a href="#">Post a new job </a>
+                    <a href="#">Subscription</a>
+                    <a href="#">Logout</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="dropdown">
+                  <button class="forEmployer dropbtn flex items-center text-[22px] md:text-base font-medium md:font-normal"
+                  >
+                    For Employers
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="ml-2 h-5 w-5 font-bold"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                      />
+                    </svg>
+                  </button>
+                  <div class="employerDropdown dropdown-content">
+                    <a href="/src/employer-myprofile.html">Dashboard</a>
+                    <a href="/src/employer-myjob.html">My Job</a>
+                    <a href="/src/employer-myprofile.html">My Profile</a>
+                    <a href="/src/employer-myaccount.html">My Account</a>
+                    <a href="/src/employer-messages.html">Massage</a>
+                    <a href="/src/employer-myapplication.html">My application</a>
+                    <a href="/src/employer-jobapplicants.html">Job applicant</a>
+                    <a href="/src/employer-talentcommunity.html">Talent community</a>
+                    <a href="/src/employer-jobpostform.html">Post a new job </a>
+                    <a href="/src/employer-subscription.html">Subscription</a>
+                    <a href="#">Logout</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+      
+    <!-- herobanner -->
+       <section class="relative z-0 bg-primary">
+        <div class="container mx-auto w-11/12 md:max-w-[767px] lg:max-w-[1000px] xl:max-w-[1200px] flex items-center justify-center">
+          <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="space-y-3 md:space-y-5 text-center md:text-left">
+              <h1 class="">
                 Find your <br />
                 next SaaS role
               </h1>
@@ -138,311 +242,288 @@
                 </span>
               </p>
             </div>
-            <div class="w-[668px] h-[470px]">
-              <img src="/src/img/herobanner.png" alt=""  class="w-full h-full"/>
+            <div class="w-[320px] sm:w-[490px] lg:w-[668px]  md:shrink-0">
+              <img src="/src/img/herobanner.png" alt=""  class="w-full h-full object-contain"/>
             </div>
-            <div class="absolute -bottom-12 z-10 w-fit">
-              <div
-                class="shadow-custom flex w-[1200px] items-center justify-center gap-4 rounded-xl bg-white py-8 px-4"
-              >
-                <div
-                  class="rounded-full border border-solid border-bodyText px-12 py-2 text-center"
-                >
-                  <select name="" id="" class="bg-white">
-                    <option selected class="text-black bg-white">
-                      I am looking for
-                    </option>
-                    <option class="text-black">I am looking for</option>
-                  </select>
+            
+          </div>
+         
+        </div>
+        <div class="z-10 -mt-4 md:-mt-14 absolute w-full">
+          <div class=" w-11/12 md:w-[768px] lg:w-[1000px] xl:w-[1200px] shadow-custom flex flex-col md:flex-row items-center justify-center gap-2 lg:gap-4 rounded-xl bg-white py-8 px-4 container mx-auto">
+            <div class="rounded-full border border-solid border-bodyText px-2 lg:px-12 py-2 text-center">
+              <select name="" id="" class="bg-white">
+                <option selected class="text-black bg-white">
+                  I am looking for
+                </option>
+                <option class="text-black">I am looking for</option>
+              </select>
+            </div>
+            <div class="rounded-full border border-solid border-bodyText px-2 lg:px-12 py-2 text-center">
+              <select name="" id="" class="bg-white">
+                <option selected>Choose job category</option>
+              </select>
+            </div>
+            <div class="rounded-full border border-solid border-bodyText px-2 xl:px-12 py-2 text-center">
+              <select name="" id="" class="bg-white">
+                Choose Location
+                <option selected>Choose Location</option>
+              </select>
+            </div>
+            <div class="">
+              <button class="rounded-full bg-button px-4 lg:px-16 py-3 text-center text-white">
+                Show Jobs
+              </button>
+            </div>
+          </div>
+        </div>
+       </section>
+       
+       
+       
+    <main class="w-11/12 md:max-w-[767px] lg:max-w-[1000px] xl:max-w-[1200px] container mx-auto">
+          <!-- categories -->
+          <section class="mt-60 md:mt-32">
+            <div class="space-y-6 lg:text-center py-10 lg:p-0">
+              <h2 class="text-center">Start your career with work you’ll love</h2>
+              <div class="w-3/4 md:w-full flex flex-col md:flex-row items-start justify-between gap-4  mx-auto">
+                <div class="flex w-full md:w-1/3 flex-col items-center justify-center gap-1 md:gap-3">
+                  <img src="/src/img/category1.png" alt="" />
+                  <div class="text-center space-y-1 md:space-y-3">
+                    <h4>High-impact roles</h4>
+                    <p class="">
+                      Find roles with high-growth teams where you can make an impact.
+                    </p>
+                  </div>
                 </div>
-                <div
-                  class="rounded-full border border-solid border-bodyText px-12 py-2 text-center"
-                >
-                  <select name="" id="" class="bg-white">
-                    <option selected>Choose job category</option>
-                  </select>
+                <div class="flex w-full md:w-1/3 flex-col items-center justify-center gap-1 md:gap-3">
+                  <img src="/src/img/category2.png" alt="" />
+                  <div class="text-center space-y-1 md:space-y-3">
+                    <h4>Meet your matches</h4>
+                    <p class="">
+                      Match with top teams based on your unique skills and values.
+                    </p>
+                  </div>
                 </div>
-                <div
-                  class="rounded-full border border-solid border-bodyText px-12 py-2 text-center"
-                >
-                  <select name="" id="" class="bg-white">
-                    Choose Location
-                    <option selected>Choose Location</option>
-                  </select>
+                <div class="flex w-full md:w-1/3 flex-col items-center justify-center gap-1 md:gap-3">
+                  <img src="/src/img/category3.png" alt="" />
+                  <div class="text-center space-y-1 md:space-y-3">
+                    <h4>Stand out</h4>
+                    <p class="">
+                      Show your motivation with an intro video and Skill Snapshot.
+                    </p>
+                  </div>
                 </div>
-                <div class="">
-                  <button
-                    class="rounded-full bg-button px-16 py-2 text-center text-white"
-                  >
-                    Show Jobs
+              </div>
+              <div class="text-center">
+                <button class="rounded-full border border-solid border-bodyText px-4 py-2 text-center font-roboto">
+                  How hatch work
+                </button>
+              </div>
+            </div>
+          </section>
+          <!-- work carousel -->
+          <section class="mt-12 md:mt-20">
+            <div class="space-y-14">
+              <div class="flex items-center justify-center">
+                <h2 class="md:pr-12 text-center">Work at these companies</h2>
+                <div class="ml-4 md:ml-12 flex items-center justify-center space-x-5">
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 rounded border border-solid border-bodyText stroke-2 p-0.5 font-bold">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
+                  </svg>
+                  </button>
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 rounded border border-solid border-bodyText stroke-2 p-0.5 font-bold">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
+                  </svg>
                   </button>
                 </div>
               </div>
+              <div class="flex items-center justify-between ">
+                <div class="shadow-custom w-64 space-y-5 rounded-md py-4 px-6">
+                  <div class="flex items-center justify-start space-x-3.5 pt-3">
+                    <img src="/src/img/work1.png" alt="" />
+                    <p class="font-normal">City of Melbourne</p>
+                  </div>
+                  <p class="text-sm">
+                    Lorem Ipsum is simply dummy text of the industry.
+                  </p>
+                  <p class="w-fit rounded-full bg-jobs px-4 py-2 font-inter text-xs">
+                    27 jobs
+                  </p>
+                </div>
+                <div class="shadow-custom w-64 space-y-5 rounded-md py-4 px-6">
+                  <div class="flex items-center justify-start space-x-3.5 pt-3">
+                    <img src="/src/img/work2.png" alt="" />
+                    <p class="font-normal">Lovisa</p>
+                  </div>
+                  <p class="text-sm">
+                    Lorem Ipsum is simply dummy text of the industry.
+                  </p>
+                  <p class="w-fit rounded-full bg-jobs px-4 py-2 font-inter text-xs">
+                    17 jobs
+                  </p>
+                </div>
+                <div class="shadow-custom w-64 space-y-5 rounded-md py-4 px-6">
+                  <div class="flex items-center justify-start space-x-3.5 pt-3">
+                    <img src="/src/img/work3.png" alt="" />
+                    <p class="font-normal">Pexa</p>
+                  </div>
+                  <p class="text-sm">
+                    Lorem Ipsum is simply dummy text of the industry.
+                  </p>
+                  <p class="w-fit rounded-full bg-jobs px-4 py-2 font-inter text-xs">
+                    35 jobs
+                  </p>
+                </div>
+                <div class="shadow-custom w-64 space-y-5 rounded-md py-4 px-6">
+                  <div class="flex items-center justify-start space-x-3.5 pt-3">
+                    <img src="/src/img/work4.png" alt="" />
+                    <p class="font-normal">Auto Parts Group</p>
+                  </div>
+                  <p class="text-sm">
+                    Lorem Ipsum is simply dummy text of the industry.
+                  </p>
+                  <p class="w-fit rounded-full bg-jobs px-4 py-2 font-inter text-xs">
+                    42 jobs
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </header>
+          </section>
+          <!-- categories -->
+          <section class="mt-32">
+            <div class="space-y-6 lg:text-center py-10 lg:p-0">
+              <h2 class="text-center">Start your career with work you’ll love</h2>
+              <div class="w-3/4 md:w-full flex flex-col md:flex-row items-start justify-between gap-4  mx-auto">
+                <div class="flex w-full md:w-1/3 flex-col items-center justify-center gap-1 md:gap-3">
+                  <img src="/src/img/category1.png" alt="" />
+                  <div class="text-center space-y-1 md:space-y-3">
+                    <h4>High-impact roles</h4>
+                    <p class="">
+                      Find roles with high-growth teams where you can make an impact.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex w-full md:w-1/3 flex-col items-center justify-center gap-1 md:gap-3">
+                  <img src="/src/img/category2.png" alt="" />
+                  <div class="text-center space-y-1 md:space-y-3">
+                    <h4>Meet your matches</h4>
+                    <p class="">
+                      Match with top teams based on your unique skills and values.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex w-full md:w-1/3 flex-col items-center justify-center gap-1 md:gap-3">
+                  <img src="/src/img/category3.png" alt="" />
+                  <div class="text-center space-y-1 md:space-y-3">
+                    <h4>Stand out</h4>
+                    <p class="">
+                      Show your motivation with an intro video and Skill Snapshot.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <button class="rounded-full border border-solid border-bodyText px-4 py-2 text-center font-roboto">
+                  How hatch work
+                </button>
+              </div>
+            </div>
+          </section> 
+       
+          
+          
+          
+          <!-- gallery -->
+          <section class="mt-12">
+              <div class="flex flex-col items-center justify-center">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                  <p class="text-center text-xl font-medium text-bodyText">
+                    Our Mission
+                  </p>
+                  <h2 class="w-full md:w-3/5 text-center">
+                    To connect industry professionals with technology companies
+                  </h2>
+                </div>
+              </div>
+              <div class="my-12 h-96 flex items-center justify-between gap-2 container mx-auto">
+                <div class="h-full w-[600px]">
+                  <img src="/src/img/gallery1.png" alt="" srcset="" class="h-full w-full object-cover"/>
+                </div>
+                <div class="h-full w-[400px]">
+                  <img src="/src/img/gallery2_pro.jpg" alt="" srcset="" class="h-full w-full rounded-xl object-cover"/>
+                </div>
+                <div class="hidden md:flex h-full w-[400px] flex-col justify-between gap-2">
+                  <img src="/src/img/gallery3_pro.jpg" alt="" srcset="" class="h-[188px] w-full"/>
+                  <img src="/src/img/gallery4_pro.jpg" alt="" srcset="" class="h-[188px] w-full"/>
+                </div>
+                <div class="hidden lg:flex h-full w-[300x] flex-col justify-between gap-2 ">
+                  <img src="/src/img/gallery5.png" alt="" srcset="" class="h-1/2" />
+                  <img src="/src/img/gallery6.png" alt="" srcset="" class="h-1/2" />
+                </div>
+              </div>
+          </section>
 
-    <!-- categories -->
-    <section class="mt-32">
-      <div class="container mx-auto max-w-[1200px] space-y-6 lg:text-center p-10 lg:p-0">
-        <h2 class="text-center text-[28px] lg:text-[36px]">Start your career with work you’ll love</h2>
-        <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
-          <div class="flex lg:w-80 lg:flex-col items-center justify-center gap-3">
-            <img src="/src/img/category1.png" alt="" />
-            <div class=" space-y-3">
-              <h4>High-impact roles</h4>
-              <p class="">
-                Find roles with high-growth teams where you can make an impact.
-              </p>
-            </div>
-          </div>
-          <div class="flex lg:w-80 lg:flex-col items-center justify-center gap-3">
-            <img src="/src/img/category2.png" alt="" />
-            <div class=" space-y-3">
-              <h4>Meet your matches</h4>
-              <p class="">
-                Match with top teams based on your unique skills and values.
-              </p>
-            </div>
-          </div>
-          <div class="flex lg:w-80 lg:flex-col items-center justify-center gap-3">
-            <img src="/src/img/category3.png" alt="" />
-            <div class=" space-y-3">
-              <h4>Stand out</h4>
-              <p class="">
-                Show your motivation with an intro video and Skill Snapshot.
-              </p>
-            </div>
-          </div>
-        </div>
-        <button
-          class="rounded-full border border-solid border-bodyText px-4 py-2 text-center font-roboto"
-        >
-          How hatch work
-        </button>
-      </div>
-    </section>
-    <!-- work carousel -->
-    <section class="mt-20">
-      <div class="container mx-auto max-w-[1200px] space-y-14">
-        <div class="flex items-center justify-center">
-          <h2 class="pr-12 text-center">Work at these companies</h2>
-          <div class="ml-12 flex items-center justify-center space-x-5">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="h-6 w-6 rounded border border-solid border-bodyText stroke-2 p-0.5 font-bold"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15.75 19.5L8.25 12l7.5-7.5"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="h-6 w-6 rounded border border-solid border-bodyText stroke-2 p-0.5 font-bold"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M8.25 4.5l7.5 7.5-7.5 7.5"
-              />
-            </svg>
-          </div>
-        </div>
-        <div class="flex items-center justify-between gap-8">
-          <div class="shadow-custom w-64 space-y-5 rounded-md py-4 px-6">
-            <div class="flex items-center justify-start space-x-3.5 pt-3">
-              <img src="/src/img/work1.png" alt="" />
-              <p class="font-normal">City of Melbourne</p>
-            </div>
-            <p class="text-sm">
-              Lorem Ipsum is simply dummy text of the industry.
-            </p>
-            <p class="w-fit rounded-full bg-jobs px-4 py-2 font-inter text-xs">
-              27 jobs
-            </p>
-          </div>
-          <div class="shadow-custom w-64 space-y-5 rounded-md py-4 px-6">
-            <div class="flex items-center justify-start space-x-3.5 pt-3">
-              <img src="/src/img/work2.png" alt="" />
-              <p class="font-normal">Lovisa</p>
-            </div>
-            <p class="text-sm">
-              Lorem Ipsum is simply dummy text of the industry.
-            </p>
-            <p class="w-fit rounded-full bg-jobs px-4 py-2 font-inter text-xs">
-              17 jobs
-            </p>
-          </div>
-          <div class="shadow-custom w-64 space-y-5 rounded-md py-4 px-6">
-            <div class="flex items-center justify-start space-x-3.5 pt-3">
-              <img src="/src/img/work3.png" alt="" />
-              <p class="font-normal">Pexa</p>
-            </div>
-            <p class="text-sm">
-              Lorem Ipsum is simply dummy text of the industry.
-            </p>
-            <p class="w-fit rounded-full bg-jobs px-4 py-2 font-inter text-xs">
-              35 jobs
-            </p>
-          </div>
-          <div class="shadow-custom w-64 space-y-5 rounded-md py-4 px-6">
-            <div class="flex items-center justify-start space-x-3.5 pt-3">
-              <img src="/src/img/work4.png" alt="" />
-              <p class="font-normal">Auto Parts Group</p>
-            </div>
-            <p class="text-sm">
-              Lorem Ipsum is simply dummy text of the industry.
-            </p>
-            <p class="w-fit rounded-full bg-jobs px-4 py-2 font-inter text-xs">
-              42 jobs
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- categories -->
-    <section class="mt-32">
-      <div class="container mx-auto max-w-[1200px] space-y-6 text-center">
-        <h2 class="text-center">Start your career with work you’ll love</h2>
-        <div class="flex items-center justify-between gap-4">
-          <div class="flex w-80 flex-col items-center justify-center space-y-3">
-            <img src="/src/img/category1.png" alt="" />
-            <h4>High-impact roles</h4>
-            <p class="text-center">
-              Find roles with high-growth teams where you can make an impact.
-            </p>
-          </div>
-          <div class="flex w-80 flex-col items-center justify-center space-y-3">
-            <img src="/src/img/category2.png" alt="" />
-            <h4>Meet your matches</h4>
-            <p class="text-center">
-              Match with top teams based on your unique skills and values.
-            </p>
-          </div>
-          <div class="flex w-80 flex-col items-center justify-center space-y-3">
-            <img src="/src/img/category3.png" alt="" />
-            <h4>Stand out</h4>
-            <p class="text-center">
-              Show your motivation with an intro video and Skill Snapshot.
-            </p>
-          </div>
-        </div>
-        <button
-          class="rounded-full border border-solid border-bodyText px-4 py-2 text-center font-roboto"
-        >
-          How hatch work
-        </button>
-      </div>
-    </section>
-    <!-- gallery -->
-    <section class="mt-12">
-      <div class="container mx-auto max-w-[1200px]">
-        <div class="flex flex-col items-center justify-center">
-          <div
-            class="flex flex-col items-center justify-center space-y-4 text-center"
-          >
-            <p class="text-center text-xl font-medium text-bodyText">
-              Our Mission
-            </p>
-            <h2 class="w-3/5 text-center leading-relaxed">
-              To connect industry professionals with technology companies
-            </h2>
-          </div>
-        </div>
-        <div class="my-12 flex items-center justify-between gap-2">
-          <div class="h-96 w-[600px]">
-            <img src="/src/img/gallery1.png" alt="" srcset="" class="h-full w-full"/>
-          </div>
-          <div class="h-96 w-[400px]">
-            <img src="/src/img/gallery2_pro.jpg" alt="" srcset="" class="h-full w-full rounded-xl"/>
-          </div>
-          <div class="flex h-96 w-[400px] flex-col justify-between gap-2">
-            <img src="/src/img/gallery3_pro.jpg" alt="" srcset="" class="h-[188px] w-full"/>
-            <img src="/src/img/gallery4_pro.jpg" alt="" srcset="" class="h-[188px] w-full"/>
-          </div>
-          <div class="flex h-96 w-[300x] flex-col justify-between gap-2">
-            <img src="/src/img/gallery5.png" alt="" srcset="" class="h-1/2" />
-            <img src="/src/img/gallery6.png" alt="" srcset="" class="h-1/2" />
-          </div>
-        </div>
-      </div>
-    </section>
-
+    </main>
+    
     <!-- footer -->
-    <footer class="">
-      <div
-        class="h-[23px] border border-bodyText border-opacity-10 bg-primary"
-      ></div>
-      <div
-        class="border border-t-0 border-bodyText border-opacity-25 pt-16 pb-6"
-      >
-        <div class="container mx-auto max-w-[1200px]">
-          <div class="flex items-start justify-between">
-            <div>
+    <footer class=" ">
+      <div class="h-[23px] border border-bodyText border-opacity-10 bg-primary"></div>
+      <div class="border border-t-0 border-bodyText border-opacity-25 pt-16 pb-6">
+        <div class="container mx-auto w-11/12 md:max-w-[767px] lg:max-w-[1000px] xl:max-w-[1200px]">
+          <div class="flex flex-col md:flex-row items-start justify-between gap-8">
+            <div class="">
               <img src="/src/img/logo.png" alt="" class="" />
             </div>
-            <div>
-              <h3 class="footer-heading">Professionals</h3>
-              <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
-                <li>
-                  <a class="footer-body" href="">Join the SaaS network</a>
-                </li>
-                <li>
-                  <a class="footer-body" href="/searchjobs">Search jobs</a>
-                </li>
-                <li>
-                  <a class="footer-body" href="/searchcompanies"
-                    >Search Companies</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="footer-heading">Employers</h3>
-              <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
-                <li><a class="footer-body" href="">Post a Job</a></li>
-                <li>
-                  <a class="footer-body" href="/">Search the SaaS network</a>
-                </li>
-                <li><a class="footer-body" href="/pricing">Pricing</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="footer-heading">OpentoSaaS</h3>
-              <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
-                <li><a class="footer-body" href="/src/about.html">About</a></li>
-                <li>
-                  <a class="footer-body" href="/privacy">Private Policy</a>
-                </li>
-                <li>
-                  <a class="footer-body" href="/terms&conditions"
-                    >Terms and Conditions</a
-                  >
-                </li>
-                <li><a class="footer-body" href="/blog">Blog</a></li>
-                <li><a class="footer-body" href="/conbtact">Contact</a></li>
-              </ul>
+            <div class="flex flex-col md:flex-row items-start justify-between gap-4 lg:gap-8">
+              <div>
+                <h3 class="footer-heading">Professionals</h3>
+                <ul class="mt-3 flex list-inside list-disc flex-col space-y-3 text-[19px]">
+                  <li>
+                    <a class="footer-body" href="">Join the SaaS network</a>
+                  </li>
+                  <li>
+                    <a class="footer-body" href="/searchjobs">Search jobs</a>
+                  </li>
+                  <li>
+                    <a class="footer-body" href="/searchcompanies">Search Companies</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="footer-heading">Employers</h3>
+                <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
+                  <li><a class="footer-body" href="">Post a Job</a></li>
+                  <li>
+                    <a class="footer-body" href="/">Search the SaaS network</a>
+                  </li>
+                  <li><a class="footer-body" href="/src">Pricing</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="footer-heading">OpentoSaaS</h3>
+                <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
+                  <li><a class="footer-body" href="/src/about.html">About</a></li>
+                  <li>
+                    <a class="footer-body" href="/privacy">Private Policy</a>
+                  </li>
+                  <li>
+                    <a class="footer-body" href="/terms&conditions"
+                      >Terms and Conditions</a
+                    >
+                  </li>
+                  <li><a class="footer-body" href="/blog">Blog</a></li>
+                  <li><a class="footer-body" href="/conbtact">Contact</a></li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          <div class="mt-12 flex items-center justify-between">
+          <div class="mt-12 flex flex-col-reverse md:flex-row items-start md:items-center justify-start md:justify-between gap-4">
             <p class="text-sm font-normal text-bodyText">@2023 Seek</p>
-            <div
-              class="flex items-center justify-center space-x-4 md:justify-end"
-            >
+            <div class="flex items-center justify-center space-x-4 md:justify-end">
               <p class="text-sm font-normal text-bodyText">Follow us:</p>
               <a href="">
                 <svg
@@ -497,5 +578,9 @@
         </div>
       </div>
     </footer>
+    
+    <!-- js -->
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
