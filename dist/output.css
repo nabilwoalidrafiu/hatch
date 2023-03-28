@@ -807,10 +807,6 @@ p {
   top: 1rem;
 }
 
-.-z-10 {
-  z-index: -10;
-}
-
 .z-0 {
   z-index: 0;
 }
@@ -825,6 +821,10 @@ p {
 
 .z-30 {
   z-index: 30;
+}
+
+.z-40 {
+  z-index: 40;
 }
 
 .order-1 {
@@ -872,11 +872,6 @@ p {
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
-
-.my-20 {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
 }
 
 .-mt-4 {
@@ -963,6 +958,10 @@ p {
   margin-right: 2rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mt-12 {
   margin-top: 3rem;
 }
@@ -981,10 +980,6 @@ p {
 
 .mt-60 {
   margin-top: 15rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
 }
 
 .block {
@@ -1216,10 +1211,6 @@ p {
   width: 1.25rem;
 }
 
-.w-5\/12 {
-  width: 41.666667%;
-}
-
 .w-52 {
   width: 13rem;
 }
@@ -1240,10 +1231,6 @@ p {
   width: 16rem;
 }
 
-.w-7\/12 {
-  width: 58.333333%;
-}
-
 .w-72 {
   width: 18rem;
 }
@@ -1258,10 +1245,6 @@ p {
 
 .w-9 {
   width: 2.25rem;
-}
-
-.w-96 {
-  width: 24rem;
 }
 
 .w-\[1200px\] {
@@ -1314,10 +1297,6 @@ p {
 
 .w-\[600px\] {
   width: 600px;
-}
-
-.w-\[606px\] {
-  width: 606px;
 }
 
 .w-\[668px\] {
@@ -1376,6 +1355,10 @@ p {
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+
+.min-w-\[270px\] {
+  min-width: 270px;
 }
 
 .max-w-\[1200px\] {
@@ -1924,10 +1907,6 @@ p {
   padding: 3rem;
 }
 
-.p-14 {
-  padding: 3.5rem;
-}
-
 .p-2 {
   padding: 0.5rem;
 }
@@ -1954,10 +1933,6 @@ p {
 
 .p-8 {
   padding: 2rem;
-}
-
-.p-6 {
-  padding: 1.5rem;
 }
 
 .px-1 {
@@ -2203,11 +2178,6 @@ p {
   font-family: Roboto, sans-serif;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .text-\[10px\] {
   font-size: 10px;
 }
@@ -2226,6 +2196,10 @@ p {
 
 .text-\[22px\] {
   font-size: 22px;
+}
+
+.text-\[24px\] {
+  font-size: 24px;
 }
 
 .text-\[26px\] {
@@ -2259,10 +2233,6 @@ p {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[24px\] {
-  font-size: 24px;
 }
 
 .font-bold {
@@ -2338,6 +2308,11 @@ p {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.text-blue-800 {
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity));
+}
+
 .text-bodyText {
   --tw-text-opacity: 1;
   color: rgb(100 100 100 / var(--tw-text-opacity));
@@ -2363,6 +2338,11 @@ p {
   color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2383,12 +2363,6 @@ p {
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow {
-  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -2534,6 +2508,16 @@ input[type=date]:focus::-webkit-datetime-edit {
   color: black !important;
 }
 
+@media only screen and (max-width: 767px) {
+  .showSidebar {
+    /* display: inline; */
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
 .file\:rounded-lg::file-selector-button {
   border-radius: 0.5rem;
 }
@@ -2621,6 +2605,10 @@ input[type=date]:focus::-webkit-datetime-edit {
 }
 
 @media (min-width: 768px) {
+  .md\:static {
+    position: static;
+  }
+
   .md\:absolute {
     position: absolute;
   }
@@ -2645,16 +2633,16 @@ input[type=date]:focus::-webkit-datetime-edit {
     margin-left: 3rem;
   }
 
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+
   .md\:mt-20 {
     margin-top: 5rem;
   }
 
   .md\:mt-32 {
     margin-top: 8rem;
-  }
-
-  .md\:mt-0 {
-    margin-top: 0px;
   }
 
   .md\:block {
@@ -2677,6 +2665,10 @@ input[type=date]:focus::-webkit-datetime-edit {
     height: auto;
   }
 
+  .md\:h-full {
+    height: 100%;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -2693,12 +2685,28 @@ input[type=date]:focus::-webkit-datetime-edit {
     width: 60%;
   }
 
+  .md\:w-4\/6 {
+    width: 66.666667%;
+  }
+
   .md\:w-40 {
     width: 10rem;
   }
 
+  .md\:w-60 {
+    width: 15rem;
+  }
+
+  .md\:w-96 {
+    width: 24rem;
+  }
+
   .md\:w-\[550px\] {
     width: 550px;
+  }
+
+  .md\:w-\[606px\] {
+    width: 606px;
   }
 
   .md\:w-fit {
@@ -2708,18 +2716,6 @@ input[type=date]:focus::-webkit-datetime-edit {
 
   .md\:w-full {
     width: 100%;
-  }
-
-  .md\:w-96 {
-    width: 24rem;
-  }
-
-  .md\:w-5\/12 {
-    width: 41.666667%;
-  }
-
-  .md\:w-\[606px\] {
-    width: 606px;
   }
 
   .md\:max-w-\[767px\] {
@@ -2770,6 +2766,10 @@ input[type=date]:focus::-webkit-datetime-edit {
     gap: 0.75rem;
   }
 
+  .md\:gap-4 {
+    gap: 1rem;
+  }
+
   .md\:space-x-2 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -2804,6 +2804,15 @@ input[type=date]:focus::-webkit-datetime-edit {
     padding: 3.5rem;
   }
 
+  .md\:p-2 {
+    padding: 0.5rem;
+  }
+
+  .md\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   .md\:px-2 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -2827,22 +2836,18 @@ input[type=date]:focus::-webkit-datetime-edit {
     padding-right: 3rem;
   }
 
-  .md\:pt-0 {
-    padding-top: 0px;
-  }
-
   .md\:text-left {
     text-align: left;
-  }
-
-  .md\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
   }
 
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .md\:font-normal {
@@ -2867,16 +2872,28 @@ input[type=date]:focus::-webkit-datetime-edit {
     display: none;
   }
 
-  .lg\:w-\[668px\] {
-    width: 668px;
-  }
-
   .lg\:w-5\/12 {
     width: 41.666667%;
   }
 
   .lg\:w-7\/12 {
     width: 58.333333%;
+  }
+
+  .lg\:w-\[668px\] {
+    width: 668px;
+  }
+
+  .lg\:w-full {
+    width: 100%;
+  }
+
+  .lg\:min-w-\[300px\] {
+    min-width: 300px;
+  }
+
+  .lg\:min-w-full {
+    min-width: 100%;
   }
 
   .lg\:max-w-\[1000px\] {
@@ -2913,11 +2930,6 @@ input[type=date]:focus::-webkit-datetime-edit {
     padding-right: 3rem;
   }
 
-  .lg\:px-16 {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
   .lg\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -2938,12 +2950,28 @@ input[type=date]:focus::-webkit-datetime-edit {
 }
 
 @media (min-width: 1366px) {
+  .xl\:w-1\/4 {
+    width: 25%;
+  }
+
+  .xl\:w-3\/4 {
+    width: 75%;
+  }
+
+  .xl\:w-full {
+    width: 100%;
+  }
+
   .xl\:max-w-\[1200px\] {
     max-width: 1200px;
   }
 
   .xl\:gap-4 {
     gap: 1rem;
+  }
+
+  .xl\:p-20 {
+    padding: 5rem;
   }
 
   .xl\:px-12 {
@@ -2955,6 +2983,9 @@ input[type=date]:focus::-webkit-datetime-edit {
     padding-left: 4rem;
     padding-right: 4rem;
   }
+
+  .xl\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
 }
-
-

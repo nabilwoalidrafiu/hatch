@@ -20,6 +20,20 @@ jQuery(document).ready(function(){
           jQuery('.forEmployer').click(function() {
             jQuery('.employerDropdown').toggleClass("show")
           })
+          jQuery('.showSidebar').click(function() {
+            // jQuery('.sidebar').toggleClass("show")
+            jQuery('.sidebar').animate({width: 'toggle'}, 200);
+          })
+          jQuery('.closeSidebar').click(function() {
+            $('.sidebar').toggle();
+          })
+          $( window ).resize(function() {
+            if( $( window ).width()>767){
+              $('.sidebar').toggle(true);
+            }else{
+              $('.sidebar').toggle(false);
+            }
+            });
         const dropdown = document.getElementById('dropdown');
         dropdown.style.display = 'hidden';
           window.onclick = function(event) {
