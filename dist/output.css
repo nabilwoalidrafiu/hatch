@@ -1199,10 +1199,6 @@ p {
   width: 1rem;
 }
 
-.w-4\/5 {
-  width: 80%;
-}
-
 .w-40 {
   width: 10rem;
 }
@@ -1359,34 +1355,6 @@ p {
 .w-max {
   width: -moz-max-content;
   width: max-content;
-}
-
-.w-5\/6 {
-  width: 83.333333%;
-}
-
-.w-10\/12 {
-  width: 83.333333%;
-}
-
-.w-2\/12 {
-  width: 16.666667%;
-}
-
-.w-8\/12 {
-  width: 66.666667%;
-}
-
-.w-4\/12 {
-  width: 33.333333%;
-}
-
-.w-9\/12 {
-  width: 75%;
-}
-
-.w-5\/12 {
-  width: 41.666667%;
 }
 
 .min-w-\[270px\] {
@@ -2747,8 +2715,16 @@ input[type=date]:focus::-webkit-datetime-edit {
     width: 10rem;
   }
 
+  .md\:w-5\/12 {
+    width: 41.666667%;
+  }
+
   .md\:w-60 {
     width: 15rem;
+  }
+
+  .md\:w-9\/12 {
+    width: 75%;
   }
 
   .md\:w-96 {
@@ -2774,14 +2750,6 @@ input[type=date]:focus::-webkit-datetime-edit {
 
   .md\:w-full {
     width: 100%;
-  }
-
-  .md\:w-9\/12 {
-    width: 75%;
-  }
-
-  .md\:w-5\/12 {
-    width: 41.666667%;
   }
 
   .md\:max-w-\[767px\] {
@@ -2818,6 +2786,10 @@ input[type=date]:focus::-webkit-datetime-edit {
 
   .md\:justify-between {
     justify-content: space-between;
+  }
+
+  .md\:justify-around {
+    justify-content: space-around;
   }
 
   .md\:gap-1 {
