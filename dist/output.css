@@ -1489,6 +1489,10 @@ p {
   gap: 2.25rem;
 }
 
+.gap-16 {
+  gap: 4rem;
+}
+
 .space-x-3 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.75rem * var(--tw-space-x-reverse));
@@ -1619,6 +1623,18 @@ p {
   --tw-space-y-reverse: 0;
   margin-top: calc(2.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2.25rem * var(--tw-space-y-reverse));
+}
+
+.space-x-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .divide-x > :not([hidden]) ~ :not([hidden]) {
@@ -2602,6 +2618,18 @@ input[type=date]:focus::-webkit-datetime-edit {
   .sm\:w-\[490px\] {
     width: 490px;
   }
+
+  .sm\:gap-16 {
+    gap: 4rem;
+  }
+
+  .sm\:gap-8 {
+    gap: 2rem;
+  }
+
+  .sm\:gap-12 {
+    gap: 3rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -2643,6 +2671,10 @@ input[type=date]:focus::-webkit-datetime-edit {
 
   .md\:mt-32 {
     margin-top: 8rem;
+  }
+
+  .md\:mr-8 {
+    margin-right: 2rem;
   }
 
   .md\:block {
@@ -2718,6 +2750,14 @@ input[type=date]:focus::-webkit-datetime-edit {
     width: 100%;
   }
 
+  .md\:w-3\/4 {
+    width: 75%;
+  }
+
+  .md\:w-\[500px\] {
+    width: 500px;
+  }
+
   .md\:max-w-\[767px\] {
     max-width: 767px;
   }
@@ -2770,6 +2810,14 @@ input[type=date]:focus::-webkit-datetime-edit {
     gap: 1rem;
   }
 
+  .md\:gap-20 {
+    gap: 5rem;
+  }
+
+  .md\:gap-16 {
+    gap: 4rem;
+  }
+
   .md\:space-x-2 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -2800,6 +2848,12 @@ input[type=date]:focus::-webkit-datetime-edit {
     margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
   }
 
+  .md\:space-x-5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.25rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .md\:p-14 {
     padding: 3.5rem;
   }
@@ -2826,6 +2880,16 @@ input[type=date]:focus::-webkit-datetime-edit {
   .md\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .md\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .md\:pl-16 {
@@ -2892,16 +2956,16 @@ input[type=date]:focus::-webkit-datetime-edit {
     min-width: 300px;
   }
 
-  .lg\:min-w-full {
-    min-width: 100%;
-  }
-
   .lg\:max-w-\[1000px\] {
     max-width: 1000px;
   }
 
   .lg\:gap-8 {
     gap: 2rem;
+  }
+
+  .lg\:gap-20 {
+    gap: 5rem;
   }
 
   .lg\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
@@ -2938,6 +3002,11 @@ input[type=date]:focus::-webkit-datetime-edit {
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .lg\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .lg\:pt-0 {
