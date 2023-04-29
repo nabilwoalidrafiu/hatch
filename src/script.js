@@ -14,45 +14,59 @@ jQuery(document).ready(function(){
               })
             }
           )
+          // For candidate 
           jQuery('.forCandidate').click(function() {
-            jQuery('.candidateDropdown').toggleClass("show")
+            jQuery('.candidateDropdown').toggle()
           })
+          jQuery(document).mouseup(function(e) {
+            var container = $(".candidateDropdown");
+            if (!container.is(e.target) && container.has(e.target).length === 0) {
+                container.hide();
+            }
+            });
+            // For employer
           jQuery('.forEmployer').click(function() {
-            jQuery('.employerDropdown').toggleClass("show")
+            // jQuery('.employerDropdown').toggleClass("show")
+            jQuery('.employerDropdown').toggle()
           })
+         jQuery(document).mouseup(function(e) {
+          var container = $(".employerDropdown");
+          if (!container.is(e.target) && container.has(e.target).length === 0) {
+              container.hide();
+          }
+          });
           jQuery('.showSidebar').click(function() {
-            // jQuery('.sidebar').toggleClass("show")
             jQuery('.sidebar').animate({width: 'toggle'}, 200);
           })
           jQuery('.closeSidebar').click(function() {
-            $('.sidebar').toggle();
+            jQuery('.sidebar').animate({width: 'toggle'}, 200);
           })
-          $( window ).resize(function() {
-            if( $( window ).width()>767){
-              $('.sidebar').toggle(true);
+          jQuery('.showIcon').hide()
+          jQuery('.iconDiv').each(function () {
+            jQuery(this).on('click', function () {
+              jQuery(this).find('.showIcon').toggle();
+            })
+          })
+          jQuery('.message-box').hide();
+          jQuery('.user').click(function(){
+            jQuery('.all-user').toggle()
+            jQuery('.message-box').toggle()
+          })
+          jQuery('.back-message').click(function(){
+            jQuery('.all-user').show()
+            jQuery('.message-box').hide()
+          })
+          jQuery( window ).resize(function() {
+            if( jQuery( window ).width()>768){
+              jQuery('.sidebar').toggle(true);
             }else{
-              $('.sidebar').toggle(false);
+              jQuery('.sidebar').toggle(false);
             }
             });
-        const dropdown = document.getElementById('dropdown');
-        dropdown.style.display = 'hidden';
-          window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-              var dropdowns = document.getElementsByClassName("dropdown-content");
-              var i;
-              for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                  openDropdown.classList.remove('show');
-                }
-              }
-            }
-          }
+          jQuery('.filterDropdown').hide()
+          jQuery('.filterLabel').click(function(){
+            jQuery(this).closest('.filterDiv').find('.filterDropdown').slideToggle();
+          })
           
    })
    
-   function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
- 
-  

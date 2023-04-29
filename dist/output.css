@@ -708,6 +708,12 @@ p {
   --tw-backdrop-sepia:  ;
 }
 
+.\!container {
+  width: 100% !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
 .container {
   width: 100%;
   margin-right: auto;
@@ -715,36 +721,60 @@ p {
 }
 
 @media (min-width: 640px) {
+  .\!container {
+    max-width: 640px !important;
+  }
+
   .container {
     max-width: 640px;
   }
 }
 
 @media (min-width: 768px) {
+  .\!container {
+    max-width: 768px !important;
+  }
+
   .container {
     max-width: 768px;
   }
 }
 
 @media (min-width: 1000px) {
+  .\!container {
+    max-width: 1000px !important;
+  }
+
   .container {
     max-width: 1000px;
   }
 }
 
 @media (min-width: 1366px) {
+  .\!container {
+    max-width: 1366px !important;
+  }
+
   .container {
     max-width: 1366px;
   }
 }
 
 @media (min-width: 1536px) {
+  .\!container {
+    max-width: 1536px !important;
+  }
+
   .container {
     max-width: 1536px;
   }
 }
 
 @media (min-width: 1920px) {
+  .\!container {
+    max-width: 1920px !important;
+  }
+
   .container {
     max-width: 1920px;
   }
@@ -787,6 +817,10 @@ p {
   left: 0.5rem;
 }
 
+.right-0 {
+  right: 0px;
+}
+
 .right-3 {
   right: 0.75rem;
 }
@@ -805,6 +839,10 @@ p {
 
 .top-4 {
   top: 1rem;
+}
+
+.top-8 {
+  top: 2rem;
 }
 
 .z-0 {
@@ -882,10 +920,6 @@ p {
   margin-top: -16rem;
 }
 
-.-mt-8 {
-  margin-top: -2rem;
-}
-
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -900,6 +934,14 @@ p {
 
 .mb-20 {
   margin-bottom: 5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .mb-6 {
@@ -920,10 +962,6 @@ p {
 
 .ml-1 {
   margin-left: 0.25rem;
-}
-
-.ml-12 {
-  margin-left: 3rem;
 }
 
 .ml-2 {
@@ -964,10 +1002,6 @@ p {
 
 .mt-12 {
   margin-top: 3rem;
-}
-
-.mt-16 {
-  margin-top: 4rem;
 }
 
 .mt-3 {
@@ -1070,10 +1104,6 @@ p {
   height: 1.5rem;
 }
 
-.h-8 {
-  height: 2rem;
-}
-
 .h-9 {
   height: 2.25rem;
 }
@@ -1102,10 +1132,6 @@ p {
   height: 350px;
 }
 
-.h-\[470px\] {
-  height: 470px;
-}
-
 .h-\[48px\] {
   height: 48px;
 }
@@ -1126,10 +1152,6 @@ p {
   height: 67ppx;
 }
 
-.h-\[700px\] {
-  height: 700px;
-}
-
 .h-\[73px\] {
   height: 73px;
 }
@@ -1147,12 +1169,12 @@ p {
   height: 100vh;
 }
 
-.max-h-full {
-  max-height: 100%;
-}
-
 .w-1\/2 {
   width: 50%;
+}
+
+.w-1\/3 {
+  width: 33.333333%;
 }
 
 .w-1\/4 {
@@ -1171,10 +1193,6 @@ p {
   width: 3rem;
 }
 
-.w-2\/4 {
-  width: 50%;
-}
-
 .w-20 {
   width: 5rem;
 }
@@ -1191,8 +1209,8 @@ p {
   width: 75%;
 }
 
-.w-32 {
-  width: 8rem;
+.w-36 {
+  width: 9rem;
 }
 
 .w-4 {
@@ -1211,10 +1229,6 @@ p {
   width: 1.25rem;
 }
 
-.w-52 {
-  width: 13rem;
-}
-
 .w-56 {
   width: 14rem;
 }
@@ -1231,10 +1245,6 @@ p {
   width: 16rem;
 }
 
-.w-72 {
-  width: 18rem;
-}
-
 .w-8 {
   width: 2rem;
 }
@@ -1247,16 +1257,8 @@ p {
   width: 2.25rem;
 }
 
-.w-\[1200px\] {
-  width: 1200px;
-}
-
 .w-\[165px\] {
   width: 165px;
-}
-
-.w-\[300px\] {
-  width: 300px;
 }
 
 .w-\[300x\] {
@@ -1279,68 +1281,24 @@ p {
   width: 400px;
 }
 
-.w-\[430px\] {
-  width: 430px;
-}
-
-.w-\[450px\] {
-  width: 450px;
-}
-
 .w-\[48px\] {
   width: 48px;
-}
-
-.w-\[500px\] {
-  width: 500px;
 }
 
 .w-\[600px\] {
   width: 600px;
 }
 
-.w-\[668px\] {
-  width: 668px;
-}
-
 .w-\[67px\] {
   width: 67px;
-}
-
-.w-\[720px\] {
-  width: 720px;
 }
 
 .w-\[74px\] {
   width: 74px;
 }
 
-.w-\[750px\] {
-  width: 750px;
-}
-
-.w-\[780px\] {
-  width: 780px;
-}
-
-.w-\[800px\] {
-  width: 800px;
-}
-
-.w-\[820px\] {
-  width: 820px;
-}
-
 .w-\[82px\] {
   width: 82px;
-}
-
-.w-\[850px\] {
-  width: 850px;
-}
-
-.w-\[890px\] {
-  width: 890px;
 }
 
 .w-fit {
@@ -1359,10 +1317,6 @@ p {
 
 .min-w-\[270px\] {
   min-width: 270px;
-}
-
-.max-w-\[1200px\] {
-  max-width: 1200px;
 }
 
 .max-w-full {
@@ -1399,10 +1353,6 @@ p {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -1519,12 +1469,6 @@ p {
   margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-x-8 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(2rem * var(--tw-space-x-reverse));
-  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1638,8 +1582,27 @@ p {
   border-color: rgb(167 167 167 / var(--tw-divide-opacity));
 }
 
+.place-self-center {
+  place-self: center;
+}
+
 .overflow-y-auto {
   overflow-y: auto;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.break-normal {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.break-words {
+  overflow-wrap: break-word;
 }
 
 .rounded {
@@ -1811,6 +1774,11 @@ p {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
 .bg-bodyText {
   --tw-bg-opacity: 1;
   background-color: rgb(100 100 100 / var(--tw-bg-opacity));
@@ -1941,6 +1909,16 @@ p {
   padding: 2rem;
 }
 
+.\!px-1 {
+  padding-left: 0.25rem !important;
+  padding-right: 0.25rem !important;
+}
+
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -1961,11 +1939,6 @@ p {
   padding-right: 3rem;
 }
 
-.px-14 {
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
-}
-
 .px-16 {
   padding-left: 4rem;
   padding-right: 4rem;
@@ -1984,11 +1957,6 @@ p {
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-}
-
-.px-3\.5 {
-  padding-left: 0.875rem;
-  padding-right: 0.875rem;
 }
 
 .px-4 {
@@ -2014,11 +1982,6 @@ p {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
-}
-
-.px-9 {
-  padding-left: 2.25rem;
-  padding-right: 2.25rem;
 }
 
 .py-0 {
@@ -2120,20 +2083,16 @@ p {
   padding-left: 2.5rem;
 }
 
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
 .pl-3 {
   padding-left: 0.75rem;
 }
 
-.pl-4 {
-  padding-left: 1rem;
-}
-
 .pl-8 {
   padding-left: 2rem;
-}
-
-.pr-14 {
-  padding-right: 3.5rem;
 }
 
 .pt-1 {
@@ -2200,16 +2159,16 @@ p {
   font-size: 19px;
 }
 
+.text-\[20px\] {
+  font-size: 20px;
+}
+
 .text-\[22px\] {
   font-size: 22px;
 }
 
 .text-\[24px\] {
   font-size: 24px;
-}
-
-.text-\[26px\] {
-  font-size: 26px;
 }
 
 .text-\[28px\] {
@@ -2372,6 +2331,12 @@ p {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-sm {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .blur {
   --tw-blur: blur(8px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -2379,6 +2344,18 @@ p {
 
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
 }
 
 /*@layer utilities {
@@ -2514,11 +2491,7 @@ input[type=date]:focus::-webkit-datetime-edit {
   color: black !important;
 }
 
-@media only screen and (max-width: 767px) {
-  .showSidebar {
-    /* display: inline; */
-  }
-
+@media only screen and (max-width: 768px) {
   .sidebar {
     display: none;
   }
@@ -2550,6 +2523,16 @@ input[type=date]:focus::-webkit-datetime-edit {
 .file\:text-bodyText::file-selector-button {
   --tw-text-opacity: 1;
   color: rgb(100 100 100 / var(--tw-text-opacity));
+}
+
+.hover\:bg-blue-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .focus\:border-blue-500:focus {
@@ -2655,6 +2638,10 @@ input[type=date]:focus::-webkit-datetime-edit {
     margin-top: 0px;
   }
 
+  .md\:mt-16 {
+    margin-top: 4rem;
+  }
+
   .md\:mt-20 {
     margin-top: 5rem;
   }
@@ -2679,6 +2666,10 @@ input[type=date]:focus::-webkit-datetime-edit {
     height: 380px;
   }
 
+  .md\:h-\[420px\] {
+    height: 420px;
+  }
+
   .md\:h-auto {
     height: auto;
   }
@@ -2695,8 +2686,28 @@ input[type=date]:focus::-webkit-datetime-edit {
     width: 33.333333%;
   }
 
+  .md\:w-1\/4 {
+    width: 25%;
+  }
+
+  .md\:w-11\/12 {
+    width: 91.666667%;
+  }
+
   .md\:w-2\/3 {
     width: 66.666667%;
+  }
+
+  .md\:w-2\/4 {
+    width: 50%;
+  }
+
+  .md\:w-28 {
+    width: 7rem;
+  }
+
+  .md\:w-3\/12 {
+    width: 25%;
   }
 
   .md\:w-3\/4 {
@@ -2705,6 +2716,10 @@ input[type=date]:focus::-webkit-datetime-edit {
 
   .md\:w-3\/5 {
     width: 60%;
+  }
+
+  .md\:w-4\/12 {
+    width: 33.333333%;
   }
 
   .md\:w-4\/6 {
@@ -2719,12 +2734,20 @@ input[type=date]:focus::-webkit-datetime-edit {
     width: 41.666667%;
   }
 
+  .md\:w-52 {
+    width: 13rem;
+  }
+
   .md\:w-60 {
     width: 15rem;
   }
 
-  .md\:w-9\/12 {
-    width: 75%;
+  .md\:w-72 {
+    width: 18rem;
+  }
+
+  .md\:w-8\/12 {
+    width: 66.666667%;
   }
 
   .md\:w-96 {
@@ -2764,12 +2787,20 @@ input[type=date]:focus::-webkit-datetime-edit {
     flex-shrink: 0;
   }
 
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
 
   .md\:items-start {
     align-items: flex-start;
+  }
+
+  .md\:items-end {
+    align-items: flex-end;
   }
 
   .md\:items-center {
@@ -2788,8 +2819,8 @@ input[type=date]:focus::-webkit-datetime-edit {
     justify-content: space-between;
   }
 
-  .md\:justify-around {
-    justify-content: space-around;
+  .md\:gap-0 {
+    gap: 0px;
   }
 
   .md\:gap-1 {
@@ -2804,12 +2835,22 @@ input[type=date]:focus::-webkit-datetime-edit {
     gap: 4rem;
   }
 
+  .md\:gap-2 {
+    gap: 0.5rem;
+  }
+
   .md\:gap-3 {
     gap: 0.75rem;
   }
 
   .md\:gap-4 {
     gap: 1rem;
+  }
+
+  .md\:space-x-1 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.25rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .md\:space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2848,12 +2889,38 @@ input[type=date]:focus::-webkit-datetime-edit {
     margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
   }
 
+  .md\:overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
+  .md\:border-b {
+    border-bottom-width: 1px;
+  }
+
+  .md\:p-10 {
+    padding: 2.5rem;
+  }
+
+  .md\:p-12 {
+    padding: 3rem;
+  }
+
   .md\:p-14 {
     padding: 3.5rem;
   }
 
   .md\:p-2 {
     padding: 0.5rem;
+  }
+
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .md\:px-1 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
   }
 
   .md\:px-12 {
@@ -2864,6 +2931,11 @@ input[type=date]:focus::-webkit-datetime-edit {
   .md\:px-2 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+  }
+
+  .md\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   .md\:px-4 {
@@ -2885,6 +2957,10 @@ input[type=date]:focus::-webkit-datetime-edit {
     padding-left: 4rem;
   }
 
+  .md\:pl-8 {
+    padding-left: 2rem;
+  }
+
   .md\:pr-12 {
     padding-right: 3rem;
   }
@@ -2896,6 +2972,10 @@ input[type=date]:focus::-webkit-datetime-edit {
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .md\:text-\[24px\] {
+    font-size: 24px;
   }
 
   .md\:text-base {
@@ -2925,6 +3005,42 @@ input[type=date]:focus::-webkit-datetime-edit {
     display: none;
   }
 
+  .lg\:h-\[450px\] {
+    height: 450px;
+  }
+
+  .lg\:w-1\/3 {
+    width: 33.333333%;
+  }
+
+  .lg\:w-1\/5 {
+    width: 20%;
+  }
+
+  .lg\:w-2\/3 {
+    width: 66.666667%;
+  }
+
+  .lg\:w-24 {
+    width: 6rem;
+  }
+
+  .lg\:w-28 {
+    width: 7rem;
+  }
+
+  .lg\:w-3\/4 {
+    width: 75%;
+  }
+
+  .lg\:w-32 {
+    width: 8rem;
+  }
+
+  .lg\:w-4\/5 {
+    width: 80%;
+  }
+
   .lg\:w-5\/12 {
     width: 41.666667%;
   }
@@ -2949,12 +3065,34 @@ input[type=date]:focus::-webkit-datetime-edit {
     max-width: 1000px;
   }
 
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
   .lg\:gap-20 {
     gap: 5rem;
   }
 
+  .lg\:gap-3 {
+    gap: 0.75rem;
+  }
+
+  .lg\:gap-4 {
+    gap: 1rem;
+  }
+
   .lg\:gap-8 {
     gap: 2rem;
+  }
+
+  .lg\:gap-9 {
+    gap: 2.25rem;
+  }
+
+  .lg\:space-x-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .lg\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
@@ -2973,9 +3111,13 @@ input[type=date]:focus::-webkit-datetime-edit {
     padding: 0px;
   }
 
-  .lg\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
+  .lg\:p-8 {
+    padding: 2rem;
+  }
+
+  .lg\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .lg\:px-12 {
@@ -2983,9 +3125,19 @@ input[type=date]:focus::-webkit-datetime-edit {
     padding-right: 3rem;
   }
 
+  .lg\:px-14 {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
   .lg\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+
+  .lg\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   .lg\:px-4 {
@@ -2998,6 +3150,15 @@ input[type=date]:focus::-webkit-datetime-edit {
     padding-right: 2rem;
   }
 
+  .lg\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .lg\:pl-4 {
+    padding-left: 1rem;
+  }
+
   .lg\:pt-0 {
     padding-top: 0px;
   }
@@ -3005,15 +3166,59 @@ input[type=date]:focus::-webkit-datetime-edit {
   .lg\:text-center {
     text-align: center;
   }
+
+  .lg\:text-\[26px\] {
+    font-size: 26px;
+  }
+
+  .lg\:text-\[28px\] {
+    font-size: 28px;
+  }
 }
 
 @media (min-width: 1366px) {
+  .xl\:block {
+    display: block;
+  }
+
+  .xl\:hidden {
+    display: none;
+  }
+
+  .xl\:h-\[400px\] {
+    height: 400px;
+  }
+
   .xl\:w-1\/4 {
     width: 25%;
   }
 
+  .xl\:w-2\/4 {
+    width: 50%;
+  }
+
   .xl\:w-3\/4 {
     width: 75%;
+  }
+
+  .xl\:w-32 {
+    width: 8rem;
+  }
+
+  .xl\:w-40 {
+    width: 10rem;
+  }
+
+  .xl\:w-52 {
+    width: 13rem;
+  }
+
+  .xl\:w-56 {
+    width: 14rem;
+  }
+
+  .xl\:w-\[400px\] {
+    width: 400px;
   }
 
   .xl\:w-full {
@@ -3024,8 +3229,24 @@ input[type=date]:focus::-webkit-datetime-edit {
     max-width: 1200px;
   }
 
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .xl\:gap-10 {
+    gap: 2.5rem;
+  }
+
   .xl\:gap-4 {
     gap: 1rem;
+  }
+
+  .xl\:gap-7 {
+    gap: 1.75rem;
+  }
+
+  .xl\:gap-9 {
+    gap: 2.25rem;
   }
 
   .xl\:p-20 {
@@ -3045,5 +3266,38 @@ input[type=date]:focus::-webkit-datetime-edit {
   .xl\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;
+  }
+
+  .xl\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .xl\:px-3\.5 {
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+  }
+
+  .xl\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .xl\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .xl\:px-9 {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+
+  .xl\:pl-8 {
+    padding-left: 2rem;
+  }
+
+  .xl\:pr-14 {
+    padding-right: 3.5rem;
   }
 }

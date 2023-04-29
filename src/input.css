@@ -145,10 +145,7 @@ input[type=date]:focus::-webkit-datetime-edit {
   color: black !important;
 }
 
-@media only screen and (max-width: 767px) {
-  .showSidebar {
-    /* display: inline; */
-  }
+@media only screen and (max-width: 768px) {
   .sidebar {
     display: none;
   }

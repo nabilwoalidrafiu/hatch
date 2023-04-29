@@ -7,9 +7,6 @@
     <title>Employer- Archives</title>
  <!-- stylesheet -->
  <link href="/dist/output.css" rel="stylesheet" />
- <!-- js -->
- <script src="jquery.js"></script>
- <script src="script.js"></script>
  <link rel="preconnect" href="https://fonts.googleapis.com" />
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
  <link
@@ -19,40 +16,44 @@
 </head>
 <body class="font-poppins">
      <!-- header -->
-     <header class="bg-primary ">
-      <!-- navbar -->
-    <div class=" bg-white bg-opacity-75 shadow-md  w-full relative z-30">
-      <div class="container mx-auto max-w-[1200px] flex items-center justify-between space-x-8 font-roboto py-5 px-2">
-      <!-- Logo -->
-        <div class="w-fit">
+  <header id="header" class="bg-primary ">
+    <!-- nav menu -->
+    <div class=" shadow-md w-full z-20">
+      <div id="nav_menu" class="nav_menu container mx-auto py-5 w-11/12 md:max-w-[767px] lg:max-w-[1000px] xl:max-w-[1200px] flex flex-col md:flex-row items-center justify-between md:space-x-8 font-roboto z-0">
+        <!-- Logo -->
+        <div class="w-full md:w-fit flex justify-between items-center">
           <a href="/src/index.html" class="w-fit">
             <img src="/src/img/logo.png" alt="logo" srcset="" class="w-20" />
           </a>
+          <button  class="toggle_btn flex md:hidden">
+            <img src="/src/img/logo.png" alt="" class="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="menu_btn w-8 h-6 stroke-2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+            </svg>
+          </button>
         </div>
-        <div class="hidden lg:flex w-full items-center justify-between">
-          <nav class="ml-12">
-            <ul class="flex items-center justify-start space-x-8">
+        <div id="" class=" hidden md:flex flex-col md:flex-row items-center justify-center md:justify-between h-screen md:h-auto space-y-8 md:space-y-0 w-full">
+          <nav class="lg:ml-12">
+            <ul class="flex flex-col md:flex-row items-center justify-start space-y-8 md:space-y-0 md:space-x-2 lg:space-x-8">
               <li>
-                <a href="/searchjobs.html" class="font-normal">
+                <a href="/searchjobs.html" class="text-[22px] md:text-base font-medium md:font-normal">
                   Search Jobs
                 </a>
               </li>
               <li>
-                <a href="/searchcompanies.html" class="">
+                <a href="/searchcompanies.html" class="text-[22px] md:text-base font-medium md:font-normal">
                   Search Companies
                 </a>
               </li>
               <li>
-                <a href="/resources.html" class=""> Resources </a>
+                <a href="/resources.html" class="text-[22px] md:text-base font-medium md:font-normal"> Resources </a>
               </li>
             </ul>
           </nav>
           <!-- dropdown -->
-          <nav class="space-x-4">
+          <nav class="md:space-x-2 lg:space-x-8 flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0">
             <div class="dropdown">
-              <button
-                onclick="myFunction()"
-                class="dropbtn flex items-center"
+              <button class="forEmployer dropbtn flex items-center text-[22px] md:text-base font-medium md:font-normal"
               >
                 For Employers
                 <svg
@@ -70,23 +71,22 @@
                   />
                 </svg>
               </button>
-              <div id="myDropdown" class="dropdown-content">
-                <a href="#">Dashboard</a>
-                <a href="#">My Job</a>
-                <a href="#">My Profile</a>
-                <a href="#">My Account</a>
-                <a href="#">Massage</a>
-                <a href="#">Job applicant</a>
-                <a href="#">Talent community</a>
-                <a href="#">Post a new job </a>
+              <div class="employerDropdown dropdown-content">
+                <a href="/src/employer-myprofile.html">Dashboard</a>
+                <a href="/src/employer-myjob.html">My Job</a>
+                <a href="/src/employer-myprofile.html">My Profile</a>
+                <a href="/src/employer-myaccount.html">My Account</a>
+                <a href="/src/employer-messages.html">Massage</a>
+                <a href="/src/employer-myapplication.html">My application</a>
+                <a href="/src/employer-jobapplicants.html">Job applicant</a>
+                <a href="/src/employer-talentcommunity.html">Talent community</a>
+                <a href="/src/employer-jobpostform.html">Post a new job </a>
+                <a href="/src/employer-subscription.html">Subscription</a>
                 <a href="#">Logout</a>
               </div>
             </div>
             <div class="signup">
-              <button
-                onclick=""
-                class="border border-[#008D96] rounded-full py-2 px-4"
-              >
+              <button class="border border-[#008D96] rounded-full py-2 px-4">
                 Signup/ Login
             
               </button>
@@ -94,18 +94,88 @@
             </div>
           </nav>
         </div>
-        <button class="block lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-8 stroke-2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+      
+      </div>
+    </div>
+    <!-- hamburger menu -->
+    <div id="menu_bar" class="fixed top-0 left-0 bottom-0 menu_bar block md:hidden z-30 w-full bg-white float-right overflow-y-auto">
+      <div class="container mx-auto pt-8 w-11/12 md:w-fit flex justify-between items-center ">
+        <a href="/src/index.html" class="w-fit">
+          <img src="/src/img/logo.png" alt="logo" srcset="" class="w-20" />
+        </a>
+        <button  class="toggle_btn flex md:hidden">
+          <img src="/src/img/logo.png" alt="" class="hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="cross_btn w-8 h-6 stroke-2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
+      </div>
+      <nav>
+        <ul class="flex flex-col bg-white items-center justify-center text-center space-y-4  h-screen">
+          <li>
+            <a href="/searchjobs.html" class="text-[22px] font-medium ">
+              Search Jobs
+            </a>
+          </li>
+          <li>
+            <a href="/searchcompanies.html" class="text-[22px] font-medium ">
+              Search Companies
+            </a>
+          </li>
+          <li>
+            <a href="/resources.html" class="text-[22px] font-medium "> Resources </a>
+          </li>
+          <li>
+            <div class="dropdown">
+              <button class="forEmployer dropbtn flex items-center text-[22px] md:text-base font-medium md:font-normal"
+              >
+                For Employers
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="ml-2 h-5 w-5 font-bold"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </button>
+              <div class="employerDropdown dropdown-content">
+                <a href="/src/employer-myprofile.html">Dashboard</a>
+                <a href="/src/employer-myjob.html">My Job</a>
+                <a href="/src/employer-myprofile.html">My Profile</a>
+                <a href="/src/employer-myaccount.html">My Account</a>
+                <a href="/src/employer-messages.html">Massage</a>
+                <a href="/src/employer-myapplication.html">My application</a>
+                <a href="/src/employer-jobapplicants.html">Job applicant</a>
+                <a href="/src/employer-talentcommunity.html">Talent community</a>
+                <a href="/src/employer-jobpostform.html">Post a new job </a>
+                <a href="/src/employer-subscription.html">Subscription</a>
+                <a href="#">Logout</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="signup">
+              <button class="border border-[#008D96] rounded-full py-2 px-4">
+                Signup/ Login
+            
+              </button>
+            
+            </div>
+          </li>
+        </ul>
+      </nav>
     </div>
-    </div>
-  
-    </header>
+  </header>
     <!-- herobanner -->
     <section class="bg-primary h-[500px] ">
-      <div class="container mx-auto max-w-[1200px] flex items-center justify-start h-full">
+      <div class="container mx-auto w-11/12 md:max-w-[767px] lg:max-w-[1000px] xl:max-w-[1200px] flex items-center justify-start h-full">
           <div class="space-y-5">
             <h1>
               Join the <br>
@@ -118,38 +188,53 @@
           </div>
       </div>
     </section>
-      <main class="max-w-[1200px] container mx-auto my-12">
-        
-        <div class="flex justify-between items-start">
-          <div class=" shadow-custom  h-full w-[450px] py-7">
+      <main class="w-11/12 md:max-w-[767px] lg:max-w-[1000px] xl:max-w-[1200px] container mx-auto my-12">
+        <button class="showSidebar btn-button flex md:hidden justify-start items-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          Show Filters
+        </button>
+        <div class="flex justify-between items-start gap-4">
+          <div class="sidebar hidden md:block  md:min-w-2/6 shadow-custom pt-8 fixed md:static top-0 left-0 z-40 bg-white h-screen md:h-full overflow-y-auto md:overflow-y-hidden shadow-custom py-7 shadow-custom ">
+            <p class="closeSidebar flex md:hidden justify-center items-center cursor-pointer text-sm font-bold text-red-600 mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              Close
+            </p>
             <form action="" class="w-full">
-              <div class="space-y-5 px-14">
+              <div class="space-y-5 px-8 md:px-4 lg:px-14 truncate">
                 <div class="space-y-3">
                   <div class="flex justify-between items-center">
                     <label for="" class="font-medium" required>Search Company Name</label>
                   </div>
                   <input type="text" class="input-class shadow-custom border-0" placeholder="Search By Job Title Or Job ID">
                 </div>
-                <div class="space-y-3">
-                  <div class="flex justify-between items-center">
+                <div class="filterDiv space-y-3">
+                  <div class="filterLabel flex justify-between items-center cursor-pointer">
                     <label for="" class="font-medium" required>Location:</label>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class=" w-5 h-5 text-bodyText stroke-2">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>                    
                   </div>
-                  <div>
-                    <input type="checkbox" name="" id="work" class="">
-                    <label for="work" class="text-sm text-bodyText font-light">Remote</label>
+                  <div class="filterDropdown space-y-3">
+                    <div>
+                      <input type="checkbox" name="" id="work" class="">
+                      <label for="work" class="text-sm text-bodyText font-light">Remote</label>
+                    </div>
+                    <select name="" id="" class="input-class shadow-custom border-0 font-medium text-sm text-bodyText">
+                      <option value="">Country</option>
+                    </select>
+                    <br>
+                    <select name="" id="" class="input-class shadow-custom border-0 font-medium text-sm text-bodyText">
+                      <option value="">State</option>
+                    </select>
+                    <br>
+                    <select name="" id="" class="input-class shadow-custom border-0 font-medium text-sm text-bodyText">
+                      <option value="">City</option>
+                    </select>
                   </div>
-                  <select name="" id="" class="input-class shadow-custom border-0 font-medium text-sm text-bodyText">
-                    <option value="">Country</option>
-                  </select>
-                  <select name="" id="" class="input-class shadow-custom border-0 font-medium text-sm text-bodyText">
-                    <option value="">State</option>
-                  </select>
-                  <select name="" id="" class="input-class shadow-custom border-0 font-medium text-sm text-bodyText">
-                    <option value="">City</option>
-                  </select>
                 </div>
               </div>
               <div class="p-4 flex justify-center">
@@ -158,183 +243,221 @@
           </form>
           </div>
           
-            <div class=" pl-8  flex flex-col space-y-3">
-              <div class="flex justify-end mb-9">
-                <div class="flex  justify-between items-center w-[750px]">
-                  <label for="" class="text-base font-medium">Showing 1-10 of 208 result</label>
-                  <div class="space-x-5">
-                    <label for="" class="text-base font-medium">Sort By</label>
-                    <select name="" id="" class="rounded-xl border border-button px-7 py-1">
-                      <option value="">Default</option>
-                    </select>
-                  </div>
-                 </div>
-              </div>
-             <div class="space-y-3 w-[750px]">
-              <div class="flex justify-between items-center w-full h-44 rounded-xl shadow-custom px-8  gap-9">
-                <div class="flex justify-start items-start gap-2">
-                  <div class="w-[82px] h-[73px] bg-[#EBEBEB] rounded-xl">
-                  </div>
-                  <div class="w-48 ml-8">
-                    <div class="space-y-1 border-b border-[#A7A7A7] pb-3 mb-2">
-                      <h4 class="text-base text-bodyText">Google in corporation</h4>
-                    </div>
-                    <div class="">
-                      <p class="text-xs text-bodyText">Location</p>
-                      <p class="text-xs text-bodyText">WFA, Remote</p>
-                    </div>
-                  </div>
+          <div class="flex flex-col space-y-3 w-full md:w-4/6">
+            <div class="flex justify-end mb-9">
+              <div class="flex flex-col md:flex-row justify-between items-start md:items-center w-full gap-4">
+                <label for="" class="text-base font-medium">Showing 1-10 of 208 result</label>
+                <div class="space-x-5">
+                  <label for="" class="text-base font-medium">Sort By</label>
+                  <select name="" id="" class="rounded-xl border border-button px-7 py-1">
+                    <option value="">Default</option>
+                  </select>
                 </div>
-                <button class="btn-secondary text-sm">View Company</button>
-              </div>
-              <div class="flex justify-between items-center w-full h-44 rounded-xl shadow-custom px-8  gap-9">
-                <div class="flex justify-start items-start gap-2">
-                  <div class="w-[82px] h-[73px] bg-[#EBEBEB] rounded-xl">
-                  </div>
-                  <div class="w-48 ml-8">
-                    <div class="space-y-1 border-b border-[#A7A7A7] pb-3 mb-2">
-                      <h4 class="text-base text-bodyText">Google in corporation</h4>
-                    </div>
-                    <div class="">
-                      <p class="text-xs text-bodyText">Location</p>
-                      <p class="text-xs text-bodyText">WFA, Remote</p>
-                    </div>
-                  </div>
                 </div>
-                <button class="btn-secondary text-sm">View Company</button>
-              </div>
-              <div class="flex justify-between items-center w-full h-44 rounded-xl shadow-custom px-8  gap-9">
-                <div class="flex justify-start items-start gap-2">
-                  <div class="w-[82px] h-[73px] bg-[#EBEBEB] rounded-xl">
-                  </div>
-                  <div class="w-48 ml-8">
-                    <div class="space-y-1 border-b border-[#A7A7A7] pb-3 mb-2">
-                      <h4 class="text-base text-bodyText">Google in corporation</h4>
-                    </div>
-                    <div class="">
-                      <p class="text-xs text-bodyText">Location</p>
-                      <p class="text-xs text-bodyText">WFA, Remote</p>
-                    </div>
-                  </div>
-                </div>
-                <button class="btn-secondary text-sm">View Company</button>
-              </div>
-              <div class="flex justify-between items-center w-full h-44 rounded-xl shadow-custom px-8  gap-9">
-                <div class="flex justify-start items-start gap-2">
-                  <div class="w-[82px] h-[73px] bg-[#EBEBEB] rounded-xl">
-                  </div>
-                  <div class="w-48 ml-8">
-                    <div class="space-y-1 border-b border-[#A7A7A7] pb-3 mb-2">
-                      <h4 class="text-base text-bodyText">Google in corporation</h4>
-                    </div>
-                    <div class="">
-                      <p class="text-xs text-bodyText">Location</p>
-                      <p class="text-xs text-bodyText">WFA, Remote</p>
-                    </div>
-                  </div>
-                </div>
-                <button class="btn-secondary text-sm">View Company</button>
-              </div>
-              <div class="flex justify-between items-center w-full h-44 rounded-xl shadow-custom px-8  gap-9">
-                <div class="flex justify-start items-start gap-2">
-                  <div class="w-[82px] h-[73px] bg-[#EBEBEB] rounded-xl">
-                  </div>
-                  <div class="w-48 ml-8">
-                    <div class="space-y-1 border-b border-[#A7A7A7] pb-3 mb-2">
-                      <h4 class="text-base text-bodyText">Google in corporation</h4>
-                    </div>
-                    <div class="">
-                      <p class="text-xs text-bodyText">Location</p>
-                      <p class="text-xs text-bodyText">WFA, Remote</p>
-                    </div>
-                  </div>
-                </div>
-                <button class="btn-secondary text-sm">View Company</button>
-              </div>
-              <div class="flex justify-between items-center w-full h-44 rounded-xl shadow-custom px-8  gap-9">
-                <div class="flex justify-start items-start gap-2">
-                  <div class="w-[82px] h-[73px] bg-[#EBEBEB] rounded-xl">
-                  </div>
-                  <div class="w-48 ml-8">
-                    <div class="space-y-1 border-b border-[#A7A7A7] pb-3 mb-2">
-                      <h4 class="text-base text-bodyText">Google in corporation</h4>
-                    </div>
-                    <div class="">
-                      <p class="text-xs text-bodyText">Location</p>
-                      <p class="text-xs text-bodyText">WFA, Remote</p>
-                    </div>
-                  </div>
-                </div>
-                <button class="btn-secondary text-sm">View Company</button>
-              </div>
             </div>
-           
-        </div>
+            <div class="space-y-3 w-full">
+            <div class="flex justify-between items-center w-full h-44 rounded-xl shadow-custom px-8  gap-9">
+              <div class="flex justify-start items-start gap-2">
+                <div class="w-[82px] h-[73px] bg-[#EBEBEB] rounded-xl">
+                </div>
+                <div class="w-48 ml-8">
+                  <div class="space-y-1 border-b border-[#A7A7A7] pb-3 mb-2">
+                    <h4 class="text-base text-bodyText">Google in corporation</h4>
+                  </div>
+                  <div class="">
+                    <p class="text-xs text-bodyText">Location</p>
+                    <p class="text-xs text-bodyText">WFA, Remote</p>
+                  </div>
+                </div>
+              </div>
+              <button class="btn-secondary text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="xl:hidden w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span class="hidden xl:block">View Profile</span>
+                </button>
+            </div>
+            <div class="flex justify-between items-center w-full h-44 rounded-xl shadow-custom px-8  gap-9">
+              <div class="flex justify-start items-start gap-2">
+                <div class="w-[82px] h-[73px] bg-[#EBEBEB] rounded-xl">
+                </div>
+                <div class="w-48 ml-8">
+                  <div class="space-y-1 border-b border-[#A7A7A7] pb-3 mb-2">
+                    <h4 class="text-base text-bodyText">Google in corporation</h4>
+                  </div>
+                  <div class="">
+                    <p class="text-xs text-bodyText">Location</p>
+                    <p class="text-xs text-bodyText">WFA, Remote</p>
+                  </div>
+                </div>
+              </div>
+              <button class="btn-secondary text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="xl:hidden w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span class="hidden xl:block">View Profile</span>
+                </button>
+            </div>
+            <div class="flex justify-between items-center w-full h-44 rounded-xl shadow-custom px-8  gap-9">
+              <div class="flex justify-start items-start gap-2">
+                <div class="w-[82px] h-[73px] bg-[#EBEBEB] rounded-xl">
+                </div>
+                <div class="w-48 ml-8">
+                  <div class="space-y-1 border-b border-[#A7A7A7] pb-3 mb-2">
+                    <h4 class="text-base text-bodyText">Google in corporation</h4>
+                  </div>
+                  <div class="">
+                    <p class="text-xs text-bodyText">Location</p>
+                    <p class="text-xs text-bodyText">WFA, Remote</p>
+                  </div>
+                </div>
+              </div>
+              <button class="btn-secondary text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="xl:hidden w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span class="hidden xl:block">View Profile</span>
+                </button>
+            </div>
+            <div class="flex justify-between items-center w-full h-44 rounded-xl shadow-custom px-8  gap-9">
+              <div class="flex justify-start items-start gap-2">
+                <div class="w-[82px] h-[73px] bg-[#EBEBEB] rounded-xl">
+                </div>
+                <div class="w-48 ml-8">
+                  <div class="space-y-1 border-b border-[#A7A7A7] pb-3 mb-2">
+                    <h4 class="text-base text-bodyText">Google in corporation</h4>
+                  </div>
+                  <div class="">
+                    <p class="text-xs text-bodyText">Location</p>
+                    <p class="text-xs text-bodyText">WFA, Remote</p>
+                  </div>
+                </div>
+              </div>
+              <button class="btn-secondary text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="xl:hidden w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span class="hidden xl:block">View Profile</span>
+                </button>
+            </div>
+            <div class="flex justify-between items-center w-full h-44 rounded-xl shadow-custom px-8  gap-9">
+              <div class="flex justify-start items-start gap-2">
+                <div class="w-[82px] h-[73px] bg-[#EBEBEB] rounded-xl">
+                </div>
+                <div class="w-48 ml-8">
+                  <div class="space-y-1 border-b border-[#A7A7A7] pb-3 mb-2">
+                    <h4 class="text-base text-bodyText">Google in corporation</h4>
+                  </div>
+                  <div class="">
+                    <p class="text-xs text-bodyText">Location</p>
+                    <p class="text-xs text-bodyText">WFA, Remote</p>
+                  </div>
+                </div>
+              </div>
+              <button class="btn-secondary text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="xl:hidden w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span class="hidden xl:block">View Profile</span>
+                </button>
+            </div>
+            <div class="flex justify-between items-center w-full h-44 rounded-xl shadow-custom px-8  gap-9">
+              <div class="flex justify-start items-start gap-2">
+                <div class="w-[82px] h-[73px] bg-[#EBEBEB] rounded-xl">
+                </div>
+                <div class="w-48 ml-8">
+                  <div class="space-y-1 border-b border-[#A7A7A7] pb-3 mb-2">
+                    <h4 class="text-base text-bodyText">Google in corporation</h4>
+                  </div>
+                  <div class="">
+                    <p class="text-xs text-bodyText">Location</p>
+                    <p class="text-xs text-bodyText">WFA, Remote</p>
+                  </div>
+                </div>
+              </div>
+              <button class="btn-secondary text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="xl:hidden w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span class="hidden xl:block">View Profile</span>
+                </button>
+            </div>
+            </div>
+            <!-- pagination -->
+            <div class="flex justify-center items-center gap-4 py-12">
+              <a href="/src/employer-archives.html" class="text-white bg-blue-600 rounded-full w-10 h-10 flex items-center justify-center ">1</a>
+            
+              <a href="/src/employer-archives-page2.html" class="rounded-full w-10 h-10 flex items-center justify-center hover:text-white hover:bg-blue-600 duration-300 transition">2</a>
+            
+              <a href="/src/employer-archives-page3.html" class="rounded-full w-10 h-10 flex items-center justify-center hover:text-white hover:bg-blue-600 duration-300 transition">3</a>
+            
+              <a href="/src/employer-archives-page4.html" class="rounded-full w-10 h-10 flex items-center justify-center hover:text-white hover:bg-blue-600 duration-300 transition">4</a>
+            
+              <a href="/src/employer-archives-page2.html" class="rounded-full w-10 h-10 flex items-center justify-center hover:text-white hover:bg-blue-600 duration-300 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </a>
+          </div>
+          </div>
        
     </main>
-
-     <!-- footer -->
-     <footer class="">
-      <div
-        class="h-[23px] border border-bodyText border-opacity-10 bg-primary"
-      ></div>
-      <div
-        class="border border-t-0 border-bodyText border-opacity-25 pt-16 pb-6"
-      >
-        <div class="container mx-auto max-w-[1200px]">
-          <div class="flex items-start justify-between">
-            <div>
+    <!-- footer -->
+    <footer class=" ">
+      <div class="h-[23px] border border-bodyText border-opacity-10 bg-primary"></div>
+      <div class="border border-t-0 border-bodyText border-opacity-25 pt-16 pb-6">
+        <div class="container mx-auto w-11/12 md:max-w-[767px] lg:max-w-[1000px] xl:max-w-[1200px]">
+          <div class="flex flex-col md:flex-row items-start justify-between gap-8">
+            <div class="">
               <img src="/src/img/logo.png" alt="" class="" />
             </div>
-            <div>
-              <h3 class="footer-heading">Professionals</h3>
-              <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
-                <li>
-                  <a class="footer-body" href="">Join the SaaS network</a>
-                </li>
-                <li>
-                  <a class="footer-body" href="/searchjobs">Search jobs</a>
-                </li>
-                <li>
-                  <a class="footer-body" href="/searchcompanies"
-                    >Search Companies</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="footer-heading">Employers</h3>
-              <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
-                <li><a class="footer-body" href="">Post a Job</a></li>
-                <li>
-                  <a class="footer-body" href="/">Search the SaaS network</a>
-                </li>
-                <li><a class="footer-body" href="/pricing">Pricing</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="footer-heading">OpentoSaaS</h3>
-              <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
-                <li><a class="footer-body" href="/src/about.html">About</a></li>
-                <li>
-                  <a class="footer-body" href="/privacy">Private Policy</a>
-                </li>
-                <li>
-                  <a class="footer-body" href="/terms&conditions"
-                    >Terms and Conditions</a
-                  >
-                </li>
-                <li><a class="footer-body" href="/blog">Blog</a></li>
-                <li><a class="footer-body" href="/conbtact">Contact</a></li>
-              </ul>
+            <div class="flex flex-col md:flex-row items-start justify-between gap-4 lg:gap-8">
+              <div>
+                <h3 class="footer-heading">Professionals</h3>
+                <ul class="mt-3 flex list-inside list-disc flex-col space-y-3 text-[19px]">
+                  <li>
+                    <a class="footer-body" href="">Join the SaaS network</a>
+                  </li>
+                  <li>
+                    <a class="footer-body" href="/searchjobs">Search jobs</a>
+                  </li>
+                  <li>
+                    <a class="footer-body" href="/searchcompanies">Search Companies</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="footer-heading">Employers</h3>
+                <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
+                  <li><a class="footer-body" href="">Post a Job</a></li>
+                  <li>
+                    <a class="footer-body" href="/">Search the SaaS network</a>
+                  </li>
+                  <li><a class="footer-body" href="/src">Pricing</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="footer-heading">OpentoSaaS</h3>
+                <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
+                  <li><a class="footer-body" href="/src/about.html">About</a></li>
+                  <li>
+                    <a class="footer-body" href="/privacy">Private Policy</a>
+                  </li>
+                  <li>
+                    <a class="footer-body" href="/terms&conditions"
+                      >Terms and Conditions</a
+                    >
+                  </li>
+                  <li><a class="footer-body" href="/blog">Blog</a></li>
+                  <li><a class="footer-body" href="/conbtact">Contact</a></li>
+                </ul>
+              </div>
             </div>
           </div>
-
-          <div class="mt-12 flex items-center justify-between">
+  
+          <div class="mt-12 flex flex-col-reverse md:flex-row items-start md:items-center justify-start md:justify-between gap-4">
             <p class="text-sm font-normal text-bodyText">@2023 Seek</p>
-            <div
-              class="flex items-center justify-center space-x-4 md:justify-end"
-            >
+            <div class="flex items-center justify-center space-x-4 md:justify-end">
               <p class="text-sm font-normal text-bodyText">Follow us:</p>
               <a href="">
                 <svg
@@ -389,5 +512,9 @@
         </div>
       </div>
     </footer>
+    
+      <!-- js -->
+      <script src="jquery.js"></script>
+      <script src="script.js"></script>
 </body>
 </html>

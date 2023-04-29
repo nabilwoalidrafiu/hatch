@@ -120,7 +120,7 @@
          
         </div>
         <!-- hamburger menu -->
-        <div id="menu_bar" class="fixed top-0 left-0 bottom-0 menu_bar block md:hidden z-10 w-full bg-white float-right overflow-y-auto">
+        <div id="menu_bar" class="fixed top-0 right-0 bottom-0 menu_bar block md:hidden z-10 w-full bg-white space-y-32 overflow-y-auto">
           <div class="container mx-auto pt-8 w-11/12 md:w-fit flex justify-between items-center ">
             <a href="/src/index.html" class="w-fit">
               <img src="/src/img/logo.png" alt="logo" srcset="" class="w-20" />
@@ -132,24 +132,24 @@
               </svg>
             </button>
           </div>
-          <nav>
-            <ul class="flex flex-col bg-white items-center justify-center text-center space-y-4  h-screen">
+          <nav class="">
+            <ul class="flex flex-col  items-center justify-center text-center space-y-4">
               <li>
-                <a href="/searchjobs.html" class="text-[22px] font-medium ">
+                <a href="/searchjobs.html" class="text-[22px] font-medium break-normal truncate">
                   Search Jobs
                 </a>
               </li>
               <li>
-                <a href="/searchcompanies.html" class="text-[22px] font-medium ">
+                <a href="/searchcompanies.html" class="text-[22px] font-medium truncate">
                   Search Companies
                 </a>
               </li>
               <li>
-                <a href="/resources.html" class="text-[22px] font-medium "> Resources </a>
+                <a href="/resources.html" class="text-[22px] font-medium truncate"> Resources </a>
               </li>
               <li>
                 <div class="dropdown">
-                  <button  class="forCandidate dropbtn flex items-center text-[22px] md:text-base font-medium md:font-normal">
+                  <button  class="forCandidate dropbtn flex items-center text-[22px] md:text-base font-medium md:font-normal truncate">
                     For Candidate
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -166,7 +166,7 @@
                       />
                     </svg>
                   </button>
-                  <div  class="candidateDropdown dropdown-content">
+                  <div  class="candidateDropdown dropdown-content overflow-y-auto">
                     <a href="/src/candidate-myprofile.html">Dashboard</a>
                     <a href="">My Job</a>
                     <a href="/src/candidate-myprofile.html">My Profile</a>
@@ -183,7 +183,7 @@
               </li>
               <li>
                 <div class="dropdown">
-                  <button class="forEmployer dropbtn flex items-center text-[22px] md:text-base font-medium md:font-normal"
+                  <button class="forEmployer dropbtn flex items-center text-[22px] md:text-base font-medium md:font-normal truncate"
                   >
                     For Employers
                     <svg

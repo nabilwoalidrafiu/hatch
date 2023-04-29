@@ -7,8 +7,6 @@
     <title>Employer-Subscription</title>
       <!-- stylesheet -->
       <link href="/dist/output.css" rel="stylesheet" />
-      <!-- js -->
-      <script src="script.js"></script>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
@@ -18,102 +16,201 @@
 </head>
 <body class="font-poppins">
     <!-- header -->
-    <header class="py-4 shadow-custom">
-      <!-- navbar -->
-      <div class="container mx-auto px-4 lg:px-0 flex max-w-[1200px] items-center justify-between space-x-8 font-roboto">
-        <!-- Logo -->
-        <div class="w-fit">
+    <header id="header" class="shadow-custom">
+      <!-- nav menu -->
+      <div class="bg-white w-full relative z-20">
+        <div id="nav_menu" class="nav_menu container mx-auto py-5 w-11/12 md:max-w-[767px] lg:max-w-[1000px] xl:max-w-[1200px] flex flex-col md:flex-row items-center justify-between md:space-x-8 font-roboto z-0">
+          <!-- Logo -->
+          <div class="w-full md:w-fit flex justify-between items-center">
+            <a href="/src/index.html" class="w-fit">
+              <img src="/src/img/logo.png" alt="logo" srcset="" class="w-20" />
+            </a>
+            <button  class="toggle_btn flex md:hidden">
+              <img src="/src/img/logo.png" alt="" class="hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="menu_btn w-8 h-6 stroke-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+              </svg>
+            </button>
+          </div>
+          <div id="" class=" hidden md:flex flex-col md:flex-row items-center justify-center md:justify-between h-screen md:h-auto space-y-8 md:space-y-0 w-full">
+            <nav class="lg:ml-12">
+              <ul class="flex flex-col md:flex-row items-center justify-start space-y-8 md:space-y-0 md:space-x-2 lg:space-x-8">
+                <li>
+                  <a href="/searchjobs.html" class="text-[22px] md:text-base font-medium md:font-normal">
+                    Search Jobs
+                  </a>
+                </li>
+                <li>
+                  <a href="/searchcompanies.html" class="text-[22px] md:text-base font-medium md:font-normal">
+                    Search Companies
+                  </a>
+                </li>
+                <li>
+                  <a href="/resources.html" class="text-[22px] md:text-base font-medium md:font-normal"> Resources </a>
+                </li>
+              </ul>
+            </nav>
+            <!-- dropdown -->
+            <nav class="md:space-x-2 lg:space-x-8 flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0">
+              <div class="dropdown">
+                <button class="forEmployer dropbtn flex items-center text-[22px] md:text-base font-medium md:font-normal"
+                >
+                  For Employers
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="ml-2 h-5 w-5 font-bold"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </button>
+                <div class="employerDropdown dropdown-content">
+                  <a href="/src/employer-myprofile.html">Dashboard</a>
+                  <a href="/src/employer-myjob.html">My Job</a>
+                  <a href="/src/employer-myprofile.html">My Profile</a>
+                  <a href="/src/employer-myaccount.html">My Account</a>
+                  <a href="/src/employer-messages.html">Massage</a>
+                  <a href="/src/employer-myapplication.html">My application</a>
+                  <a href="/src/employer-jobapplicants.html">Job applicant</a>
+                  <a href="/src/employer-talentcommunity.html">Talent community</a>
+                  <a href="/src/employer-jobpostform.html">Post a new job </a>
+                  <a href="/src/employer-subscription.html">Subscription</a>
+                  <a href="#">Logout</a>
+                </div>
+              </div>
+              <div class="signup">
+                <button class="border border-[#008D96] rounded-full py-2 px-4">
+                  Signup/ Login
+              
+                </button>
+              
+              </div>
+            </nav>
+          </div>
+        
+        </div>
+      </div>
+      <!-- hamburger menu -->
+      <div id="menu_bar" class="fixed top-0 left-0 bottom-0 menu_bar block md:hidden z-30 w-full bg-white float-right overflow-y-auto">
+        <div class="container mx-auto pt-8 w-11/12 md:w-fit flex justify-between items-center ">
           <a href="/src/index.html" class="w-fit">
             <img src="/src/img/logo.png" alt="logo" srcset="" class="w-20" />
           </a>
+          <button  class="toggle_btn flex md:hidden">
+            <img src="/src/img/logo.png" alt="" class="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="cross_btn w-8 h-6 stroke-2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
-        <div class="hidden lg:flex w-full items-center justify-between">
-          <nav class="ml-12">
-            <ul class="flex items-center justify-start space-x-8">
-              <li>
-                <a href="/searchjobs.html" class="font-normal">
-                  Search Jobs
-                </a>
-              </li>
-              <li>
-                <a href="/searchcompanies.html" class="">
-                  Search Companies
-                </a>
-              </li>
-              <li>
-                <a href="/resources.html" class=""> Resources </a>
-              </li>
-            </ul>
-          </nav>
-          <!-- dropdown -->
-          <nav class="space-x-4">
-            <div class="dropdown">
-              <button
-                onclick="myFunction()"
-                class="dropbtn flex items-center"
-              >
-                For Employers
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="ml-2 h-5 w-5 font-bold"
+        <nav>
+          <ul class="flex flex-col bg-white items-center justify-center text-center space-y-4  h-screen">
+            <li>
+              <a href="/searchjobs.html" class="text-[22px] font-medium ">
+                Search Jobs
+              </a>
+            </li>
+            <li>
+              <a href="/searchcompanies.html" class="text-[22px] font-medium ">
+                Search Companies
+              </a>
+            </li>
+            <li>
+              <a href="/resources.html" class="text-[22px] font-medium "> Resources </a>
+            </li>
+            <li>
+              <div class="dropdown">
+                <button class="forEmployer dropbtn flex items-center text-[22px] md:text-base font-medium md:font-normal"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                  />
-                </svg>
-              </button>
-              <div id="myDropdown" class="dropdown-content">
-                <a href="#">Dashboard</a>
-                <a href="#">My Job</a>
-                <a href="#">My Profile</a>
-                <a href="#">My Account</a>
-                <a href="#">Massage</a>
-                <a href="#">Job applicant</a>
-                <a href="#">Talent community</a>
-                <a href="#">Post a new job </a>
-                <a href="#">Logout</a>
+                  For Employers
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="ml-2 h-5 w-5 font-bold"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </button>
+                <div class="employerDropdown dropdown-content">
+                  <a href="/src/employer-myprofile.html">Dashboard</a>
+                  <a href="/src/employer-myjob.html">My Job</a>
+                  <a href="/src/employer-myprofile.html">My Profile</a>
+                  <a href="/src/employer-myaccount.html">My Account</a>
+                  <a href="/src/employer-messages.html">Massage</a>
+                  <a href="/src/employer-myapplication.html">My application</a>
+                  <a href="/src/employer-jobapplicants.html">Job applicant</a>
+                  <a href="/src/employer-talentcommunity.html">Talent community</a>
+                  <a href="/src/employer-jobpostform.html">Post a new job </a>
+                  <a href="/src/employer-subscription.html">Subscription</a>
+                  <a href="#">Logout</a>
+                </div>
               </div>
-            </div>
-            <div class="signup">
-              <button
-                onclick=""
-                class="border border-[#008D96] rounded-full py-2 px-4"
-              >
-                Signup/ Login
-            
-              </button>
-            
-            </div>
-          </nav>
-        </div>
-        <button class="block lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-8 stroke-2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
-          </svg>
-        </button>
+            </li>
+            <li>
+              <div class="signup">
+                <button class="border border-[#008D96] rounded-full py-2 px-4">
+                  Signup/ Login
+              
+                </button>
+              
+              </div>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
       <!-- form -->
-    <main class="max-w-[1200px] container mx-auto my-10">
+    <main class="w-11/12 md:max-w-[767px] lg:max-w-[1000px] xl:max-w-[1200px] container mx-auto my-10">
+      <button class="showSidebar flex md:hidden justify-start items-center cursor-pointer text-sm font-bold text-blue-800 mb-8">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        Show Sidebar
+      </button>
         <div class="flex justify-end my-5">
-          <div class="flex  justify-start items-center gap-4 w-[890px]">
-          
+          <div class="flex  justify-start items-center gap-4 w-full md:w-4/6 lg:w-4/5 xl:w-3/4">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 p-3 shadow-custom rounded-md">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
             </svg>
             <p class="text-bodyText">Back to setting</p>
-            
           </div>
         </div>
-        <div class="flex justify-center items-start gap-4 h-[600px]">
-          <nav class="w-1/4 shadow-custom pt-8 h-full">
+        <div class="flex justify-between items-start md:w-11/12 lg:w-full gap-4">
+          <nav class="sidebar hidden md:block min-w-[270px] md:min-w-2/6 lg:w-1/5 xl:w-1/4 shadow-custom pt-8 fixed md:static top-0 left-0 z-40 bg-white h-screen md:h-full  overflow-y-auto md:overflow-y-hidden">
             <ul>
+              <li class="closeSidebar flex md:hidden justify-center items-center cursor-pointer text-sm font-bold text-red-600">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                Close
+              </li>
+              <li class="w-full">
+                <a href="/src/employer-jobapplicants.html" class="flex justify-start items-center gap-3 h-16 w-full px-8">
+                  <div class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-semibold">My Application</p>
+                    <p class="text-sm font-medium text-bodyText hidden md:block">view jobs you applied to</p>
+                  </div>
+                </a>
+              </li>
               <li class="w-full">
                 <a href="/src/employer-myjob.html" class="flex justify-start items-center gap-3 h-16 w-full px-8">
                   <div class="">
@@ -124,7 +221,7 @@
                   </div>
                   <div>
                     <p class="font-semibold">My Job</p>
-                    <p class="text-sm font-medium text-bodyText">view jobs you applied to</p>
+                    <p class="text-sm font-medium text-bodyText hidden md:block">view jobs you applied to</p>
                   </div>
                 </a>
               </li>
@@ -138,7 +235,7 @@
                   </div>
                   <div>
                     <p class="font-semibold">My Profile</p>
-                    <p class="text-sm font-medium text-bodyText">Manage your profile</p>
+                    <p class="text-sm font-medium text-bodyText hidden md:block">Manage your profile</p>
                   </div>
                 </a>
               </li>
@@ -147,15 +244,15 @@
                   <div class="">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z" />
-                    </svg>                    
+                    </svg>
                   </div>
                   <div>
                     <p class="font-semibold">My Account</p>
-                    <p class="text-sm font-medium text-bodyText">Edit personal details</p>
+                    <p class="text-sm font-medium text-bodyText hidden md:block">Edit personal details</p>
                   </div>
                 </a>
               </li>
-             <li class=" w-full">
+             <li class="w-full">
               <a href="/src/employer-messages.html" class="flex justify-start items-center gap-3 h-16 w-full px-8">
                 <div class="">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -165,7 +262,7 @@
                 </div>
                 <div>
                   <p class="font-semibold">Massage</p>
-                  <p class="text-sm font-medium text-bodyText">Edit personal details</p>
+                  <p class="text-sm font-medium text-bodyText hidden md:block">Edit personal details</p>
                 </div>
               </a>
              </li>
@@ -179,7 +276,7 @@
                   </div>
                   <div>
                     <p class="font-semibold">Job applicant</p>
-                    <p class="text-sm font-medium text-bodyText">Edit personal details</p>
+                    <p class="text-sm font-medium text-bodyText hidden md:block">Edit personal details</p>
                   </div>
                 </a>
               </li>
@@ -193,7 +290,7 @@
                   </div>
                   <div>
                     <p class="font-semibold">Talent community</p>
-                    <p class="text-sm font-medium text-bodyText">Edit personal details</p>
+                    <p class="text-sm font-medium text-bodyText hidden md:block">Edit personal details</p>
                   </div>
                 </a>
               </li>
@@ -207,11 +304,11 @@
                   </div>
                   <div>
                     <p class="font-semibold">Post a new job </p>
-                    <p class="text-sm font-medium text-bodyText">Edit personal details</p>
+                    <p class="text-sm font-medium text-bodyText hidden md:block">Edit personal details</p>
                   </div>
                 </a>
               </li>
-              <li class="shadow-custom bg-primary/10 border-r-8 border-r-primary w-full">
+              <li class=" shadow-custom bg-primary/10 border-r-8 border-r-primary w-full">
                 <a href="/src/employer-subscription.html" class="flex justify-start items-center gap-3 h-16 w-full px-8">
                   <div class="">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -221,176 +318,178 @@
                   </div>
                   <div>
                     <p class="font-semibold">Subscription</p>
-                    <p class="text-sm font-medium text-bodyText">Edit personal details</p>
+                    <p class="text-sm font-medium text-bodyText hidden md:block">Edit personal details</p>
                   </div>
                 </a>
               </li>
             </ul>
           </nav>
-          
-            <div class="w-3/4 shadow-custom rounded-xl p-8 pr-14 space-y-5">
-              <h6 class="font-medium">Current Plan</h6>
-              <div class="flex justify-between items-center">
-                <div class="space-y-4 w-3/4">
-                  <div class="flex justify-start items-center gap-7">
-                    <h4 class="text-button">ELITE</h4>
-                    <button class="bg-primary/50 text-sm text-[#A7A7A7] rounded-2xl px-3 py-2">Yearly</button>
-                    <div class="space-y-4">
-                      <p>$2.80 / user /month</p>
-                      <button class="btn-buttonLight py-1 px-4 text-[#A7A7A7] text-sm">After 20% discount</button>
-                    </div>
+          <div class="w-full md:w-4/6 lg:w-4/5 xl:w-3/4 shadow-custom rounded-xl p-8 xl:pr-14 space-y-5">
+            
+            <h6 class="font-medium">Current Plan</h6>
+            <div class="flex justify-between items-center">
+              <div class="space-y-4 w-full md:w-3/5 lg:w-3/4">
+                <div class="flex justify-start items-center gap-3 xl:gap-7">
+                  <h4 class="text-button">ELITE</h4>
+                  <button class="bg-primary/50 text-sm text-[#A7A7A7] rounded-2xl px-3 py-2">Yearly</button>
+                  <div class="space-y-4">
+                    <p>$2.80 / user /month</p>
+                    <button class="btn-buttonLight w-36 md:w-40 py-1 text-[#A7A7A7] text-sm">After 20% discount</button>
                   </div>
-                  <p class="text-sm text-bodyText">Ideal for Remote Teams or a combination of in-house, mobile & remote teams.      </p>
                 </div>
-                <div class="space-y-2 w-1/4">
-                  <button class="btn-button w-52 h-12">Change Plan</button>
-                  <button class="btn-white border-black w-52 h-12 text-button font-semibold">Cancel Subscription</button>
-                </div>
+                <p class="text-sm text-bodyText">Ideal for Remote Teams or a combination of in-house, mobile & remote teams.      </p>
               </div>
-              <p class="text-sm text-bodyText flex justify-start items-center gap-2">Status :
-                <button>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 stroke-2 bg-button rounded-full p-1 ml-2 text-white">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                  </svg>
-                </button>
-                Active</p>
-              <p class="text-sm text-bodyText">Renew subscription by <span class="font-medium text-[#4C4C4C]">January 26, 2024</span></p>
-              <div class="flex justify-between items-center">
-                <div class="flex justify-start items-start gap-10">
-                  <div class="">
-                    <p class="text-sm text-bodyText">Payment Method</p>
-                    <div class="flex justify-start items-center gap-2">
-                      <img src="/src/img/visapro.png" alt="" srcset="" class="w-10 h-10">
-                      <p class="text-bodyText font-semibold text-sm">****5702</p>
-                    </div>
-                  </div>
-                  <div class="space-y-2">
-                    <p class="text-sm text-bodyText">Expiry Date</p>
-                    <p class="text-sm text-bodyText">12/2027</p>
-                  </div>
-                </div>
-                <button class="btn-white border-button w-72 text-bodyText font-semibold py-3">Change payment Method</button>
+              <div class="hidden md:block space-y-2 w-1/4 ">
+                <button class="btn-button md:w-28 lg:48 xl:w-52 !px-1 h-12">Change Plan</button>
+                <button class="btn-white border-black md:w-28 lg:48 xl:w-52 h-12 !px-1 text-button font-semibold">Cancel Subscription</button>
               </div>
             </div>
+            <p class="text-sm text-bodyText flex justify-start items-center gap-2">Status :
+              <button>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 stroke-2 bg-button rounded-full p-1 ml-2 text-white">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+              </button>
+              Active</p>
+            <p class="text-sm text-bodyText">Renew subscription by <span class="font-medium text-[#4C4C4C]">January 26, 2024</span></p>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+              <div class="flex justify-start items-start gap-10 md:gap-4 xl:gap-10">
+                <div class="">
+                  <p class="text-sm text-bodyText">Payment Method</p>
+                  <div class="flex justify-start items-center gap-2">
+                    <img src="/src/img/visapro.png" alt="" srcset="" class="w-10 h-10">
+                    <p class="text-bodyText font-semibold text-sm">****5702</p>
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <p class="text-sm text-bodyText">Expiry Date</p>
+                  <p class="text-sm text-bodyText">12/2027</p>
+                </div>
+              </div>
+              <button class="btn-white border-button w-full md:w-72 text-bodyText font-semibold py-3">Change payment Method</button>
+            </div>
+            <div class="md:hidden space-y-2 w-full flex flex-col">
+              <button class="btn-button w-full  md:w-52 h-12">Change Plan</button>
+              <button class="btn-white border-black w-full md:w-52 h-12 text-button font-semibold">Cancel Subscription</button>
+            </div>
+          </div>
             
         </div>
     </main>
 
-    <!-- footer -->
-    <footer class="">
-      <div
-        class="h-[23px] border border-bodyText border-opacity-10 bg-primary"
-      ></div>
-      <div
-        class="border border-t-0 border-bodyText border-opacity-25 pt-16 pb-6"
-      >
-        <div class="container mx-auto max-w-[1200px]">
-          <div class="flex items-start justify-between">
-            <div>
-              <img src="/src/img/logo.png" alt="" class="" />
+      <!-- footer -->
+      <footer class=" ">
+        <div class="h-[23px] border border-bodyText border-opacity-10 bg-primary"></div>
+        <div class="border border-t-0 border-bodyText border-opacity-25 pt-16 pb-6">
+          <div class="container mx-auto w-11/12 md:max-w-[767px] lg:max-w-[1000px] xl:max-w-[1200px]">
+            <div class="flex flex-col md:flex-row items-start justify-between gap-8">
+              <div class="">
+                <img src="/src/img/logo.png" alt="" class="" />
+              </div>
+              <div class="flex flex-col md:flex-row items-start justify-between gap-2 md:gap-4 lg:gap-8">
+                <div>
+                  <h3 class="footer-heading">Professionals</h3>
+                  <ul class="mt-3 flex list-inside list-disc flex-col space-y-3 text-[19px]">
+                    <li>
+                      <a class="footer-body" href="">Join the SaaS network</a>
+                    </li>
+                    <li>
+                      <a class="footer-body" href="/searchjobs">Search jobs</a>
+                    </li>
+                    <li>
+                      <a class="footer-body" href="/searchcompanies">Search Companies</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="footer-heading">Employers</h3>
+                  <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
+                    <li><a class="footer-body" href="">Post a Job</a></li>
+                    <li>
+                      <a class="footer-body" href="/">Search the SaaS network</a>
+                    </li>
+                    <li><a class="footer-body" href="/src">Pricing</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="footer-heading">OpentoSaaS</h3>
+                  <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
+                    <li><a class="footer-body" href="/src/about.html">About</a></li>
+                    <li>
+                      <a class="footer-body" href="/privacy">Private Policy</a>
+                    </li>
+                    <li>
+                      <a class="footer-body" href="/terms&conditions"
+                        >Terms and Conditions</a
+                      >
+                    </li>
+                    <li><a class="footer-body" href="/blog">Blog</a></li>
+                    <li><a class="footer-body" href="/conbtact">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div>
-              <h3 class="footer-heading">Professionals</h3>
-              <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
-                <li>
-                  <a class="footer-body" href="">Join the SaaS network</a>
-                </li>
-                <li>
-                  <a class="footer-body" href="/searchjobs">Search jobs</a>
-                </li>
-                <li>
-                  <a class="footer-body" href="/searchcompanies"
-                    >Search Companies</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="footer-heading">Employers</h3>
-              <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
-                <li><a class="footer-body" href="">Post a Job</a></li>
-                <li>
-                  <a class="footer-body" href="/">Search the SaaS network</a>
-                </li>
-                <li><a class="footer-body" href="/pricing">Pricing</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="footer-heading">OpentoSaaS</h3>
-              <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
-                <li><a class="footer-body" href="/src/about.html">About</a></li>
-                <li>
-                  <a class="footer-body" href="/privacy">Private Policy</a>
-                </li>
-                <li>
-                  <a class="footer-body" href="/terms&conditions"
-                    >Terms and Conditions</a
-                  >
-                </li>
-                <li><a class="footer-body" href="/blog">Blog</a></li>
-                <li><a class="footer-body" href="/conbtact">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="mt-12 flex items-center justify-between">
-            <p class="text-sm font-normal text-bodyText">@2023 Seek</p>
-            <div
-              class="flex items-center justify-center space-x-4 md:justify-end"
-            >
-              <p class="text-sm font-normal text-bodyText">Follow us:</p>
-              <a href="">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  class="footer-social-icon"
-                >
-                  <path
-                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
-                  />
-                </svg>
-              </a>
-              <a href="#">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                  class="footer-social-icon"
-                >
-                  <path
+  
+            <div class="mt-12 flex flex-col-reverse md:flex-row items-start md:items-center justify-start md:justify-between gap-2 md:gap-4">
+              <p class="text-sm font-normal text-bodyText">@2023 Seek</p>
+              <div class="flex items-center justify-center space-x-4 md:justify-end">
+                <p class="text-sm font-normal text-bodyText">Follow us:</p>
+                <a href="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
-                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-                  />
-                </svg>
-              </a>
-              <a href="">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  class="footer-social-icon"
-                >
-                  <path
-                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
-                  />
-                </svg>
-              </a>
-              <a href="">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                  class="footer-social-icon"
-                >
-                  <path
+                    viewBox="0 0 24 24"
+                    class="footer-social-icon"
+                  >
+                    <path
+                      d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                    />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    class="footer-social-icon"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                    />
+                  </svg>
+                </a>
+                <a href="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
-                    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                  />
-                </svg>
-              </a>
+                    viewBox="0 0 24 24"
+                    class="footer-social-icon"
+                  >
+                    <path
+                      d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+                    />
+                  </svg>
+                </a>
+                <a href="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    class="footer-social-icon"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+      
+      <!-- js -->
+      <script src="jquery.js"></script>
+      <script src="script.js"></script>  
 </body>
 </html>

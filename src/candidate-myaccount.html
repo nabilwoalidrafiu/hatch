@@ -183,8 +183,8 @@
           Show Sidebar
         </button>
         <div class="flex justify-center items-start gap-4">
-          <nav class="sidebar hidden md:block min-w-[270px] md:min-w-2/6 xl:w-1/4 shadow-custom pt-8 fixed md:static top-0 left-0 z-40 bg-white h-screen md:h-full">
-            <ul>
+          <nav class="sidebar hidden md:block md:w-1/3 xl:w-1/4 shadow-custom pt-8 fixed md:static top-0 left-0 z-40 bg-white h-screen md:h-full  overflow-y-auto md:overflow-y-hidden">
+            <ul class="truncate">
               <li class="closeSidebar flex md:hidden justify-center items-center cursor-pointer text-sm font-bold text-red-600">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -333,7 +333,7 @@
                   </div>
                 </form>
                 <div class="text-right">
-                  <button class="bg-button rounded-xl text-white py-3 px-4 w-40 mr-20">Save</button>
+                  <button class="bg-button rounded-xl text-white py-3 px-4 w-full md:w-40 mr-20">Save</button>
                 </div>
               
               

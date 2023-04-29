@@ -7,8 +7,6 @@
     <title>Employer-My Jobs</title>
       <!-- stylesheet -->
       <link href="/dist/output.css" rel="stylesheet" />
-      <!-- js -->
-      <script src="script.js"></script>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
@@ -17,93 +15,181 @@
       />
 </head>
 <body class="font-poppins">
-    <!-- header -->
-  <header class="py-4 shadow-custom">
-    <!-- navbar -->
-    <div class="container mx-auto px-4 lg:px-0 flex max-w-[1200px] items-center justify-between space-x-8 font-roboto">
-      <!-- Logo -->
-      <div class="w-fit">
-        <a href="/src/index.html" class="w-fit">
-          <img src="/src/img/logo.png" alt="logo" srcset="" class="w-20" />
-        </a>
+     <!-- header -->
+     <header id="header" class="shadow-custom">
+      <!-- nav menu -->
+      <div class="bg-white w-full relative z-20">
+        <div id="nav_menu" class="nav_menu container mx-auto py-5 w-11/12 md:max-w-[767px] lg:max-w-[1000px] xl:max-w-[1200px] flex flex-col md:flex-row items-center justify-between md:space-x-8 font-roboto z-0">
+          <!-- Logo -->
+          <div class="w-full md:w-fit flex justify-between items-center">
+            <a href="/src/index.html" class="w-fit">
+              <img src="/src/img/logo.png" alt="logo" srcset="" class="w-20" />
+            </a>
+            <button  class="toggle_btn flex md:hidden">
+              <img src="/src/img/logo.png" alt="" class="hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="menu_btn w-8 h-6 stroke-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+              </svg>
+            </button>
+          </div>
+          <div id="" class=" hidden md:flex flex-col md:flex-row items-center justify-center md:justify-between h-screen md:h-auto space-y-8 md:space-y-0 w-full">
+            <nav class="lg:ml-12">
+              <ul class="flex flex-col md:flex-row items-center justify-start space-y-8 md:space-y-0 md:space-x-2 lg:space-x-8">
+                <li>
+                  <a href="/searchjobs.html" class="text-[22px] md:text-base font-medium md:font-normal">
+                    Search Jobs
+                  </a>
+                </li>
+                <li>
+                  <a href="/searchcompanies.html" class="text-[22px] md:text-base font-medium md:font-normal">
+                    Search Companies
+                  </a>
+                </li>
+                <li>
+                  <a href="/resources.html" class="text-[22px] md:text-base font-medium md:font-normal"> Resources </a>
+                </li>
+              </ul>
+            </nav>
+            <!-- dropdown -->
+            <nav class="md:space-x-2 lg:space-x-8 flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0">
+              <div class="dropdown">
+                <button class="forEmployer dropbtn flex items-center text-[22px] md:text-base font-medium md:font-normal"
+                >
+                  For Employers
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="ml-2 h-5 w-5 font-bold"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </button>
+                <div class="employerDropdown dropdown-content">
+                  <a href="/src/employer-myprofile.html">Dashboard</a>
+                  <a href="/src/employer-myjob.html">My Job</a>
+                  <a href="/src/employer-myprofile.html">My Profile</a>
+                  <a href="/src/employer-myaccount.html">My Account</a>
+                  <a href="/src/employer-messages.html">Massage</a>
+                  <a href="/src/employer-myapplication.html">My application</a>
+                  <a href="/src/employer-jobapplicants.html">Job applicant</a>
+                  <a href="/src/employer-talentcommunity.html">Talent community</a>
+                  <a href="/src/employer-jobpostform.html">Post a new job </a>
+                  <a href="/src/employer-subscription.html">Subscription</a>
+                  <a href="#">Logout</a>
+                </div>
+              </div>
+              <div class="signup">
+                <button class="border border-[#008D96] rounded-full py-2 px-4">
+                  Signup/ Login
+              
+                </button>
+              
+              </div>
+            </nav>
+          </div>
+        
+        </div>
       </div>
-      <div class="hidden lg:flex w-full items-center justify-between">
-        <nav class="ml-12">
-          <ul class="flex items-center justify-start space-x-8">
+      <!-- hamburger menu -->
+      <div id="menu_bar" class="fixed top-0 left-0 bottom-0 menu_bar block md:hidden z-30 w-full bg-white float-right overflow-y-auto">
+        <div class="container mx-auto pt-8 w-11/12 md:w-fit flex justify-between items-center ">
+          <a href="/src/index.html" class="w-fit">
+            <img src="/src/img/logo.png" alt="logo" srcset="" class="w-20" />
+          </a>
+          <button  class="toggle_btn flex md:hidden">
+            <img src="/src/img/logo.png" alt="" class="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="cross_btn w-8 h-6 stroke-2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <nav>
+          <ul class="flex flex-col bg-white items-center justify-center text-center space-y-4  h-screen">
             <li>
-              <a href="/searchjobs.html" class="font-normal">
+              <a href="/searchjobs.html" class="text-[22px] font-medium ">
                 Search Jobs
               </a>
             </li>
             <li>
-              <a href="/searchcompanies.html" class="">
+              <a href="/searchcompanies.html" class="text-[22px] font-medium ">
                 Search Companies
               </a>
             </li>
             <li>
-              <a href="/resources.html" class=""> Resources </a>
+              <a href="/resources.html" class="text-[22px] font-medium "> Resources </a>
+            </li>
+            <li>
+              <div class="dropdown">
+                <button class="forEmployer dropbtn flex items-center text-[22px] md:text-base font-medium md:font-normal"
+                >
+                  For Employers
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="ml-2 h-5 w-5 font-bold"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </button>
+                <div class="employerDropdown dropdown-content">
+                  <a href="/src/employer-myprofile.html">Dashboard</a>
+                  <a href="/src/employer-myjob.html">My Job</a>
+                  <a href="/src/employer-myprofile.html">My Profile</a>
+                  <a href="/src/employer-myaccount.html">My Account</a>
+                  <a href="/src/employer-messages.html">Massage</a>
+                  <a href="/src/employer-myapplication.html">My application</a>
+                  <a href="/src/employer-jobapplicants.html">Job applicant</a>
+                  <a href="/src/employer-talentcommunity.html">Talent community</a>
+                  <a href="/src/employer-jobpostform.html">Post a new job </a>
+                  <a href="/src/employer-subscription.html">Subscription</a>
+                  <a href="#">Logout</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="signup">
+                <button class="border border-[#008D96] rounded-full py-2 px-4">
+                  Signup/ Login
+              
+                </button>
+              
+              </div>
             </li>
           </ul>
         </nav>
-        <!-- dropdown -->
-        <nav class="space-x-4">
-          <div class="dropdown">
-            <button
-              onclick="myFunction()"
-              class="dropbtn flex items-center"
-            >
-              For Employers
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="ml-2 h-5 w-5 font-bold"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                />
-              </svg>
-            </button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="#">Dashboard</a>
-              <a href="#">My Job</a>
-              <a href="#">My Profile</a>
-              <a href="#">My Account</a>
-              <a href="#">Massage</a>
-              <a href="#">Job applicant</a>
-              <a href="#">Talent community</a>
-              <a href="#">Post a new job </a>
-              <a href="#">Logout</a>
-            </div>
-          </div>
-          <div class="signup">
-            <button
-              onclick=""
-              class="border border-[#008D96] rounded-full py-2 px-4"
-            >
-              Signup/ Login
-          
-            </button>
-           
-          </div>
-        </nav>
       </div>
-      <button class="block lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-8 stroke-2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
-        </svg>
-      </button>
-    </div>
-  </header>
+    </header>
       <!-- form -->
-    <main class="max-w-[1200px] container mx-auto my-10">
-        <div class="flex justify-center items-start gap-4 ">
-          <nav class="w-1/4 shadow-custom pt-8 h-full">
-            <ul>
+    <main class="w-11/12 md:max-w-[767px] lg:max-w-[1000px] xl:max-w-[1200px] container mx-auto my-10">
+      <button class="showSidebar flex md:hidden justify-start items-center cursor-pointer text-sm font-bold text-blue-800 mb-8">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        Show Sidebar
+      </button>
+        <div class="flex justify-between items-start">
+          <nav class="sidebar hidden md:block md:w-1/3 xl:w-1/4 shadow-custom pt-8 fixed md:static top-0 left-0 z-40 bg-white h-screen md:h-full  overflow-y-auto md:overflow-y-hidden">
+            <ul class="truncate">
+              <li class="closeSidebar flex md:hidden justify-center items-center cursor-pointer text-sm font-bold text-red-600">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                Close
+              </li>
               <li class="w-full">
                 <a href="/src/employer-jobapplicants.html" class="flex justify-start items-center gap-3 h-16 w-full px-8">
                   <div class="">
@@ -113,11 +199,11 @@
                   </div>
                   <div>
                     <p class="font-semibold">My Application</p>
-                    <p class="text-sm font-medium text-bodyText">view jobs you applied to</p>
+                    <p class="text-sm font-medium text-bodyText hidden md:block">view jobs you applied to</p>
                   </div>
                 </a>
               </li>
-              <li class=" shadow-custom bg-primary/10 border-r-8 border-r-primary w-full">
+              <li class="shadow-custom bg-primary/10 border-r-8 border-r-primary w-full">
                 <a href="/src/employer-myjob.html" class="flex justify-start items-center gap-3 h-16 w-full px-8">
                   <div class="">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -127,7 +213,7 @@
                   </div>
                   <div>
                     <p class="font-semibold">My Job</p>
-                    <p class="text-sm font-medium text-bodyText">view jobs you applied to</p>
+                    <p class="text-sm font-medium text-bodyText hidden md:block">view jobs you applied to</p>
                   </div>
                 </a>
               </li>
@@ -141,7 +227,7 @@
                   </div>
                   <div>
                     <p class="font-semibold">My Profile</p>
-                    <p class="text-sm font-medium text-bodyText">Manage your profile</p>
+                    <p class="text-sm font-medium text-bodyText hidden md:block">Manage your profile</p>
                   </div>
                 </a>
               </li>
@@ -150,15 +236,15 @@
                   <div class="">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z" />
-                    </svg>                    
+                    </svg>
                   </div>
                   <div>
                     <p class="font-semibold">My Account</p>
-                    <p class="text-sm font-medium text-bodyText">Edit personal details</p>
+                    <p class="text-sm font-medium text-bodyText hidden md:block">Edit personal details</p>
                   </div>
                 </a>
               </li>
-             <li class=" w-full">
+             <li class="w-full">
               <a href="/src/employer-messages.html" class="flex justify-start items-center gap-3 h-16 w-full px-8">
                 <div class="">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -168,7 +254,7 @@
                 </div>
                 <div>
                   <p class="font-semibold">Massage</p>
-                  <p class="text-sm font-medium text-bodyText">Edit personal details</p>
+                  <p class="text-sm font-medium text-bodyText hidden md:block">Edit personal details</p>
                 </div>
               </a>
              </li>
@@ -182,7 +268,7 @@
                   </div>
                   <div>
                     <p class="font-semibold">Job applicant</p>
-                    <p class="text-sm font-medium text-bodyText">Edit personal details</p>
+                    <p class="text-sm font-medium text-bodyText hidden md:block">Edit personal details</p>
                   </div>
                 </a>
               </li>
@@ -196,7 +282,7 @@
                   </div>
                   <div>
                     <p class="font-semibold">Talent community</p>
-                    <p class="text-sm font-medium text-bodyText">Edit personal details</p>
+                    <p class="text-sm font-medium text-bodyText hidden md:block">Edit personal details</p>
                   </div>
                 </a>
               </li>
@@ -210,7 +296,7 @@
                   </div>
                   <div>
                     <p class="font-semibold">Post a new job </p>
-                    <p class="text-sm font-medium text-bodyText">Edit personal details</p>
+                    <p class="text-sm font-medium text-bodyText hidden md:block">Edit personal details</p>
                   </div>
                 </a>
               </li>
@@ -224,548 +310,695 @@
                   </div>
                   <div>
                     <p class="font-semibold">Subscription</p>
-                    <p class="text-sm font-medium text-bodyText">Edit personal details</p>
+                    <p class="text-sm font-medium text-bodyText hidden md:block">Edit personal details</p>
                   </div>
                 </a>
               </li>
             </ul>
           </nav>
-          
-            <div class="w-3/4 shadow-custom pl-8 pt-8 flex flex-col rounded space-y-3 h-fit">
-             <div class="flex justify-between items-center">
-              <div class="relative">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="absolute top-3 left-2 w-4 h-4 stroke-2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                </svg>
-                <input type="text" class="bg-gradient h-10 w-40 pl-8 rounded-lg focus:outline-none text-xs" name="" placeholder="Search contacts....">
-              </div>
-              <div class="space-x-5 mr-8">
-                <label for="" class="text-base font-medium">Sort By</label>
-                <select name="" id="" class="rounded-xl border border-button px-7 py-1">
-                  <option value="">Newest</option>
-                  <option value="">Oldest</option>
-                </select>
-              </div>
-             </div>
-             
-             <!-- <div>
-              <div class="flex justify-between items-center shadow-custom p-4 text-button text-xs">
-                <div class="">
-                  <span></span>Title</span>
-                </div>
-                <div class="flex justify-start items-center gap-20">
-                  <div class="">
-                    <span>Applicants</span>
-                  </div>
-                  <div class="">
-                    <span>Created & expired</span>
-                  </div>
-                  <div class="">
-                    <span>Status</span>
-                  </div>
-                  <div class="">
-                    <span>Action</span>
-                  </div>
-                </div>
-              </div>
-              <div class="flex justify-between items-center px-4 py-5 border-b border-b-[#A7A7A7]">
-                <div>
-                  <div class="flex justify-start items-center gap-3">
-                    <div class="w-9 h-9 bg-bodyText rounded-md">
-                                      
-                    </div>
-                    <div class="space-y-1">
-                      <p class="text-xs font-medium">Finance Manager & Health</p>
-                      <div class="flex justify-start items-center gap-4">
-                        <div class="flex justify-center items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                          </svg>
-                          <span class="text-xs text-bodyText">Design</span>
-                        </div>
-                        <div class="flex justify-center items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                          </svg>                          
-                          <span class="text-xs text-bodyText">Design</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="flex gap-20 w-56">
-                  <div class="">
-                    <span class="text-xs text-bodyText">July 20, 2021</span>
-                  </div>
-                  <div class="flex justify-around items-center gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>                                        
-                  </div>
-                </div>
-              </div>
-              <div class="flex justify-between items-center px-4 py-5 border-b border-b-[#A7A7A7]">
-                <div>
-                  <div class="flex justify-start items-center gap-3">
-                    <div class="w-9 h-9 bg-bodyText rounded-md">
-                                      
-                    </div>
-                    <div class="space-y-1">
-                      <p class="text-xs font-medium">Finance Manager & Health</p>
-                      <div class="flex justify-start items-center gap-4">
-                        <div class="flex justify-center items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                          </svg>
-                          <span class="text-xs text-bodyText">Design</span>
-                        </div>
-                        <div class="flex justify-center items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                          </svg>                          
-                          <span class="text-xs text-bodyText">Design</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="flex gap-20 w-56">
-                  <div>
-                    <span class="text-xs text-bodyText">July 20, 2021</span>
-                  </div>
-                  <div class="flex justify-around items-center gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>                                        
-                  </div>
-                </div>
-              </div>
-              <div class="flex justify-between items-center px-4 py-5 border-b border-b-[#A7A7A7]">
-                <div>
-                  <div class="flex justify-start items-center gap-3">
-                    <div class="w-9 h-9 bg-bodyText rounded-md">
-                                      
-                    </div>
-                    <div class="space-y-1">
-                      <p class="text-xs font-medium">Finance Manager & Health</p>
-                      <div class="flex justify-start items-center gap-4">
-                        <div class="flex justify-center items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                          </svg>
-                          <span class="text-xs text-bodyText">Design</span>
-                        </div>
-                        <div class="flex justify-center items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                          </svg>                          
-                          <span class="text-xs text-bodyText">Design</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="flex gap-20 w-56">
-                  <div>
-                    <span class="text-xs text-bodyText">July 20, 2021</span>
-                  </div>
-                  <div class="flex justify-around items-center gap-3  ">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>                                        
-                  </div>
-                </div>
-              </div>
-              <div class="flex justify-between items-center px-4 py-5 border-b border-b-[#A7A7A7]">
-                <div>
-                  <div class="flex justify-start items-center gap-3">
-                    <div class="w-9 h-9 bg-bodyText rounded-md">
-                                      
-                    </div>
-                    <div class="space-y-1">
-                      <p class="text-xs font-medium">Finance Manager & Health</p>
-                      <div class="flex justify-start items-center gap-4">
-                        <div class="flex justify-center items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                          </svg>
-                          <span class="text-xs text-bodyText">Design</span>
-                        </div>
-                        <div class="flex justify-center items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                          </svg>                          
-                          <span class="text-xs text-bodyText">Design</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="flex gap-20 w-56">
-                  <div>
-                    <span class="text-xs text-bodyText">July 20, 2021</span>
-                  </div>
-                  <div class="flex justify-around items-center gap-3  ">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>                                        
-                  </div>
-                </div>
-              </div>
-              <div class="flex justify-between items-center px-4 py-5">
-                <div>
-                  <div class="flex justify-start items-center gap-3">
-                    <div class="w-9 h-9 bg-bodyText rounded-md">
-                                      
-                    </div>
-                    <div class="space-y-1">
-                      <p class="text-xs font-medium">Finance Manager & Health</p>
-                      <div class="flex justify-start items-center gap-4">
-                        <div class="flex justify-center items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                          </svg>
-                          <span class="text-xs text-bodyText">Design</span>
-                        </div>
-                        <div class="flex justify-center items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                          </svg>                          
-                          <span class="text-xs text-bodyText">Design</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="flex gap-20 w-56">
-                  <div>
-                    <span class="text-xs text-bodyText">July 20, 2021</span>
-                  </div>
-                  <div class="flex justify-around items-center gap-3  ">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>                                        
-                  </div>
-                </div>
-              </div>
-             </div> -->
-             <div>
-              <div class="flex justify-between items-center shadow-custom p-4 text-button text-xs gap-8">
-                <div class="w-60">
-                  <span>Title</span>
-                </div>
-                  <div class="w-40">
-                    <span>Applicants</span>
-                  </div>
-                  <div class="w-40">
-                    <span>Created & expired</span>
-                  </div>
-                  <div class="w-40 text-center">
-                    <span>Status</span>
-                  </div>
-                  <div class="w-40 text-center">
-                    <span>Action</span>
-                  </div>
-              </div>
-              <div class="flex justify-between items-center px-4 py-5 border-b border-b-[#A7A7A7] gap-4">
-                <div class="w-60">
-                  <div class="flex justify-start items-center gap-3">
-                    <div class="space-y-1">
-                      <p class="text-xs font-medium">Finance Manager & Health</p>
-                      <div class="flex justify-start items-center gap-4">
-                        <div class="flex justify-center items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                          </svg>                          
-                          <span class="text-xs text-bodyText">New York</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                  <div class="w-40">
-                    <span class="text-[10px] text-bodyText">349  Applicants (S)</span>
-                  </div>
-                  <div class="w-40">
-                    <p class="text-[10px] text-bodyText"><span class="font-medium">Created</span> : june 20, 2021</p>
-                    <p class="text-[10px] text-bodyText">Expiry date : <span class="text-button">may 6 2026</span></p>
-                  </div>
-                  <div class="w-40 text-center">
-                    <span class="text-[10px] text-bodyText">Published</span>
-                  </div>
-                  <div class="flex justify-center items-center w-40 text-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
-                    </svg>
-                    
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>                                        
-                  </div>
-              </div>
-              <div class="flex justify-between items-center px-4 py-5 border-b border-b-[#A7A7A7] gap-4">
-                <div class="w-60">
-                  <div class="flex justify-start items-center gap-3">
-                    <div class="space-y-1">
-                      <p class="text-xs font-medium">Finance Manager & Health</p>
-                      <div class="flex justify-start items-center gap-4">
-                        <div class="flex justify-center items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                          </svg>                          
-                          <span class="text-xs text-bodyText">New York</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                  <div class="w-40">
-                    <span class="text-[10px] text-bodyText">349  Applicants (S)</span>
-                  </div>
-                  <div class="w-40">
-                    <p class="text-[10px] text-bodyText"><span class="font-medium">Created</span> : june 20, 2021</p>
-                    <p class="text-[10px] text-bodyText">Expiry date : <span class="text-button">may 6 2026</span></p>
-                  </div>
-                  <div class="w-40 text-center">
-                    <span class="text-[10px] text-bodyText">Published</span>
-                  </div>
-                  <div class="flex justify-center items-center w-40 text-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
-                    </svg>
-                    
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>                                        
-                  </div>
-              </div>
-              <div class="flex justify-between items-center px-4 py-5 border-b border-b-[#A7A7A7] gap-4">
-                <div class="w-60">
-                  <div class="flex justify-start items-center gap-3">
-                    <div class="space-y-1">
-                      <p class="text-xs font-medium">Finance Manager & Health</p>
-                      <div class="flex justify-start items-center gap-4">
-                        <div class="flex justify-center items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                          </svg>                          
-                          <span class="text-xs text-bodyText">New York</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                  <div class="w-40">
-                    <span class="text-[10px] text-bodyText">349  Applicants (S)</span>
-                  </div>
-                  <div class="w-40">
-                    <p class="text-[10px] text-bodyText"><span class="font-medium">Created</span> : june 20, 2021</p>
-                    <p class="text-[10px] text-bodyText">Expiry date : <span class="text-button">may 6 2026</span></p>
-                  </div>
-                  <div class="w-40 text-center">
-                    <span class="text-[10px] text-bodyText">Published</span>
-                  </div>
-                  <div class="flex justify-center items-center w-40 text-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
-                    </svg>
-                    
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>                                        
-                  </div>
-              </div>
-              <div class="flex justify-between items-center px-4 py-5 border-b border-b-[#A7A7A7] gap-4">
-                <div class="w-60">
-                  <div class="flex justify-start items-center gap-3">
-                    <div class="space-y-1">
-                      <p class="text-xs font-medium">Finance Manager & Health</p>
-                      <div class="flex justify-start items-center gap-4">
-                        <div class="flex justify-center items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                          </svg>                          
-                          <span class="text-xs text-bodyText">New York</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                  <div class="w-40">
-                    <span class="text-[10px] text-bodyText">349  Applicants (S)</span>
-                  </div>
-                  <div class="w-40">
-                    <p class="text-[10px] text-bodyText"><span class="font-medium">Created</span> : june 20, 2021</p>
-                    <p class="text-[10px] text-bodyText">Expiry date : <span class="text-button">may 6 2026</span></p>
-                  </div>
-                  <div class="w-40 text-center">
-                    <span class="text-[10px] text-bodyText">Published</span>
-                  </div>
-                  <div class="flex justify-center items-center w-40 text-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
-                    </svg>
-                    
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>                                        
-                  </div>
-              </div>
-              <div class="flex justify-between items-center px-4 py-5 gap-4">
-                <div class="w-60">
-                  <div class="flex justify-start items-center gap-3">
-                    <div class="space-y-1">
-                      <p class="text-xs font-medium">Finance Manager & Health</p>
-                      <div class="flex justify-start items-center gap-4">
-                        <div class="flex justify-center items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                          </svg>                          
-                          <span class="text-xs text-bodyText">New York</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                  <div class="w-40">
-                    <span class="text-[10px] text-bodyText">349  Applicants (S)</span>
-                  </div>
-                  <div class="w-40">
-                    <p class="text-[10px] text-bodyText"><span class="font-medium">Created</span> : june 20, 2021</p>
-                    <p class="text-[10px] text-bodyText">Expiry date : <span class="text-button">may 6 2026</span></p>
-                  </div>
-                  <div class="w-40 text-center">
-                    <span class="text-[10px] text-bodyText">Published</span>
-                  </div>
-                  <div class="flex justify-center items-center w-40 text-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
-                    </svg>
-                    
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>                                        
-                  </div>
-              </div>
-             </div>
+          <div class="w-full md:w-4/6 xl:w-3/4 shadow-custom md:pl-8 pt-8 flex flex-col rounded space-y-3 h-fit">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 px-2 md:px-0">
+            <div class="relative w-full md:w-fit">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="absolute top-3 left-2 w-4 h-4 stroke-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+              </svg>
+              <input type="text" class="bg-gradient h-10 w-full pl-8 rounded-lg focus:outline-none text-xs" name="" placeholder="Search contacts....">
             </div>
-           
+            <div class="flex justify-between items-center w-full md:w-fit space-x-5 mr-8 md:px-0">
+              <label for="" class="text-base font-medium">Sort By</label>
+              <select name="" id="" class="rounded-xl border border-button px-7 py-1">
+                <option value="">Newest</option>
+                <option value="">Oldest</option>
+              </select>
+            </div>
+            </div>
+            
+            <!-- <div>
+            <div class="flex justify-between items-center shadow-custom p-4 text-button text-xs">
+              <div class="">
+                <span></span>Title</span>
+              </div>
+              <div class="flex justify-start items-center gap-20">
+                <div class="">
+                  <span>Applicants</span>
+                </div>
+                <div class="">
+                  <span>Created & expired</span>
+                </div>
+                <div class="">
+                  <span>Status</span>
+                </div>
+                <div class="">
+                  <span>Action</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-between items-center px-4 py-5 border-b border-b-[#A7A7A7]">
+              <div>
+                <div class="flex justify-start items-center gap-3">
+                  <div class="w-9 h-9 bg-bodyText rounded-md">
+                                    
+                  </div>
+                  <div class="space-y-1">
+                    <p class="text-xs font-medium">Finance Manager & Health</p>
+                    <div class="flex justify-start items-center gap-4">
+                      <div class="flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                        </svg>
+                        <span class="text-xs text-bodyText">Design</span>
+                      </div>
+                      <div class="flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                        </svg>                          
+                        <span class="text-xs text-bodyText">Design</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-20 w-56">
+                <div class="">
+                  <span class="text-xs text-bodyText">July 20, 2021</span>
+                </div>
+                <div class="flex justify-around items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>                                        
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-between items-center px-4 py-5 border-b border-b-[#A7A7A7]">
+              <div>
+                <div class="flex justify-start items-center gap-3">
+                  <div class="w-9 h-9 bg-bodyText rounded-md">
+                                    
+                  </div>
+                  <div class="space-y-1">
+                    <p class="text-xs font-medium">Finance Manager & Health</p>
+                    <div class="flex justify-start items-center gap-4">
+                      <div class="flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                        </svg>
+                        <span class="text-xs text-bodyText">Design</span>
+                      </div>
+                      <div class="flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                        </svg>                          
+                        <span class="text-xs text-bodyText">Design</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-20 w-56">
+                <div>
+                  <span class="text-xs text-bodyText">July 20, 2021</span>
+                </div>
+                <div class="flex justify-around items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>                                        
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-between items-center px-4 py-5 border-b border-b-[#A7A7A7]">
+              <div>
+                <div class="flex justify-start items-center gap-3">
+                  <div class="w-9 h-9 bg-bodyText rounded-md">
+                                    
+                  </div>
+                  <div class="space-y-1">
+                    <p class="text-xs font-medium">Finance Manager & Health</p>
+                    <div class="flex justify-start items-center gap-4">
+                      <div class="flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                        </svg>
+                        <span class="text-xs text-bodyText">Design</span>
+                      </div>
+                      <div class="flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                        </svg>                          
+                        <span class="text-xs text-bodyText">Design</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-20 w-56">
+                <div>
+                  <span class="text-xs text-bodyText">July 20, 2021</span>
+                </div>
+                <div class="flex justify-around items-center gap-3  ">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>                                        
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-between items-center px-4 py-5 border-b border-b-[#A7A7A7]">
+              <div>
+                <div class="flex justify-start items-center gap-3">
+                  <div class="w-9 h-9 bg-bodyText rounded-md">
+                                    
+                  </div>
+                  <div class="space-y-1">
+                    <p class="text-xs font-medium">Finance Manager & Health</p>
+                    <div class="flex justify-start items-center gap-4">
+                      <div class="flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                        </svg>
+                        <span class="text-xs text-bodyText">Design</span>
+                      </div>
+                      <div class="flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                        </svg>                          
+                        <span class="text-xs text-bodyText">Design</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-20 w-56">
+                <div>
+                  <span class="text-xs text-bodyText">July 20, 2021</span>
+                </div>
+                <div class="flex justify-around items-center gap-3  ">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>                                        
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-between items-center px-4 py-5">
+              <div>
+                <div class="flex justify-start items-center gap-3">
+                  <div class="w-9 h-9 bg-bodyText rounded-md">
+                                    
+                  </div>
+                  <div class="space-y-1">
+                    <p class="text-xs font-medium">Finance Manager & Health</p>
+                    <div class="flex justify-start items-center gap-4">
+                      <div class="flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                        </svg>
+                        <span class="text-xs text-bodyText">Design</span>
+                      </div>
+                      <div class="flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                        </svg>                          
+                        <span class="text-xs text-bodyText">Design</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-20 w-56">
+                <div>
+                  <span class="text-xs text-bodyText">July 20, 2021</span>
+                </div>
+                <div class="flex justify-around items-center gap-3  ">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>                                        
+                </div>
+              </div>
+            </div>
+            </div> -->
+            <div>
+            <div class="flex justify-between items-center shadow-custom p-4 text-button text-xs gap-8">
+              <div class="w-60">
+                <span>Title</span>
+              </div>
+                <div class="w-40">
+                  <span>Applicants</span>
+                </div>
+                <div class="w-40 hidden md:block">
+                  <span>Created & expired</span>
+                </div>
+                <div class="w-40 text-center">
+                  <span>Status</span>
+                </div>
+                <div class="w-40 text-center">
+                  <span>Action</span>
+                </div>
+            </div>
+            <div class="flex justify-between items-center px-4 py-5 border-b border-b-[#A7A7A7] gap-4">
+              <div class="w-60">
+                <div class="flex justify-start items-center gap-3">
+                  <div class="space-y-1">
+                    <p class="text-xs font-medium">Finance Manager & Health</p>
+                    <div class="flex justify-start items-center gap-4">
+                      <div class="flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                        </svg>                          
+                        <span class="text-xs text-bodyText">New York</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div class="w-40">
+                  <span class="text-[10px] text-bodyText">349  Applicants (S)</span>
+                </div>
+                <div class="w-40 hidden md:block">
+                  <p class="text-[10px] text-bodyText"><span class="font-medium">Created</span> : june 20, 2021</p>
+                  <p class="text-[10px] text-bodyText">Expiry date : <span class="text-button">may 6 2026</span></p>
+                </div>
+                <div class="w-40 text-center">
+                  <span class="text-[10px] text-bodyText">Published</span>
+                </div>
+                <div class="iconDiv w-40 flex flex-col justify-center items-center text-center relative">
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ellipsis w-6 h-6 lg:hidden cursor-pointer ">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                    </svg>   
+                  </button>                 
+                  <div class="showIcon absolute top-8 lg:hidden flex justify-center items-center w-24 text-center gap-2 bg-iconBg p-2 rounded-md shadow-sm">
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-gradient rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-gradient rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-gradient rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg> 
+                    </button>
+                  </div> 
+                  <div class="hidden lg:flex justify-center items-center w-full text-center gap-2">
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg> 
+                    </button>
+                  </div>                                          
+                </div>
+                
+            </div>
+            <div class="flex justify-between items-center px-4 py-5 border-b border-b-[#A7A7A7] gap-4">
+              <div class="w-60">
+                <div class="flex justify-start items-center gap-3">
+                  <div class="space-y-1">
+                    <p class="text-xs font-medium">Finance Manager & Health</p>
+                    <div class="flex justify-start items-center gap-4">
+                      <div class="flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                        </svg>                          
+                        <span class="text-xs text-bodyText">New York</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div class="w-40">
+                  <span class="text-[10px] text-bodyText">349  Applicants (S)</span>
+                </div>
+                <div class="w-40 hidden md:block">
+                  <p class="text-[10px] text-bodyText"><span class="font-medium">Created</span> : june 20, 2021</p>
+                  <p class="text-[10px] text-bodyText">Expiry date : <span class="text-button">may 6 2026</span></p>
+                </div>
+                <div class="w-40 text-center">
+                  <span class="text-[10px] text-bodyText">Published</span>
+                </div>
+                <div class="iconDiv w-40 flex flex-col justify-center items-center text-center relative">
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ellipsis w-6 h-6 lg:hidden cursor-pointer ">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                    </svg>   
+                  </button>                 
+                  <div class="showIcon absolute top-8 lg:hidden flex justify-center items-center w-24 text-center gap-2 bg-iconBg p-2 rounded-md shadow-sm">
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-gradient rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-gradient rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-gradient rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg> 
+                    </button>
+                  </div> 
+                  <div class="hidden lg:flex justify-center items-center w-full text-center gap-2">
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg> 
+                    </button>
+                  </div>                                          
+                </div>
+                
+            </div>
+            <div class="flex justify-between items-center px-4 py-5 border-b border-b-[#A7A7A7] gap-4">
+              <div class="w-60">
+                <div class="flex justify-start items-center gap-3">
+                  <div class="space-y-1">
+                    <p class="text-xs font-medium">Finance Manager & Health</p>
+                    <div class="flex justify-start items-center gap-4">
+                      <div class="flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                        </svg>                          
+                        <span class="text-xs text-bodyText">New York</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div class="w-40">
+                  <span class="text-[10px] text-bodyText">349  Applicants (S)</span>
+                </div>
+                <div class="w-40 hidden md:block">
+                  <p class="text-[10px] text-bodyText"><span class="font-medium">Created</span> : june 20, 2021</p>
+                  <p class="text-[10px] text-bodyText">Expiry date : <span class="text-button">may 6 2026</span></p>
+                </div>
+                <div class="w-40 text-center">
+                  <span class="text-[10px] text-bodyText">Published</span>
+                </div>
+                <div class="iconDiv w-40 flex flex-col justify-center items-center text-center relative">
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ellipsis w-6 h-6 lg:hidden cursor-pointer ">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                    </svg>   
+                  </button>                 
+                  <div class="showIcon absolute top-8 lg:hidden flex justify-center items-center w-24 text-center gap-2 bg-iconBg p-2 rounded-md shadow-sm">
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-gradient rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-gradient rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-gradient rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg> 
+                    </button>
+                  </div> 
+                  <div class="hidden lg:flex justify-center items-center w-full text-center gap-2">
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg> 
+                    </button>
+                  </div>                                          
+                </div>
+                
+            </div>
+            <div class="flex justify-between items-center px-4 py-5 border-b border-b-[#A7A7A7] gap-4">
+              <div class="w-60">
+                <div class="flex justify-start items-center gap-3">
+                  <div class="space-y-1">
+                    <p class="text-xs font-medium">Finance Manager & Health</p>
+                    <div class="flex justify-start items-center gap-4">
+                      <div class="flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                        </svg>                          
+                        <span class="text-xs text-bodyText">New York</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div class="w-40">
+                  <span class="text-[10px] text-bodyText">349  Applicants (S)</span>
+                </div>
+                <div class="w-40 hidden md:block">
+                  <p class="text-[10px] text-bodyText"><span class="font-medium">Created</span> : june 20, 2021</p>
+                  <p class="text-[10px] text-bodyText">Expiry date : <span class="text-button">may 6 2026</span></p>
+                </div>
+                <div class="w-40 text-center">
+                  <span class="text-[10px] text-bodyText">Published</span>
+                </div>
+                <div class="iconDiv w-40 flex flex-col justify-center items-center text-center relative">
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ellipsis w-6 h-6 lg:hidden cursor-pointer ">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                    </svg>   
+                  </button>                 
+                  <div class="showIcon absolute top-8 lg:hidden flex justify-center items-center w-24 text-center gap-2 bg-iconBg p-2 rounded-md shadow-sm">
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-gradient rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-gradient rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-gradient rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg> 
+                    </button>
+                  </div> 
+                  <div class="hidden lg:flex justify-center items-center w-full text-center gap-2">
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg> 
+                    </button>
+                  </div>                                          
+                </div>
+                
+            </div>
+            <div class="flex justify-between items-center px-4 py-5 border-b border-b-[#A7A7A7] gap-4">
+              <div class="w-60">
+                <div class="flex justify-start items-center gap-3">
+                  <div class="space-y-1">
+                    <p class="text-xs font-medium">Finance Manager & Health</p>
+                    <div class="flex justify-start items-center gap-4">
+                      <div class="flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                        </svg>                          
+                        <span class="text-xs text-bodyText">New York</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div class="w-40">
+                  <span class="text-[10px] text-bodyText">349  Applicants (S)</span>
+                </div>
+                <div class="w-40 hidden md:block">
+                  <p class="text-[10px] text-bodyText"><span class="font-medium">Created</span> : june 20, 2021</p>
+                  <p class="text-[10px] text-bodyText">Expiry date : <span class="text-button">may 6 2026</span></p>
+                </div>
+                <div class="w-40 text-center">
+                  <span class="text-[10px] text-bodyText">Published</span>
+                </div>
+                <div class="iconDiv w-40 flex flex-col justify-center items-center text-center relative">
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ellipsis w-6 h-6 lg:hidden cursor-pointer ">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                    </svg>   
+                  </button>                 
+                  <div class="showIcon absolute top-8 lg:hidden flex justify-center items-center w-24 text-center gap-2 bg-iconBg p-2 rounded-md shadow-sm">
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-gradient rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-gradient rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-gradient rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg> 
+                    </button>
+                  </div> 
+                  <div class="hidden lg:flex justify-center items-center w-full text-center gap-2">
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-iconBg rounded p-1 stroke-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg> 
+                    </button>
+                  </div>                                          
+                </div>
+                
+            </div>
+            </div>
+          </div>
         </div>
-       
     </main>
 
+    
     <!-- footer -->
-    <footer class="">
-      <div
-        class="h-[23px] border border-bodyText border-opacity-10 bg-primary"
-      ></div>
-      <div
-        class="border border-t-0 border-bodyText border-opacity-25 pt-16 pb-6"
-      >
-        <div class="container mx-auto max-w-[1200px]">
-          <div class="flex items-start justify-between">
-            <div>
+    <footer class=" ">
+      <div class="h-[23px] border border-bodyText border-opacity-10 bg-primary"></div>
+      <div class="border border-t-0 border-bodyText border-opacity-25 pt-16 pb-6">
+        <div class="container mx-auto w-11/12 md:max-w-[767px] lg:max-w-[1000px] xl:max-w-[1200px]">
+          <div class="flex flex-col md:flex-row items-start justify-between gap-8">
+            <div class="">
               <img src="/src/img/logo.png" alt="" class="" />
             </div>
-            <div>
-              <h3 class="footer-heading">Professionals</h3>
-              <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
-                <li>
-                  <a class="footer-body" href="">Join the SaaS network</a>
-                </li>
-                <li>
-                  <a class="footer-body" href="/searchjobs">Search jobs</a>
-                </li>
-                <li>
-                  <a class="footer-body" href="/searchcompanies"
-                    >Search Companies</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="footer-heading">Employers</h3>
-              <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
-                <li><a class="footer-body" href="">Post a Job</a></li>
-                <li>
-                  <a class="footer-body" href="/">Search the SaaS network</a>
-                </li>
-                <li><a class="footer-body" href="/pricing">Pricing</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="footer-heading">OpentoSaaS</h3>
-              <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
-                <li><a class="footer-body" href="/src/about.html">About</a></li>
-                <li>
-                  <a class="footer-body" href="/privacy">Private Policy</a>
-                </li>
-                <li>
-                  <a class="footer-body" href="/terms&conditions"
-                    >Terms and Conditions</a
-                  >
-                </li>
-                <li><a class="footer-body" href="/blog">Blog</a></li>
-                <li><a class="footer-body" href="/conbtact">Contact</a></li>
-              </ul>
+            <div class="flex flex-col md:flex-row items-start justify-between gap-2 md:gap-4 lg:gap-8">
+              <div>
+                <h3 class="footer-heading">Professionals</h3>
+                <ul class="mt-3 flex list-inside list-disc flex-col space-y-3 text-[19px]">
+                  <li>
+                    <a class="footer-body" href="">Join the SaaS network</a>
+                  </li>
+                  <li>
+                    <a class="footer-body" href="/searchjobs">Search jobs</a>
+                  </li>
+                  <li>
+                    <a class="footer-body" href="/searchcompanies">Search Companies</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="footer-heading">Employers</h3>
+                <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
+                  <li><a class="footer-body" href="">Post a Job</a></li>
+                  <li>
+                    <a class="footer-body" href="/">Search the SaaS network</a>
+                  </li>
+                  <li><a class="footer-body" href="/src">Pricing</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="footer-heading">OpentoSaaS</h3>
+                <ul class="mt-3 flex list-inside list-disc flex-col space-y-3">
+                  <li><a class="footer-body" href="/src/about.html">About</a></li>
+                  <li>
+                    <a class="footer-body" href="/privacy">Private Policy</a>
+                  </li>
+                  <li>
+                    <a class="footer-body" href="/terms&conditions"
+                      >Terms and Conditions</a
+                    >
+                  </li>
+                  <li><a class="footer-body" href="/blog">Blog</a></li>
+                  <li><a class="footer-body" href="/conbtact">Contact</a></li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          <div class="mt-12 flex items-center justify-between">
+          <div class="mt-12 flex flex-col-reverse md:flex-row items-start md:items-center justify-start md:justify-between gap-2 md:gap-4">
             <p class="text-sm font-normal text-bodyText">@2023 Seek</p>
-            <div
-              class="flex items-center justify-center space-x-4 md:justify-end"
-            >
+            <div class="flex items-center justify-center space-x-4 md:justify-end">
               <p class="text-sm font-normal text-bodyText">Follow us:</p>
               <a href="">
                 <svg
@@ -820,5 +1053,9 @@
         </div>
       </div>
     </footer>
+
+    <!-- js -->
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
